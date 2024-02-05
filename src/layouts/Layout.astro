@@ -1,0 +1,63 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="relative text-black dark:text-white">
+		<div
+			class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-purple-50 dark:bg-black
+		bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
+		dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+		>
+		</div>
+		<Header />
+		<slot />
+		<!-- <Footer /> -->
+	</body>
+</html>
+<style is:global>
+	:root {
+		color-scheme: light dark;
+		font-family: "Onest Variable", system-ui, sans-serif;
+	}
+	html {
+		background: #13151a;
+		scroll-behavior: smooth;
+	}
+	body {
+		color: rgba(17, 17, 17, 0.9);
+	}
+	#header-nav {
+		animation: blur linear both 0.5s;
+		animation-timeline: scroll();
+		animation-range: 0 500px;
+	}
+
+	@keyframes blur {
+		to {
+			backdrop-filter: blur(20px);
+			border-width: 1px;
+			border-color: rgba(0, 0, 0);
+			padding: 0.25rem 0.75rem;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			background-color: rgb(229, 229, 229);
+			border-radius: 9999px;
+		}
+	}
+</style>

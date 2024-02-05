@@ -1,0 +1,27 @@
+---
+import AboutMe from "../components/AboutMe.astro";
+import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Portfolio">
+	<main class="px-4">
+		<section
+			class="section py-16 md:py-36 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+		>
+			<Hero />
+		</section>
+		<section
+			class="section py-16 md:py-36 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+		>
+			<h2
+				class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+			>
+				Proyectos
+			</h2>
+			<Projects />
+		</section>
+		<!-- <AboutMe/> -->
+	</main>
+</Layout>

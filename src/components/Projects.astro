@@ -1,0 +1,116 @@
+---
+const tags = {
+  React: {
+    name: "ReactJS",
+    class: "bg-black text-white",
+  },
+  C: {
+    name: "C++",
+    class: "bg-pink text-white",
+  },
+  Processing: {
+    name: "Processing",
+    class: "bg-blue-500 text-white",
+  },
+  Svelte: {
+    name: "Svelte",
+    class: "bg-orange-500 text-white",
+  },
+  JavaScript:{
+    name: 'JavaScript',
+    class: "bg-yellow-500"
+  }
+};
+const projects = [
+  {
+    title: "Search Movies and books!",
+    description:
+      "Fue creado con el proposito de aprender acerca de Svelte, actualmente presenta dos funciones principales las cuales son la busqueda de libros y peliculas",
+    link: "https://search-movies-and-books.vercel.app/",
+    github: "https://github.com/Deyverson1/search-movies-and-books",
+    image: "/projects/SearchMovie.png",
+    tags: [tags.Svelte],
+  },
+  {
+    title: "Dropi.co - Replic with ReactJs",
+    description:
+      "Tiene como objetivo replicar la página web existente en https://dropi.co utilizando tecnologías avanzadas como ReactJS. ",
+    link: "https://dropi-replic.vercel.app/",
+    github: "https://github.com/Deyverson1/dropi-replic",
+    image: "/projects/Dropies.png",
+    tags: [tags.React],
+  },
+  {
+    title: "Implementación de sensores",
+    description:
+      "Este proyecto contiene codigo de Arduino y Processing para la medida con los sensores SHT-30, HC-SR04, Termistor.",
+    github:
+      "https://github.com/Deyverson1/SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura",
+    image: "/projects/Dropies.png",
+    tags: [tags.C, tags.Processing],
+  },
+  {
+    title: "Challenger Encriptador",
+    description:
+      "Fue presentado como Challenge en la formacion FrontEnd G5 Oracle Next Education el cual implicaba el desarrollo de un Ecriptador-Desencriptador",
+    github:
+      "https://github.com/Deyverson1/SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura",
+    image: "/projects/Encriptador.png",
+    tags: [tags.JavaScript],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    projects.map(({ title, image, description, tags, github, link }) => (
+      <article class="flex flex-1 space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              src={image}
+              alt={"Extraido de" + title}
+            />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold pt-0 mt-0">{title}</h3>
+          <div class="flex flex-row flex-wrap mt-2">
+            <ul class="gap-x-2 flex mb-2">
+              {tags.map((tag) => (
+                <li>
+                  <span>{tag.name}</span>
+                </li>
+              ))}
+            </ul>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4">
+              {github && (
+                <a
+                  class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-normal rounded-lg text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                  href={github}
+                >
+                  Code
+                </a>
+              )}
+              {
+                //condicionado, en caso de no contener repositorio o sitio web
+                link && (
+                  <a
+                    class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-lg text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                    href={link}
+                  >
+                    Preview
+                  </a>
+                )
+              }
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>
