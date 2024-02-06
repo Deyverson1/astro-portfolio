@@ -1,25 +1,44 @@
 ---
+import React from "./icons/React.astro";
+import C from "./icons/Cplusplus.astro";
+import Svelte from "./icons/Svelte.astro";
+import javaScript from "./icons/javaScript.astro";
+import Html from "./icons/Html.astro";
+import Css from "./icons/Css.astro";
+import Github from "./icons/GithubIcon.astro";
+import GithubCat from "./icons/GithubCat.astro";
+import BrandVercel from "./icons/BrandVercel.astro";
 const tags = {
   React: {
     name: "ReactJS",
-    class: "bg-black text-white",
+    class: "bg-blue-500 text-white",
+    icon: React,
   },
   C: {
     name: "C++",
-    class: "bg-pink text-white",
+    class: "bg-pink-500 text-white",
+    icon: C,
   },
-  Processing: {
-    name: "Processing",
+  Html: {
+    name: "Html 5",
     class: "bg-blue-500 text-white",
+    icon: Html,
   },
   Svelte: {
     name: "Svelte",
     class: "bg-orange-500 text-white",
+    icon: Svelte,
   },
-  JavaScript:{
-    name: 'JavaScript',
-    class: "bg-yellow-500"
-  }
+  JavaScript: {
+    name: "JavaScript",
+    class: "bg-yellow-500",
+    icon: javaScript,
+  },
+  Css: {
+    name: "Css",
+    class: "bg-blue-800",
+    icon: Css,
+  },
 };
 const projects = [
   {
@@ -38,7 +57,7 @@ const projects = [
     link: "https://dropi-replic.vercel.app/",
     github: "https://github.com/Deyverson1/dropi-replic",
     image: "/projects/Dropies.png",
-    tags: [tags.React],
+    tags: [tags.React, tags.JavaScript],
   },
   {
     title: "Implementación de sensores",
@@ -47,7 +66,7 @@ const projects = [
     github:
       "https://github.com/Deyverson1/SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura",
     image: "/projects/Dropies.png",
-    tags: [tags.C, tags.Processing],
+    tags: [tags.C],
   },
   {
     title: "Challenger Encriptador",
@@ -55,8 +74,10 @@ const projects = [
       "Fue presentado como Challenge en la formacion FrontEnd G5 Oracle Next Education el cual implicaba el desarrollo de un Ecriptador-Desencriptador",
     github:
       "https://github.com/Deyverson1/SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura",
+      link:
+      "https://encriptador-github-io.vercel.app/",
     image: "/projects/Encriptador.png",
-    tags: [tags.JavaScript],
+    tags: [tags.JavaScript, tags.Html, tags.Css],
   },
 ];
 ---
@@ -79,20 +100,24 @@ const projects = [
           <div class="flex flex-row flex-wrap mt-2">
             <ul class="gap-x-2 flex mb-2">
               {tags.map((tag) => (
-                <li>
-                  <span>{tag.name}</span>
+                <li
+                  class={`flex items-center gap-x-2 rounded-full py-0.5 px-2 text-sn ${tag.class}`}
+                >
+                  <tag.icon class="size-4" />
+                  {tag.name}
                 </li>
               ))}
             </ul>
             <div class="mt-2 text-gray-700 dark:text-gray-400">
               {description}
             </div>
-            <footer class="flex items-end justify-start mt-4">
+            <footer class="flex items-end justify-start mt-4 gap-x-2">
               {github && (
                 <a
-                  class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-normal rounded-lg text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                  class=" flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text- px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                   href={github}
                 >
+                  <GithubCat class="size-5" />
                   Code
                 </a>
               )}
@@ -100,9 +125,10 @@ const projects = [
                 //condicionado, en caso de no contener repositorio o sitio web
                 link && (
                   <a
-                    class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-lg text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                    class="flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                     href={link}
                   >
+                    <BrandVercel class="size-5" />
                     Preview
                   </a>
                 )
