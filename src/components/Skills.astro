@@ -1,0 +1,31 @@
+---
+import AstroIcon from "./icons/AstroIcon.astro";
+import React from "./icons/React.astro";
+import Svelte from "./icons/Svelte.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import JavaScript from "./icons/javaScript.astro";
+const data = [
+  { name: "React", icon: React },
+  { name: "Svelte", icon: Svelte },
+  { name: "Astro", icon: AstroIcon },
+  { name: "JavaScript", icon: JavaScript },
+  { name: "Tailwind", icon: Tailwind },
+];
+---
+
+<div class="flex flex-1 flex- gap-x-2">
+ {
+  data.map((data) => (
+  <article>
+    <div class="gap-x-2">
+      <div
+        class="flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+      >
+        <data.icon class="size-10"/>
+        <h3 class="text-white font-sm">{data.name}</h3>
+      </div>
+    </div>
+  </article>
+  ))
+ }
+</div>

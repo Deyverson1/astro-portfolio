@@ -5,22 +5,34 @@ import Hero from "../components/Hero.astro";
 import Projects from "../components/Projects.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
+import Skills from "../components/Skills.astro";
+import TitleContatiner from "../components/TitleContatiner.astro";
 ---
 
 <Layout title="Portfolio de Deyverson - Desarrollador y Programador Web">
 	<main class="px-4">
 		<section
-			class="section py-16 md:py-36 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+			class="section pt-16 pb-10 md:pt-36 md:pb-10  w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
 		>
 			<Hero />
 		</section>
+		<SectionContainer>
+			<TitleContatiner>
+				Habilidades
+			</TitleContatiner>
+			<Skills />
+		</SectionContainer>
 		<SectionContainer id="projects">
-			<h2
-				class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-			>
+			<TitleContatiner>
 				Proyectos
-			</h2>
+			</TitleContatiner>
 			<Projects />
+		</SectionContainer>
+		<SectionContainer id="sobre-mi">
+			<TitleContatiner>
+				Sobre mí
+			</TitleContatiner>
+			<AboutMe/>
 		</SectionContainer>
 	</main>
 </Layout>
