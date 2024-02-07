@@ -1,0 +1,68 @@
+---
+import GithubCat from "./icons/GithubCat.astro";
+import Gmail from "./icons/Gmail.astro";
+import LinkedinIcon from "./icons/LinkedinIcon.astro";
+import WhatsApp from "./icons/WhatsApp.astro";
+import Portatil from "./icons/Portatil.astro";
+import JavaScript from "./icons/javaScript.astro";
+import React from "./icons/React.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import Svelte from "./icons/Svelte.astro";
+import Cplusplus from "./icons/Cplusplus.astro";
+import Php from './icons/Php.astro'
+import Git from './icons/Git.astro'
+import Education from './Education.astro'
+import Experience from './Experience.astro'
+
+const dataPerfil = [
+  { title: "deyversongp@gmail.com", icon: Gmail,  },
+  { title: "312 2138601", icon: WhatsApp, fill: 'fill-white'},
+  { title: "linkedin.com/in/deyverson", icon: LinkedinIcon },
+  { title: "github.com/Deyverson1", icon: GithubCat },
+  { title: "https://portfolio-deyverson.vercel.app/", icon: Portatil },
+];
+const dataLearning = [
+  {name: 'JavaScript', icon: JavaScript},
+  {name: 'ReactJS', icon: React},
+  {name: 'Astro', icon: AstroIcon},
+  {name: 'Svelte', icon: Svelte},
+  {name: 'Php', icon: Php},
+  {name: 'C++', icon: Cplusplus},  
+  {name: 'Git', icon: Git},
+]
+---
+
+<section class="flex gap-4 py-16">
+  <div class="w-5/12">
+    <div class="w-full flex justify-center items-center pb-4">
+      <img class="w-6/12 rounded-2xl" src="/icon.jpg" alt="Foto Deyverson" />
+    </div>
+    <h2>Perfil</h2>
+    {dataPerfil.map(dato => (
+      <article class="flex items-center gap-x-2">
+        <dato.icon class=`size-4 ${dato.fill}` />
+        <h5>{dato.title}</h5>
+        </article>
+    ))}
+    <h2 class="pt-7">Aprendiendo</h2>
+    <div class="flex flex-wrap gap-x-4">
+      { dataLearning.map(learn => (
+        <article class="flex gap-2 pt-4">
+          <learn.icon class="size-6"/>
+          <h5>{learn.name}</h5>
+          </article>
+          ))
+      }
+    </div>
+  </div>
+  <div class="w-8/12">
+    <h1 class="text-center text-4xl">Deyverson Herrera Valencia</h1>
+    <h2 class="text-center italic pb-5">Desarrollador Web y estudiante de Mecatrónica Industrial</h2>
+    <h3 class="pb-2">Soy un desarrollador web con un amplio conocimiento en diversas tecnologías que me permite ofrecer enfoques diversos adaptados a los requisitos del proyecto.</h3>
+    <h3>Mis estudios también están orientados hacia el trabajo en equipo, utilizando
+      diversas metodologías de equipo que van desde habilidades blandas hasta metodologías de desarrollo web como Scrum. Mi objetivo es ampliar mi conjunto de habilidades para abarcar el desarrollo backend y poder crear proyectos web completos. Siempre estoy en búsqueda de nuevos desafíos y oportunidades para crecer como desarrollador. </h3>
+    <h4></h4>
+    <Experience/>
+    <Education/>
+  </div>
+</section>

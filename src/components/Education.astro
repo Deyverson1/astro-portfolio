@@ -1,0 +1,35 @@
+---
+const data = [
+  {
+    title: "Tecnología en Mecatrónica Industrial,",
+    description: "Institucion Universitaria Antonio Jose",
+    date: "Cali - Valle del cauca, 2021- Actualidad",
+  },
+  {
+    title: "Especialización Front-end,",
+    description: "Alura Latam-Oracle Next Education ONE,",
+    date: "Online, 2022-2023",
+  },
+  {
+    title: "React Group G5,",
+    description: "Alura Latam-Oracle Next Education ONE,",
+    date: "Online, 2022-2023",
+  },
+];
+---
+
+<section class="py-5">
+  <h2 class="font-bold">Educación</h2>
+  {
+    data.map((dato) => (
+      <ul class="pt-3">
+        <li>
+          <h6 class="font-bold">{dato.title}</h6>
+          <p>{dato.description}</p>
+
+          <p>{dato.date}</p>
+        </li>
+      </ul>
+    ))
+  }
+</section>

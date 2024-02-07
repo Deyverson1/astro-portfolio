@@ -1,22 +1,46 @@
-<!-- ---
-const contentGithub = await fetch(
-  "https://api.github.com/users/Deyverson1/repos",
-)
-  .then((res) => res.json())
-  .then((res) => res);
+---
+// async function obtenerRepositoriosYCommits() {
+//   try {
+//     const contentGithub = await fetch("https://api.github.com/users/Deyverson1/repos")
+//       .then((res) => {
+//         if (!res.ok) {
+//           throw new Error('Hubo un problema al obtener los repositorios.');
+//         }
+//         return res.json();
+//       });
+
+//     const repositoriosOrdenados = await Promise.all(contentGithub.map(async (repo: { name: string }) => {
+//       const commitsUrl = `https://api.github.com/repos/Deyverson1/${repo.name}/commits`;
+//       const commitsResponse = await fetch(commitsUrl);
+      
+//       if (!commitsResponse.ok) {
+//         throw new Error(`Hubo un problema al obtener los commits de ${repo.name}.`);
+//       }
+      
+//       const commits = await commitsResponse.json();
+//       const fechaUltimoCommit = commits[0].commit.author.date;
+//       return { repo: repo.name, fechaUltimoCommit };
+//     }));
+
+//     repositoriosOrdenados.sort((a, b) => new Date(b.fechaUltimoCommit).getTime() - new Date(a.fechaUltimoCommit).getTime());
+
+//     const cincoRepositoriosMasRecientes = repositoriosOrdenados.slice(0, 5);
+//     console.log(cincoRepositoriosMasRecientes)
+//     const latestCommits = cincoRepositoriosMasRecientes.map(dato => (
+//       fetch(`https://api.github.com/repos/Deyverson1/${dato.repo}/commits`)
+//       .then(res => res.json)
+//       .then(res => console.log(res))
+//     ))
+//     console.log("Los 5 repositorios más recientes:", cincoRepositoriosMasRecientes.map(repo => repo.repo));
+//   } catch (error) {
+//     console.error('Error:', error.message);
+//   }
+// }
+
+// obtenerRepositoriosYCommits();
 
 
-// console.log(nombre)
-// const contentNames = [];
-// contentGithub.forEach((content: { name: any; pushed_at: any }) => {
-//   console.log(content.pushed_at + content.name);
-//   contentNames.push(content.name);
-// });
-
-console.log(contentGithub); -->
-
-<!-- --- -->
-
+---
 <!-- <section>
   <h1>Hola</h1>
   {

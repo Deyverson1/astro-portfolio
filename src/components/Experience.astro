@@ -1,0 +1,41 @@
+---
+const data = [
+  {
+    title: "Challenge Encriptador de Texto",
+    subTitle: "Alura Latam- Oracle ONE, 2023 - Online",
+    description:
+      "Desarrollo de un cifrador de texto que utiliza principalmente prácticas de JavaScript para la lógica responsable del procesamiento y cifrado de texto. Además, integra el manejo de eventos, la capacidad de respuesta y estilos implementados a través de HTML y CSS.",
+  },
+  {
+    title: "Organización y gestión de equipos",
+    subTitle: "Alura Latam- Oracle ONE, 2023 - Online",
+    description:
+      "itio web para la organización de equipos utilizando React e implementación en JavaScript, incorporando el manejo de eventos en la lógica del proyecto junto con LocalStorage para una experiencia de usuario mejorada, además de garantizar la capacidad de respuesta",
+  },
+  {
+    title: "Portafolio personal",
+    subTitle: "Personal Project - 2023",
+    description:
+      "Página web interactiva con un diseño adaptable, utilizando principalmente React, así como JavaScript para una funcionalidad adecuada según los requisitos del proyecto. Manejo de las solicitudes fetch para la comunicación con un servidor backend local para almacenar datos utilizando Node.js, mientras que en la nube utilizo una infraestructura distinta.",
+  },
+  {
+    title: "CRUD para la gestión de empleados, usuarios y puestos de trabajo",
+    subTitle: "Project for learning - 2023",
+    description:
+      "Este proyecto implica el desarrollo de un sistema de gestión que permite a una organización supervisar eficientemente a sus empleados, usuarios y puestos de trabajo. El sistema fue creado utilizando PHP y MySQL y se centra en las operaciones fundamentales de Crear, Leer, Actualizar y Eliminar (CRUD).",
+  },
+];
+---
+
+<section class="pt-4">
+  <h1 class="font-bold">Experiencia</h1>
+  {
+    data.map((dato) => (
+      <article class="py-2">
+        <h4 class="font-bold">{dato.title}</h4>
+        <h5 class="italic">{dato.subTitle}</h5>
+        <p class="text-sm">{dato.description}</p>
+      </article>
+    ))
+  }
+</section>
