@@ -1,23 +1,32 @@
----
-// const username = "Deyverson1"
-// const url = `https://api.github.com/users/${username}`
+<!-- ---
+const contentGithub = await fetch(
+  "https://api.github.com/users/Deyverson1/repos",
+)
+  .then((res) => res.json())
+  .then((res) => res);
 
-// fetch(`https://api.github.com/users/${username}`)
-// .then(res => res.json())
-// .then(res => console.log(res.bio))
 
-// console.log()
+// console.log(nombre)
+// const contentNames = [];
+// contentGithub.forEach((content: { name: any; pushed_at: any }) => {
+//   console.log(content.pushed_at + content.name);
+//   contentNames.push(content.name);
+// });
 
-// REpos
+console.log(contentGithub); -->
 
-// let content;
+<!-- --- -->
 
-// fetch("https://api.github.com/users/Deyverson1/repos")
-//   .then((res) => res.json())
-//   .then(res => {
-//     res.map(answer => {
-//       const name = answer.name
-//       const latest = answer.updated_at
-//       console.log(latest)
-//     })
-//   })
+<!-- <section>
+  <h1>Hola</h1>
+  {
+    contentGithub.map((content: unknown) => {
+      return(
+        <div class="text-white">
+          <p>{content.name}</p>
+          {content.pushed_at}
+          </div>
+        )
+    })
+  }
+</section> -->

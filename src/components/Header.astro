@@ -1,8 +1,7 @@
 ---
 const contentNav = [
   { title: "Proyectos", label: "/#proyectos", url: "/#projects" },
-  {title: "Sobre mi", label: '/#sobre-mi', url:"/#sobre-mi"},
-  
+  { title: "Sobre mi", label: "/#sobre-mi", url: "/#sobre-mi" },
   {
     title: "Contacto",
     label: "/#contacto",
@@ -15,12 +14,12 @@ const contentNav = [
   class="text-white fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex px-3 text-medium font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
   >
     {
       contentNav.map((content) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+          class="relative block px-2 py-2  hover:text-blue-500 dark:hover:text-blue-500"
           aria-label={content.label}
           href={content.url}
         >
@@ -30,3 +29,17 @@ const contentNav = [
     }
   </nav>
 </header>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur bg-gray-500 dark:bg-blue-500 ring-black/10;
+    }
+  }
+</style>
