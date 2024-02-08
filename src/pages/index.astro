@@ -7,10 +7,13 @@ import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
 import Skills from "../components/Skills.astro";
 import TitleContatiner from "../components/TitleContatiner.astro";
+import Presentation from "../components/icons/Presentation.astro";
+import Shield from '../components/icons/Shield.astro'
+import Dna from '../components/icons/Dna.astro'
 ---
 
 <Layout title="Portfolio de Deyverson - Desarrollador y Programador Web">
-	<main class="px-4">
+	<main>
 		<section
 			class="section pt-16 pb-10 md:pt-36 md:pb-10  w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
 		>
@@ -18,18 +21,21 @@ import TitleContatiner from "../components/TitleContatiner.astro";
 		</section>
 		<SectionContainer>
 			<TitleContatiner>
+			<Dna class="size-7 pb-0.5"/>
 				Habilidades
 			</TitleContatiner>
 			<Skills />
 		</SectionContainer>
 		<SectionContainer id="projects">
 			<TitleContatiner>
+				<Presentation class="size-7 pb-0.5"/>
 				Proyectos
 			</TitleContatiner>
 			<Projects />
 		</SectionContainer>
 		<SectionContainer id="sobre-mi">
 			<TitleContatiner>
+				<Shield class="size-7 pb-0.5"/>
 				Sobre mí
 			</TitleContatiner>
 			<AboutMe/>

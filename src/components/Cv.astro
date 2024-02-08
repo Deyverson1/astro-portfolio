@@ -14,6 +14,7 @@ import Git from './icons/Git.astro'
 import Education from './Education.astro'
 import Experience from './Experience.astro'
 import Tools from "./Tools.astro";
+import Download from "./icons/Download.astro";
 
 const dataPerfil = [
   { title: "deyversongp@gmail.com", icon: Gmail,  },
@@ -32,20 +33,24 @@ const dataLearning = [
   {name: 'Git', icon: Git},
 ]
 ---
-
+<div class="flex justify-end">
+  <a href="/projects/DeyversonCV.pdf" download><Download/></a>
+</div>
 <section class="flex gap-4 py-16">
+   
+
   <div class="w-5/12">
     <div class="w-full flex justify-center items-center pb-4">
       <img class="w-6/12 rounded-2xl" src="/icon.jpg" alt="Foto Deyverson" />
     </div>
-    <h2>Perfil</h2>
+    <h2 class="font-bold">Perfil</h2>
     {dataPerfil.map(dato => (
       <article class="flex items-center gap-x-2">
         <dato.icon class=`size-4 ${dato.fill}` />
         <h5>{dato.title}</h5>
         </article>
     ))}
-    <h2 class="pt-7">Aprendiendo</h2>
+    <h2 class="pt-7 font-bold">Aprendiendo</h2>
     <div class="flex flex-wrap gap-x-4">
       { dataLearning.map(learn => (
         <article class="flex gap-2 pt-4">
@@ -56,7 +61,7 @@ const dataLearning = [
       }
     </div>
     <section class="pt-7">
-      <h2>Herramientas</h2>
+      <h2 class="font-bold ">Herramientas</h2>
       <Tools/>
     </section>
   </div>
@@ -69,6 +74,6 @@ const dataLearning = [
     <h4></h4>
     <Experience/>
     <Education/>
-  
+
   </div>
 </section>
