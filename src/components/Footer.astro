@@ -4,16 +4,16 @@ import AstroIcon from "./icons/AstroIcon.astro"
 const currentYear = new Date().getFullYear()
 ---
 
-<footer class="py-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+<footer class=" py-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
 >
   <div
-    class="w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between"
+    class="items-center flex flex-col lg:flex-row w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between"
   >
     <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
       >© {currentYear}
       <a href="https://github.com/Deyverson1" class="hover:underline">Deyverson</a>. 
     </span>
-    <a href="/"><AstroIcon class="size-8"/></a>
+    <a href="/"><AstroIcon class="size-8 pt-2 lg:pt-0"/></a>
     <ul
       class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
     >
