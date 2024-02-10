@@ -1,4 +1,5 @@
 ---
+import Theme from './Theme.astro'
 const contentNav = [
   {title: "Inicio", label:'/', url:'/'},
   { title: "Proyectos", label: "/#proyectos", url: "/#projects" },
@@ -13,10 +14,10 @@ const contentNav = [
 ---
 
 <header
-  class="text-white fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="text-white fixed top-0 z-10 flex items-center light:text-black justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="sm:text-xs flex lg:px-3 lg:text-medium font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex px-3 text-medium font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
   >
     {
       contentNav.map((content) => (
@@ -29,6 +30,7 @@ const contentNav = [
         </a>
       ))
     }
+    <Theme/>
   </nav>
 </header>
 
