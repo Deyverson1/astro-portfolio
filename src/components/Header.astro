@@ -17,12 +17,12 @@ const contentNav = [
   class="fixed top-0 z-10  flex items-cente justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex lg:px-3  text-medium font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class=" flex lg:px-3  text-medium font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
   >
     {
       contentNav.map((content) => (
         <a
-          class=" text-white text-sm relative block px-2 py-2  hover:text-blue-500 dark:hover:text-blue-500"
+          class="  text-sm relative block px-2 py-2  hover:text-blue-500 dark:hover:text-blue-500"
           aria-label={content.label}
           href={content.url}
         >
@@ -43,7 +43,7 @@ const contentNav = [
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur bg-gray-500 dark:bg-blue-500 ring-black/10;
+      @apply shadow-lg ring-1 backdrop-blur text-white bg-gray-500 dark:bg-blue-500 ring-black/10;
     }
   }
 </style>
