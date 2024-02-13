@@ -19,9 +19,14 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="relative text-white dark:text-white">
-	<!-- <div class="absolute inset-0 top-0  -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div> -->
+	<body class="relative text-black dark:text-white">
+	<div class="absolute inset-0 top-0  -z-10 h-full w-full 
+	bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]
+	dark:items-center dark:px-5 dark:py-24 dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+		<div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)] dark:bg-[radial-gradient(circle_800px_at_100%_200px,#000,transparent)]"></div>
+	</div>
 		
+	<div class="absolute inset-0 -z-10 h-full w-full"></div>
 		</div>
 		<Header />
 		<slot />
@@ -30,15 +35,15 @@ const { title } = Astro.props;
 
 	<style is:global>
 		:root {
-			color-scheme: light dark;
+			color-scheme: light dark ;
 			font-family: "Onest Variable", system-ui, sans-serif;
 		}
 		html {
-			background: #13151a;
+			/* background: #13151a; */
 			scroll-behavior: smooth;
 		}
 		body {
-			color: rgba(17, 17, 17, 0.9);
+			/* color: rgba(17, 17, 17, 0.9); */
 		}
 		#header-nav {
 			animation: blur linear both 0.5s;
@@ -60,9 +65,12 @@ const { title } = Astro.props;
 			}
 		}
 		@media (prefers-color-scheme: light) {
-        body {
-          color: rgba(255, 255, 255, 0.9);
-        }
+			body{
+				background-color: white;
+			}
+			.try{
+				display: none;
+			}
       }
 	</style>
 </html>
