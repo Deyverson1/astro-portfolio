@@ -1,7 +1,6 @@
 ---
 import GithubCat from "./icons/GithubCat.astro";
 import Gmail from "./icons/Gmail.astro";
-import LinkedinIcon from "./icons/LinkedinIcon.astro";
 import WhatsApp from "./icons/WhatsApp.astro";
 import Portatil from "./icons/Portatil.astro";
 import JavaScript from "./icons/javaScript.astro";
@@ -15,11 +14,12 @@ import Education from './Education.astro'
 import Experience from './Experience.astro'
 import Tools from "./Tools.astro";
 import Download from "./icons/Download.astro";
+import LinkedinIcon from "./icons/LinkedinIcon.astro";
 
 const dataPerfil = [
   { title: "deyversongp@gmail.com", icon: Gmail,  },
   { title: "312 2138601", icon: WhatsApp, fill: 'fill-white'},
-  { title: "linkedin.com/in/deyverson", icon: LinkedinIcon },
+  { title: "linkedin.com/in/deyverson", icon: LinkedinIcon, fill: 'fill-white'},
   { title: "github.com/Deyverson1", icon: GithubCat },
   { title: "https://portfolio-deyverson.vercel.app/", icon: Portatil },
 ];
@@ -33,11 +33,11 @@ const dataLearning = [
   {name: 'Git', icon: Git},
 ]
 ---
-<div class="flex justify-end">
+<div class="flex px-2 justify-end">
   <a href="/projects/DeyversonCV.pdf" download><Download/></a>
 </div>
-<section class="flex flex-wrap justify-center gap-4 py-16 lg:flex-nowrap">
-  <div class="w-5/12">
+<section class=" flex w-full flex-wrap justify-center gap-4 pt-16 pb-4 lg:py-16 lg:pb-0 lg:pt-0 lg:flex-nowrap">
+  <div class="w-full px-2 lg:px-0 lg:w-5/12">
     <div class="w-full flex justify-center items-center pb-4">
       <img class="w-6/12 rounded-2xl" src="/icon.jpg" alt="Foto Deyverson" />
     </div>
@@ -63,7 +63,7 @@ const dataLearning = [
       <Tools/>
     </section>
   </div>
-  <div class="w-8/12">
+  <div class="w-full px-2 pt-8 lg:w-8/12">
     <h1 class="text-center text-4xl">Deyverson Herrera Valencia</h1>
     <h2 class="text-center italic pb-5">Desarrollador Web y estudiante de Mecatrónica Industrial</h2>
     <h3 class="pb-2">Soy un desarrollador web con un amplio conocimiento en diversas tecnologías que me permite ofrecer enfoques diversos adaptados a los requisitos del proyecto.</h3>
