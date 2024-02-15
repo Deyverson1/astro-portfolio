@@ -1,28 +1,114 @@
 ---
+import React from "./icons/React.astro";
+import C from "./icons/Cplusplus.astro";
+import Svelte from "./icons/Svelte.astro";
+import javaScript from "./icons/javaScript.astro";
+import Html from "./icons/Html.astro";
+import Css from "./icons/Css.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import Php from "./icons/Php.astro";
+import MySQL from "./icons/MySQL.astro";
+const tags = {
+  React: {
+    name: "ReactJS",
+    class: "bg-blue-500 text-white",
+    icon: React,
+  },
+  C: {
+    name: "C++",
+    class: "bg-pink-500 text-white",
+    icon: C,
+  },
+  Html: {
+    name: "Html 5",
+    class: "bg-orange-500 text-white",
+    icon: Html,
+  },
+  Svelte: {
+    name: "Svelte",
+    class: "bg-orange-500 text-white",
+    icon: Svelte,
+  },
+  Tailwind: {
+    name: "Tailwind",
+    class: "bg-blue-800 text-white",
+    icon: Tailwind,
+  },
+  Astro: {
+    name: "Astro",
+    class: "bg-orange-700 text-white",
+    icon: AstroIcon,
+  },
+  JavaScript: {
+    name: "JavaScript",
+    class: "bg-yellow-500",
+    icon: javaScript,
+  },
+  TypeScript: {
+    name: "TypeScript",
+    class: "bg-blue-600",
+    icon: TypeScript,
+  },
+  Css: {
+    name: "Css",
+    class: "bg-blue-800",
+    icon: Css,
+  },
+  Php: {
+    name: "Php",
+    class: "bg-purple-900",
+    icon: Php,
+  },
+  MySQL: {
+    name: "MySQL",
+    class: "bg-gray-400",
+    icon: MySQL,
+  },
+};
 const data = [
   {
+    title: "Dropi.co replica con React",
+    subTitle: "Proyecto Personal - 2023",
+    description:
+      "Este proyecto tiene como objetivo replicar el sitio web existente en https://dropi.co utilizando tecnologías como ReactJS. El objetivo principal es transformar la página en una Aplicación de Página Única (SPA) para mejorar la experiencia del usuario y mantener la fidelidad visual y funcional lo más cercana posible al original.",
+    tags: [tags.JavaScript, tags.React],
+  },
+  {
+    title: "Bancolombia, replica con Astro + Tailwind",
+    subTitle: "Proyecto Personal - 2024",
+    description:
+      "Este proyecto está basado en el sitio web de Bancolombia https://www.bancolombia.com/personas. El objetivo principal es replicar su página lo mejor posible.",
+    tags: [tags.Astro, tags.Tailwind],
+  },
+  {
     title: "Challenge Encriptador de Texto",
-    subTitle: "Alura Latam- Oracle ONE, 2023 - Online",
+    subTitle: "Alura - Oracle, 2023 - Online",
     description:
       "Desarrollo de un cifrador de texto que utiliza principalmente prácticas de JavaScript para la lógica responsable del procesamiento y cifrado de texto. Además, integra el manejo de eventos, la capacidad de respuesta y estilos implementados a través de HTML y CSS.",
-  },
-  {
-    title: "Organización y gestión de equipos",
-    subTitle: "Alura Latam- Oracle ONE, 2023 - Online",
-    description:
-      "Sitio web para la organización de equipos utilizando React e implementación en JavaScript, incorporando el manejo de eventos en la lógica del proyecto junto con LocalStorage para una experiencia de usuario mejorada, además de garantizar la capacidad de respuesta",
-  },
-  {
-    title: "Portafolio personal",
-    subTitle: "Personal Project - 2023",
-    description:
-      "Página web interactiva con un diseño adaptable, utilizando principalmente React, así como JavaScript para una funcionalidad adecuada según los requisitos del proyecto. Manejo de las solicitudes fetch para la comunicación con un servidor backend local para almacenar datos utilizando Node.js, mientras que en la nube utilizo una infraestructura distinta.",
+    tags: [tags.JavaScript, tags.Css, tags.Html],
   },
   {
     title: "CRUD para la gestión de empleados, usuarios y puestos de trabajo",
-    subTitle: "Project for learning - 2023",
+    subTitle: "Proyecto Personal - 2023",
     description:
       "Este proyecto implica el desarrollo de un sistema de gestión que permite a una organización supervisar eficientemente a sus empleados, usuarios y puestos de trabajo. El sistema fue creado utilizando PHP y MySQL y se centra en las operaciones fundamentales de Crear, Leer, Actualizar y Eliminar (CRUD).",
+    tags: [tags.Php, tags.MySQL],
+  },
+  {
+    title: "Portafolio personal",
+    subTitle: "Proyecto Personal - 2023",
+    description:
+      "Página web interactiva con un diseño adaptable, utilizando principalmente React, así como JavaScript para una funcionalidad adecuada según los requisitos del proyecto. Manejo de las solicitudes fetch para la comunicación con un servidor backend local para almacenar datos utilizando Node.js, mientras que en la nube utilizo una infraestructura distinta.",
+    tags: [tags.JavaScript, tags.React, tags.Tailwind],
+  },
+  {
+    title: "Organización y gestión de equipos",
+    subTitle: "Alura - Oracle, 2023 - Online",
+    description:
+      "Sitio web para la organización de equipos utilizando React e implementación en JavaScript, incorporando el manejo de eventos en la lógica del proyecto junto con LocalStorage para una experiencia de usuario mejorada, además de garantizar la capacidad de respuesta",
+    tags: [tags.JavaScript, tags.React],
   },
 ];
 ---
@@ -30,12 +116,32 @@ const data = [
 <section class="pt-4">
   <h1 class="font-bold text-xl">Experiencia</h1>
   {
-    data.map((dato) => (
+    data.map(({ title, subTitle, tags, description }) => (
       <article class="py-2">
-        <h4 class="font-bold">{dato.title}</h4>
-        <h5 class="italic">{dato.subTitle}</h5>
-        <p class="text-sm">{dato.description}</p>
+        <h4 class="font-bold">{title}</h4>
+        <div class="flex flex-col gap-y-1">
+          <h5 class="italic font-xs pr-4">{subTitle}</h5>
+          <ul class="gap-x-2 flex mb-2">
+            {tags.map((tag) => (
+              <li
+                class={`flex text-white dark:text-white items-center gap-x-1 rounded-full py-0.5 px-2 text-sn ${tag.class}`}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p class="text-sm">{description}</p>
       </article>
     ))
   }
+  <div class="flex justify-center pt-8">
+    <a
+      href="https://github.com/Deyverson1?tab=repositories"
+      target="_blank"
+      class="lex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+      >Repositorios</a
+    >
+  </div>
 </section>

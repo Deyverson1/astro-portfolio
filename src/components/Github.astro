@@ -36,21 +36,19 @@ async function obtenerRepositoriosYCommits() {
     const cincoRepositoriosMasRecientes = repositoriosOrdenados.slice(0, 5);
     console.log(cincoRepositoriosMasRecientes);
     const latestCommits = cincoRepositoriosMasRecientes.map((repo) =>
-      fetch(
-        `https://api.github.com/repos/Deyverson1/${repo.repo}/commits`,
-      ).then((res) => {
-        if (!res.ok) {
-          throw new Error("Error con el fetching de Datos Repo");
-        }
-        return res.json();
-      }),
-    );
-    Promise.all(latestCommits).then((dato) => {
-      console.log(dato)
-    })
-    .catch((error) => {
-      console.log('Error en en el latestCommits')
-    })
+      fetch( `https://api.github.com/repos/Deyverson1/${repo.repo}/commits`, )
+      .then((res) => res.json())
+      .then(res => {
+       return res.map((dato) => dato.commit)
+      }//obtener los ultimos datos
+    ));
+    console.log(latestCommits)
+    // latestCommits.map((dato) => (
+    //   console.log(dato)
+    // ))
+    // .catch((error) => {
+    //   console.log('Error en en el latestCommits')
+    // })
     // const commits = latestCommits.map((commits)) => (
     //   console.log(commits)
     // )
@@ -79,4 +77,4 @@ obtenerRepositoriosYCommits();
         )
     })
   }
-</section>  --> 
+</section>  -->

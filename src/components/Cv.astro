@@ -15,11 +15,12 @@ import Experience from './Experience.astro'
 import Tools from "./Tools.astro";
 import Download from "./icons/Download.astro";
 import LinkedinIcon from "./icons/LinkedinIcon.astro";
-
+import Tailwind from "./icons/Tailwind.astro";
+import MySQL from './icons/MySQL.astro'
 const dataPerfil = [
   { title: "deyversongp@gmail.com", icon: Gmail,  },
   { title: "312 2138601", icon: WhatsApp, fill: 'fill-white'},
-  { title: "linkedin.com/in/deyverson", icon: LinkedinIcon, fill: 'fill-white'},
+  { title: "linkedin.com/in/deyverson", icon: LinkedinIcon, fill: 'fill-black'},
   { title: "github.com/Deyverson1", icon: GithubCat },
   { title: "https://portfolio-deyverson.vercel.app/", icon: Portatil },
 ];
@@ -31,6 +32,9 @@ const dataLearning = [
   {name: 'Php', icon: Php},
   {name: 'C++', icon: Cplusplus},  
   {name: 'Git', icon: Git},
+  {name: 'Tailwind', icon: Tailwind},
+  {name: 'MySQL', icon: MySQL},
+
 ]
 ---
 <div class="flex px-2 justify-end">
@@ -44,7 +48,7 @@ const dataLearning = [
     <h2 class="font-bold">Perfil</h2>
     {dataPerfil.map(dato => (
       <article class="flex items-center gap-x-2">
-        <dato.icon class=`size-4 ${dato.fill}` />
+        <dato.icon class=`size-4 dark:fill-white ${dato.fill}` />
         <h5>{dato.title}</h5>
         </article>
     ))}
@@ -62,6 +66,7 @@ const dataLearning = [
       <h2 class="font-bold ">Herramientas</h2>
       <Tools/>
     </section>
+    <Education/>
   </div>
   <div class="w-full px-2 pt-8 lg:w-8/12">
     <h1 class="text-center text-4xl">Deyverson Herrera Valencia</h1>
@@ -71,7 +76,7 @@ const dataLearning = [
       diversas metodologías de equipo que van desde habilidades blandas hasta metodologías de desarrollo web como Scrum. Mi objetivo es ampliar mi conjunto de habilidades para abarcar el desarrollo backend y poder crear proyectos web completos. Siempre estoy en búsqueda de nuevos desafíos y oportunidades para crecer como desarrollador. </h3>
     <h4></h4>
     <Experience/>
-    <Education/>
+
 
   </div>
 </section>
