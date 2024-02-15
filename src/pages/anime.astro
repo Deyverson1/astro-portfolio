@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { dataBase } from "../database/DataBaseAnime";
+import SectionContainer from "../components/SectionContainer.astro";
+---
+
+<Layout title="Anime">
+  <SectionContainer class="pt-32">
+    <section class="flex  flex-col gap-y-8">
+      {
+        dataBase.map(({ title, image, synopsis, fact, color }) => (
+          <article class="flex-wrap sm:justify-center xl:flex-nowrap flex flex-1 md:gap-x-10  space-x-0 space-y-8 group md:flex-row  md:space-y-0">
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+              <img
+                class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                src={image}
+                alt=""
+              />
+            </div>
+            <div class="w-full">
+              <p class=`pt-2 pb-4 ${color}`>{title}</p>
+              <p class="pb-2">{synopsis}</p>
+              <h6 class=`${color} italic font-medium`>{fact}</h6>
+            </div>
+          </article>
+        ))
+      }
+    </section>
+  </SectionContainer>
+</Layout>
+<style>
+  img {
+    width: 600px;
+    height: 350px;
+  }
+</style>
