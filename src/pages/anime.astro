@@ -5,7 +5,8 @@ import SectionContainer from "../components/SectionContainer.astro";
 ---
 
 <Layout title="Anime">
-  <SectionContainer class="pt-32">
+  <SectionContainer class="pt-32 px-2">
+    <h1 class="text-center px-20 pb-8 text-black dark:text-white">Esta es la lista de animes no contiene orden, ninguno es mas importante que el otro, cada uno representa algo importante</h1>
     <section class="flex  flex-col gap-y-8">
       {
         dataBase.map(({ title, image, synopsis, fact, color }) => (
@@ -17,10 +18,10 @@ import SectionContainer from "../components/SectionContainer.astro";
                 alt=""
               />
             </div>
-            <div class="w-full">
-              <p class=`pt-2 pb-4 ${color}`>{title}</p>
-              <p class="pb-2">{synopsis}</p>
-              <h6 class=`${color} italic font-medium`>{fact}</h6>
+            <div class="w-full flex flex-col justify-center">
+              <p class=` pb-4 ${color}`>{title}</p>
+              <p class="pb-2 text-xs lg:text-sm">{synopsis}</p>
+              <h6 class=`${color} text-xs lg:text-sm italic font-medium`>{fact}</h6>
             </div>
           </article>
         ))
@@ -31,6 +32,6 @@ import SectionContainer from "../components/SectionContainer.astro";
 <style>
   img {
     width: 600px;
-    height: 350px;
+    height: 400px;
   }
 </style>
