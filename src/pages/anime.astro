@@ -2,11 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import { dataBase } from "../database/DataBaseAnime";
 import SectionContainer from "../components/SectionContainer.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Anime">
   <SectionContainer class="pt-32 px-2">
-    <h1 class="text-center px-4 lg:px-20 pb-8 text-black dark:text-white">Esta es la lista de animes no contiene orden, ninguno es mas importante que el otro, cada uno representa algo importante</h1>
+    <h1 class="text-center px-4 lg:px-20 pb-8 text-black dark:text-white">Esta lista de animes no contiene orden, ninguno es mas importante que el otro, cada uno representa algo importante</h1>
     <section class="flex  flex-col gap-y-8">
       {
         dataBase.map(({ title, image, synopsis, fact, color }) => (
@@ -29,6 +30,7 @@ import SectionContainer from "../components/SectionContainer.astro";
     </section>
   </SectionContainer>
 </Layout>
+<Footer/>
 <style>
   img {
     width: 600px;
