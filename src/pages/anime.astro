@@ -6,7 +6,7 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Anime">
-  <SectionContainer class="pt-32 px-2">
+  <SectionContainer class="pt-32 px-2" transition:name="anime box">
     <section class="flex  flex-col gap-y-8">
       {
         dataBase.map(({ title, image, synopsis, fact, color }) => (
