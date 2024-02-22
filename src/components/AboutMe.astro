@@ -1,8 +1,11 @@
 ---
-import Netflix from './icons/Netflix.astro'
-import Spotify from './icons/Spotify.astro'
+import Netflix from "./icons/Netflix.astro";
+import Spotify from "./icons/Spotify.astro";
 ---
-<article class="flex justify-center px-2 lg:px-0 flex-wrap lg:flex-nowrap  gap-x-2">
+
+<article
+  class="flex justify-center px-2 lg:px-0 flex-wrap lg:flex-nowrap gap-x-2"
+>
   <div
     class="w-6/12 flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
   >
@@ -35,23 +38,22 @@ import Spotify from './icons/Spotify.astro'
       > hasta aplicaciones de lógica y encriptamiento.
     </p>
   </div>
- 
 </article>
-<section class="display flex item-center justify-center pt-4">
+<section class="display flex item-center justify-center gap-x-4 pt-4">
   <a
-class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-300 hover:border-gray-700 group max-w-fit  focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2"
-href="/anime"
->
-<Netflix class="size-4  fill-black dark:fill-white"/>
-Anime
-</a>
-<a
-class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-300 hover:border-gray-700 group max-w-fit  focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2"
-href="/music"
->
-<Spotify class="size-4  fill-black dark:fill-white"/>
-Música
-</a>
+    class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-300 hover:border-gray-700 group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2"
+    href="/anime"
+  >
+    <Netflix class="size-4 fill-black dark:fill-white" />
+    Anime
+  </a>
+  <a
+    class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-300 hover:border-gray-700 group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2"
+    href="/music"
+  >
+    <Spotify class="size-4 fill-black dark:fill-white" />
+    Música
+  </a>
 </section>
 <style>
   strong {

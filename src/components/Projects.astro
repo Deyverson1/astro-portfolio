@@ -10,7 +10,7 @@ import GithubCat from "./icons/GithubCat.astro";
 import BrandVercel from "./icons/BrandVercel.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
 import Tailwind from "./icons/Tailwind.astro";
-import TypeScript from './icons/TypeScript.astro'
+import TypeScript from "./icons/TypeScript.astro";
 const tags = {
   React: {
     name: "ReactJS",
@@ -59,13 +59,12 @@ const tags = {
   },
 };
 const projects = [
-{
+  {
     title: "Bancolombia - Replic with Astro",
     description:
       "Actualmente en proceso de replica del sitio web de Bancolombia https://www.bancolombia.com/personas",
-    github:
-      "https://github.com/Deyverson1/bancolombia-replic",
-    link: 'https://bancolombia-replic.vercel.app/',
+    github: "https://github.com/Deyverson1/bancolombia-replic",
+    link: "https://bancolombia-replic.vercel.app/",
     image: "/projects/Bancolombia.png",
     tags: [tags.Astro, tags.Tailwind, tags.TypeScript],
   },
@@ -88,15 +87,14 @@ const projects = [
     tags: [tags.React, tags.JavaScript],
   },
   {
-    title: "Challenger Encriptador",
+    title: "Anime Search",
     description:
-      "Fue presentado como Challenge en la formación FrontEnd G5 Oracle Next Education el cual implicaba el desarrollo de un Ecriptador-Desencriptador",
+      "Tiene como objetivo la implementación de búsqueda de anime a partir de varias APIS como https://jikan.moe/, https://animechan.xyz/, https://nekos.best/ ",
     github:
-      "https://github.com/Deyverson1/SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura",
-      link:
-      "https://encriptador-github-io.vercel.app/",
-    image: "/projects/Encriptador.png",
-    tags: [tags.JavaScript, tags.Html, tags.Css],
+      "https://github.com/Deyverson1/anime-search",
+    link: "https://anime-search-deyverson1.vercel.app/",
+    image: "/projects/animeSearch.png",
+    tags: [tags.TypeScript, tags.Tailwind, tags.React],
   },
   {
     title: "Implementación de sensores",
@@ -104,12 +102,11 @@ const projects = [
       "Este proyecto contiene código de Arduino y Processing para la medida con los sensores SHT-30, HC-SR04, Termistor.",
     github:
       "https://github.com/Deyverson1/SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura",
+      link: '',
     image: "/projects/Sensores.png",
     tags: [tags.C],
   },
-  
 ];
-
 ---
 
 <div class="flex px-2 lg:px-0 flex-col gap-y-16 flex-wrap">
@@ -152,19 +149,16 @@ const projects = [
                   Code
                 </a>
               )}
-              {
-                //condicionado, en caso de no contener repositorio o sitio web
-                link && (
-                  <a
-                    target="_blank"
-                    class="flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-                    href={link}
-                  >
-                    <BrandVercel class="size-5" />
-                    Preview
-                  </a>
-                )
-              }
+              {link && (
+                <a
+                  target="_blank"
+                  class="flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                  href={link}
+                >
+                  <BrandVercel class="size-5" />
+                  Preview
+                </a>
+              )}
             </footer>
           </div>
         </div>
@@ -172,6 +166,11 @@ const projects = [
     ))
   }
   <div class="flex justify-center">
-    <a href="https://github.com/Deyverson1?tab=repositories" target="_blank" class="lex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Ver mas...</a>
+    <a
+      href="https://github.com/Deyverson1?tab=repositories"
+      target="_blank"
+      class="lex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+      >Ver mas...</a
+    >
   </div>
 </div>
