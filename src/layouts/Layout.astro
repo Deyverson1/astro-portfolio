@@ -1,6 +1,5 @@
 ---
 import Header from "../components/Header.astro";
-import { ViewTransitions } from "astro:transitions";
 // Supports weights 100-900
 import "@fontsource-variable/onest";
 interface Props {
@@ -18,7 +17,6 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<ViewTransitions fallback="none"/>
 	</head>
 	<body class="relative text-black dark:text-white">
 	<div class="absolute inset-0 top-0  -z-10 h-full w-full 
@@ -39,11 +37,7 @@ const { title } = Astro.props;
 			font-family: "Onest Variable", system-ui, sans-serif;
 		}
 		html {
-			/* background: #13151a; */
 			scroll-behavior: smooth;
-		}
-		body {
-			/* color: rgba(17, 17, 17, 0.9); */
 		}
 		#header-nav {
 			animation: blur linear both 0.5s;
