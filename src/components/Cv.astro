@@ -17,24 +17,29 @@ import Download from "./icons/Download.astro";
 import LinkedinIcon from "./icons/LinkedinIcon.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import MySQL from './icons/MySQL.astro'
+import Next from './icons/Next.astro'
+import TypeScript from "./icons/TypeScript.astro";
+import Node from './icons/Node.astro'
 const dataPerfil = [
-  { title: "deyversongp@gmail.com", icon: Gmail,  },
-  { title: "312 2138601", icon: WhatsApp, fill: 'fill-white'},
-  { title: "linkedin.com/in/deyverson", icon: LinkedinIcon, fill: 'fill-black'},
-  { title: "github.com/Deyverson1", icon: GithubCat },
-  { title: "https://portfolio-deyverson.vercel.app/", icon: Portatil },
+  { title: "deyversongp@gmail.com", icon: Gmail, href: 'mailto:deyversongp@gmail.com' },
+  { title: "312 2138601", icon: WhatsApp, fill: 'fill-white', },
+  { title: "linkedin.com/in/deyverson", icon: LinkedinIcon, fill: 'fill-black', href: 'https://www.linkedin.com/in/deyverson/'},
+  { title: "github.com/Deyverson1", icon: GithubCat, href: 'https://github.com/Deyverson1' },
+  { title: "https://portfolio-deyverson.vercel.app/", icon: Portatil, href: 'https://portfolio-deyverson.vercel.app/' },
 ];
 const dataLearning = [
   {name: 'JavaScript', icon: JavaScript},
   {name: 'ReactJS', icon: React},
   {name: 'Astro', icon: AstroIcon},
   {name: 'Svelte', icon: Svelte},
+  {name: 'TypeScript', icon: TypeScript},
   {name: 'Php', icon: Php},
   {name: 'C++', icon: Cplusplus},  
   {name: 'Git', icon: Git},
   {name: 'Tailwind', icon: Tailwind},
   {name: 'MySQL', icon: MySQL},
-
+  {name: 'NodeJS', icon: Node},
+  {name: 'NextJS', icon: Next},
 ]
 ---
 <div class="flex px-2 justify-end">
@@ -49,7 +54,7 @@ const dataLearning = [
     {dataPerfil.map(dato => (
       <article class="flex items-center gap-x-2">
         <dato.icon class=`size-4 dark:fill-white ${dato.fill}` />
-        <h5>{dato.title}</h5>
+        <a target="_blank" href={dato.href} class="hover:underline"> <h5>{dato.title}</h5></a>
         </article>
     ))}
     <h2 class="pt-7 font-bold">Aprendiendo</h2>

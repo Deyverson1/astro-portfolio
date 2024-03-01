@@ -4,11 +4,7 @@ const contentNav = [
   {title: "Inicio", label:'/', url:'/'},
   { title: "Proyectos", label: "/#proyectos", url: "/#projects" },
   { title: "Sobre mi", label: "/#sobre-mi", url: "/#sobre-mi" },
-  {
-    title: "Contacto",
-    label: "/#contacto",
-    url: "mailto:deyversongp@gmail.com",
-  },
+  { title: "Contacto", label: "/#contacto", url: "mailto:deyversongp@gmail.com",},
   { title: "Curriculum", label: "/#curriculum", url: "/curriculum" },
 ];
 ---
@@ -22,7 +18,7 @@ const contentNav = [
     {
       contentNav.map((content) => (
         <a
-          class="  text-sm relative block px-2 py-2  hover:text-blue-500 dark:hover:text-blue-500"
+          class="  text-sm relative block px-2 py-2  hover:text-gray-500 dark:hover:text-gray-600"
           aria-label={content.label}
           href={content.url}
         >
@@ -40,10 +36,11 @@ const contentNav = [
     animation-timeline: scroll();
     animation-range: 0 100px;
   }
-
+ 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur text-white bg-gray-500 dark:bg-blue-500 ring-black/10;
+      @apply shadow-lg ring-1 backdrop-blur text-white bg-blue-600 dark:bg-blue-500 ring-black/10;
     }
   }
+  
 </style>
