@@ -8,7 +8,8 @@
     "Dropi",
     "github",
     "Latam",
-    "Mecatrónica"
+    "Mecatrónica",
+    "mechatronics"
   ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }
