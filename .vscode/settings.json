@@ -9,5 +9,6 @@
     "github",
     "Latam",
     "Mecatrónica"
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

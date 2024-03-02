@@ -10,10 +10,10 @@ const contentNav = [
 ---
 
 <header
-  class="fixed top-0 z-10  flex items-cente justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-10  flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class=" flex lg:px-3  text-medium font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex lg:px-3 rounded-full text-medium font-medium  text-gray-600 dark:text-gray-200 justify-center items-center"
   >
     {
       contentNav.map((content) => (
@@ -39,7 +39,7 @@ const contentNav = [
  
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur text-white bg-blue-600 dark:bg-blue-500 ring-black/10;
+      @apply shadow-lg ring-1 backdrop-blur text-white bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 ring-black/10;
     }
   }
   

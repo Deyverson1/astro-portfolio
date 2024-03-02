@@ -60,59 +60,64 @@ const tags = {
 };
 const projects = [
   {
-    title: "Bancolombia - Replic with Astro",
+    title: "Dropi.co - Replica con ReactJS",
     description:
-      "Actualmente en proceso de replica del sitio web de Bancolombia https://www.bancolombia.com/personas",
-    github: "https://github.com/Deyverson1/bancolombia-replic",
-    link: "https://bancolombia-replic.vercel.app/",
-    image: "/projects/Bancolombia.png",
-    tags: [tags.Astro, tags.Tailwind, tags.TypeScript],
-  },
-  {
-    title: "Search Movies and books!",
-    description:
-      "Fue creado con el propósito de aprender acerca de Svelte, actualmente presenta dos funciones principales las cuales son la búsqueda de libros y películas",
-    link: "https://search-movies-and-books.vercel.app/",
-    github: "https://github.com/Deyverson1/search-movies-and-books",
-    image: "/projects/SearchMovie.png",
-    tags: [tags.Svelte, tags.JavaScript],
-  },
-  {
-    title: "Dropi.co - Replic with ReactJs",
-    description:
-      "Tiene como objetivo replicar la página web existente en https://dropi.co utilizando tecnologías avanzadas como ReactJS. ",
+      "Tiene como objetivo replicar la página web existente en https://dropi.co utilizando ReactJS principalmente, por medio del cual busco mejorar el rendimiento utilizando el enfoque SPA, ademas de presentar ciertos aportes propios con respecto al diseño de la pagina.",
     link: "https://dropi-replic.vercel.app/",
     github: "https://github.com/Deyverson1/dropi-replic",
     image: "/projects/Dropies.png",
     tags: [tags.React, tags.JavaScript],
+    color: 'border-orange-500'
   },
   {
-    title: "Anime Search",
+    title: "Anime Search - Consumo de APIs",
     description:
-      "Tiene como objetivo la implementación de búsqueda de anime a partir de varias APIS como https://jikan.moe/, https://animechan.xyz/, https://nekos.best/ ",
+      "Tiene como objetivo la implementación de búsqueda de anime a partir del consumo de varias APIS como https://jikan.moe/, https://animechan.xyz/, https://nekos.best/, presento una implementación de TypeScript para mejorar la calidad del código con respecto a los errores",
     github:
       "https://github.com/Deyverson1/anime-search",
     link: "https://anime-search-deyverson1.vercel.app/",
     image: "/projects/animeSearch.png",
     tags: [tags.TypeScript, tags.Tailwind, tags.React],
+    color: 'border-yellow-600'
   },
   {
-    title: "Implementación de sensores",
+    title: "Bancolombia - Replica con Astro",
     description:
-      "Este proyecto contiene código de Arduino y Processing para la medida con los sensores SHT-30, HC-SR04, Termistor.",
-    github:
-      "https://github.com/Deyverson1/SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura",
-      link: '',
-    image: "/projects/Sensores.png",
-    tags: [tags.C],
+      "Actualmente en proceso de replica del sitio web de Bancolombia https://www.bancolombia.com/personas, esta desarrollado principalmente con Astro, ademas de una pequeña integración de TypeScript,  por la parte los estilos se realizan por medio de Tailwind",
+    github: "https://github.com/Deyverson1/bancolombia-replic",
+    link: "https://bancolombia-replic.vercel.app/",
+    image: "/projects/Bancolombia.png",
+    tags: [tags.Astro, tags.Tailwind, tags.TypeScript],
+    color: 'border-white'
   },
+  {
+    title: "Search Movies and books!",
+    description:
+    "Fue creado con el propósito de aprender acerca de Svelte, actualmente presenta dos funciones principales las cuales son la búsqueda de libros y películas",
+    link: "https://search-movies-and-books.vercel.app/",
+    github: "https://github.com/Deyverson1/search-movies-and-books",
+    image: "/projects/SearchMovie.png",
+    tags: [tags.Svelte, tags.JavaScript],
+    color: 'border-sky-500'
+  },
+  // {
+  //   title: "Implementación de sensores",
+  //   description:
+  //     "Este proyecto contiene código de Arduino y Processing para la medida con los sensores SHT-30, HC-SR04, Termistor.",
+  //   github:
+  //     "https://github.com/Deyverson1/SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura",
+  //     link: '',
+  //   image: "/projects/Sensores.png",
+  //   tags: [tags.C],
+  //   color: 'border-pink-600'
+  // },
 ];
 ---
 
 <div class="flex px-2 lg:px-0 flex-col gap-y-16 flex-wrap">
   {
-    projects.map(({ title, image, description, tags, github, link }) => (
-      <article class="flex-wrap sm:justify-center xl:flex-nowrap flex flex-1 md:gap-x-10  space-x-0 space-y-8 group md:flex-row-reverse  md:space-y-0 ">
+    projects.map(({ title, image, description, tags, github, link, color }) => (
+      <article class={`border-l-4 pl-2 lg:pl-4 ${color} flex-wrap sm:justify-center xl:flex-nowrap flex flex-1 md:gap-x-10  space-x-0 space-y-8 group md:flex-row-reverse  md:space-y-0`}>
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
@@ -142,7 +147,7 @@ const projects = [
               {github && (
                 <a
                   target="_blank"
-                  class=" flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text- px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                  class=" flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text- px-4 py-2 me-2 mb-2 dark:bg-neutral-950 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                   href={github}
                 >
                   <GithubCat class="size-5" />
@@ -152,7 +157,7 @@ const projects = [
               {link && (
                 <a
                   target="_blank"
-                  class="flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                  class="flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-neutral-950 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                   href={link}
                 >
                   <BrandVercel class="size-5" />
@@ -169,7 +174,7 @@ const projects = [
     <a
       href="https://github.com/Deyverson1?tab=repositories"
       target="_blank"
-      class="lex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+      class="lex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-neutral-950 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700"
       >Ver mas...</a
     >
   </div>

@@ -5,6 +5,10 @@ import Svelte from "./icons/Svelte.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import JavaScript from "./icons/javaScript.astro";
 import TypeScript from "./icons/TypeScript.astro"
+import Node from "./icons/Node.astro";
+import Php from "./icons/Php.astro";
+import MySQL from "./icons/MySQL.astro";
+import Next from "./icons/Next.astro";
 const data = [
   { name: "JavaScript", icon: JavaScript },
   { name: "TypeScript", icon: TypeScript },
@@ -12,6 +16,9 @@ const data = [
   { name: "Astro", icon: AstroIcon },
   { name: "Svelte", icon: Svelte },
   { name: "Tailwind", icon: Tailwind },
+  { name: "NodeJs", icon: Node },
+  { name: "Php", icon: Php },
+
 ];
 ---
 
@@ -21,7 +28,7 @@ const data = [
   <article class="flex flex-wrap">
     <div class="gap-x-2">
       <div
-        class="flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+        class="flex items-center gap-x-2 text-gray-900  border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2  dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
       >
         <data.icon class="size-10 fill-black dark:fill-white"/>
         <h3 class="text-gray-900 dark:text-white font-sm">{data.name}</h3>
