@@ -4,11 +4,11 @@ import Footer from "../../../components/Footer.astro";
 ---
 
 <Layout title="Documentacion">
-  <section class="bg-black min-h-screen text-white">
+  <section class="dark:bg-black bg-white min-h-screen text-black dark:text-white">
     <div class="py-16 w-full mx-auto container lg:max-w-4xl md:max-w-3xl">
       <main class="fixed top-1/4 w-2/12">
         <header class="w-7/12" id="navbar">
-          <nav class="border-l-2 flex flex-col gap-y-4">
+          <nav class="border-l-2 border-black dark:border-white flex flex-col gap-y-4">
             <a href="#description">Descripcion</a>
             <a href="#components">Componentes</a>
             <a href="#installation">Instalación</a>
@@ -21,7 +21,7 @@ import Footer from "../../../components/Footer.astro";
       </main>
 
       <article
-        class="flex flex-col gap-y-8 absolute w-6/12 box-content right-60"
+        class="flex flex-col gap-y-8 absolute w-6/12 box-content right-60 py-4"
       >
         <section>
           <h3 id="description">Implementación de sensores</h3>
