@@ -3,47 +3,42 @@ import BrandVercel from "./icons/BrandVercel.astro";
 import GithubCat from "./icons/GithubCat.astro";
 import Analytics from './icons/Analytics.astro'
 
-type AstroProps = {
-  projects: any;
-  tags: any;
-};
+const { projects } = Astro.props;
 
-const { projects }: AstroProps = Astro.props;
-
-interface Props {
-  projects: any 
-  title: string;
-  image: string;
-  description: string;
-  github: string;
-  link: string;
-  color: string;
-  tags: any;
-  documentation: string
-}
+// interface Props {
+//   projects: any 
+//   title: string;
+//   image: string;
+//   description: string;
+//   github: string;
+//   link: string;
+//   color: string;
+//   tags: any;
+//   documentation: string
+// }
 ---
 
 <div class="flex px-2 lg:px-0 flex-col gap-y-16 flex-wrap">
   {
     projects.map(
-      (({ title, image, description, tags, github, link, color, documentation }: Props) => (
+      (( data: { title: string, image: string, description: string, tags: any, github: string, link: string, color: string, documentation: string }) => (
         <article
-          class={`border-l-4 pl-2 lg:pl-4 ${color} flex-wrap sm:justify-center xl:flex-nowrap flex flex-1 md:gap-x-10  space-x-0 space-y-8 group md:flex-row-reverse  md:space-y-0`}
+          class={`border-l-4 pl-2 lg:pl-4 ${data.color} flex-wrap sm:justify-center xl:flex-nowrap flex flex-1 md:gap-x-10  space-x-0 space-y-8 group md:flex-row-reverse  md:space-y-0`}
         >
           <div class="w-full md:w-1/2">
             <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
               <img
                 class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-                src={image}
-                alt={"Extraido de" + title}
+                src={data.image}
+                alt={"Extraido de" + data.title}
               />
             </div>
           </div>
           <div class="w-full md:w-1/2 md:max-w-lg">
-            <h3 class="text-2xl font-bold pt-0 mt-0">{title}</h3>
+            <h3 class="text-2xl font-bold pt-0 mt-0">{data.title}</h3>
             <div class="flex flex-row flex-wrap mt-2">
               <ul class="gap-x-2 flex mb-2">
-                {tags.map((tag: { icon: any; name: string; class: string }) => (
+                {data.tags.map((tag: { icon: any; name: string; class: string }) => (
                   <li
                     class={`flex text-white dark:text-white items-center gap-x-2 rounded-full py-0.5 px-2 text-sn ${tag.class}`}
                   >
@@ -53,33 +48,33 @@ interface Props {
                 ))}
               </ul>
               <div class="mt-2 text-gray-700 dark:text-gray-400">
-                {description}
+                {data.description}
               </div>
               <footer class="flex items-end justify-start mt-4 gap-x-2">
-                {github && (
+                {data.github && (
                   <a
                     target="_blank"
                     class=" flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text- px-4 py-2 me-2 mb-2 dark:bg-neutral-950 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-                    href={github}
+                    href={data.github}
                   >
                     <GithubCat class="size-5" />
                     Code
                   </a>
                 )}
-                {link && (
+                {data.link && (
                   <a
                     target="_blank"
                     class="flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-neutral-950 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-                    href={link}
+                    href={data.link}
                   >
                     <BrandVercel class="size-5" />
                     Preview
                   </a>
                 )}
-                {documentation && (
+                {data.documentation && (
                   <a
                     class="flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-neutral-950 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-                    href={documentation}
+                    href={data.documentation}
                   >
                     <Analytics class="size-5" />
                     Documentación
