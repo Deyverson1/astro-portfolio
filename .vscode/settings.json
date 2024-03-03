@@ -9,7 +9,8 @@
     "github",
     "Latam",
     "Mecatrónica",
-    "mechatronics"
+    "mechatronics",
+    "Tersmistor"
   ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }

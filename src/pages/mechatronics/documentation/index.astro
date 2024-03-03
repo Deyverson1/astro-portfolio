@@ -1,8 +1,268 @@
 ---
-import Layout from "../../../layouts/Layout.astro"
-
+import Layout from "../../../layouts/Layout.astro";
+import Footer from "../../../components/Footer.astro";
 ---
 
 <Layout title="Documentacion">
-  <h1>hola</h1>
+  <section class="bg-black min-h-screen text-white">
+    <div class="py-16 w-full mx-auto container lg:max-w-4xl md:max-w-3xl">
+      <main class="fixed top-1/4 w-2/12">
+        <header class="w-7/12" id="navbar">
+          <nav class="border-l-2 flex flex-col gap-y-4">
+            <a href="#description">Descripcion</a>
+            <a href="#components">Componentes</a>
+            <a href="#installation">Instalación</a>
+            <a href="#structure">Estructura</a>
+            <a href="#evidence">Pruebas</a>
+            <a href="#problems">Problemas</a>
+            <a href="#references">Referencias</a>
+          </nav>
+        </header>
+      </main>
+
+      <article
+        class="flex flex-col gap-y-8 absolute w-6/12 box-content right-60"
+      >
+        <section>
+          <h3 id="description">Implementación de sensores</h3>
+          <p>
+            <ul class="gap-y-4 flex flex-col">
+              <li>
+                Este proyecto fue realizado como laboratorio #6 en la clase de
+                Sistemas Digitales Programables en la carrera de Mecatrónica
+                Industrial. El propósito principal de esta practica fue afianzar
+                el conocimiento acerca de la implementación de sensores en el
+                ámbito industrial.
+              </li>
+              <li>
+                Este proyecto consiste en la implementación de tres sensores
+                para la medida de Temperatura, Humedad y Distancia. En este caso
+                se utilizaron SHT-30 (Humedad) , HC-SR04 (Distancia), Tersmistor
+                (Temperatura)
+              </li>
+              <li>
+                En esta documentación encontraras una breve recopilación de
+                resultados obtenidos, ademas del código implementado Arduino y Processing para la medida
+                correcta de los sensores SHT-30 (Humedad)💧,  HC-SR04 (Distancia)📏,
+                 Termistor (NTC 203)🌡️
+              </li>
+              <li>
+                Por medio de una red móvil a la cual se podrá conectar nuestro
+                ESP32 se generará una página desde la cual podremos controlar el
+                funcionamiento de nuestra aplicación.
+              </li>
+              <li>
+                <h1>Importancia:</h1>
+                <p>
+                  Los sensores presentan un papel fundamental en la industria
+                  debido a su capacidad para recopilar datos precisos y en
+                  tiempo real con respecto a un proceso, entre ellos:
+                </p>
+              </li>
+            </ul>
+          </p>
+        </section>
+        <section>
+          <h3 id="components">Componentes</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta autem qui
+          repellendus illum quibusdam magni nobis porro nam sed molestias? Distinctio
+          dolor quas rerum nemo, incidunt culpa debitis consequuntur vel. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Eaque, excepturi. Sapiente
+          asperiores atque officia inventore delectus quibusdam, quod voluptate itaque!
+          Sequi aliquid voluptatum cupiditate dolorem sapiente dignissimos reprehenderit
+          quisquam exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Nam, incidunt dolores beatae nisi at libero enim delectus eaque ad,
+          eveniet tenetur culpa eum eius. Error asperiores accusamus magnam quis
+          quisquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+          aliquid reprehenderit maxime odit, nostrum ut cum incidunt, deleniti architecto
+          aspernatur accusantium provident similique repudiandae totam aliquam. Possimus
+          blanditiis provident veritatis. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Quis doloremque repellendus minus exercitationem quod
+          excepturi iusto quam illo odit sit eligendi ea ipsam perspiciatis saepe
+          animi, nesciunt molestias, at cumque. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Vitae sint eius temporibus ipsam rerum assumenda placeat
+          aut ipsum est illum! Doloribus saepe beatae fugit blanditiis officiis animi
+          quibusdam optio numquam! Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Earum quis doloremque dolore, consequatur animi dolores iure inventore
+          dolorum? Consectetur obcaecati sapiente ex aut optio aliquam totam delectus.
+          Quasi, iure facilis? Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Voluptate tenetur eaque quam eius eveniet suscipit laborum vero quasi?
+          Quis reprehenderit, delectus inventore quia rerum deleniti corrupti eaque
+          eum facilis corporis?
+        </section>
+        <section>
+          <h3 id="installation">Instalación</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cum, cumque
+          illum illo ab explicabo id debitis tempora voluptates nihil recusandae
+          unde et fugiat assumenda totam laborum voluptatem consequuntur perspiciatis.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, excepturi.
+          Sapiente asperiores atque officia inventore delectus quibusdam, quod voluptate
+          itaque! Sequi aliquid voluptatum cupiditate dolorem sapiente dignissimos
+          reprehenderit quisquam exercitationem. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Nam, incidunt dolores beatae nisi at libero enim delectus
+          eaque ad, eveniet tenetur culpa eum eius. Error asperiores accusamus magnam
+          quis quisquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Omnis aliquid reprehenderit maxime odit, nostrum ut cum incidunt, deleniti
+          architecto aspernatur accusantium provident similique repudiandae totam
+          aliquam. Possimus blanditiis provident veritatis. Lorem ipsum dolor sit,
+          amet consectetur adipisicing elit. Quis doloremque repellendus minus exercitationem
+          quod excepturi iusto quam illo odit sit eligendi ea ipsam perspiciatis
+          saepe animi, nesciunt molestias, at cumque. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Vitae sint eius temporibus ipsam rerum assumenda
+          placeat aut ipsum est illum! Doloribus saepe beatae fugit blanditiis officiis
+          animi quibusdam optio numquam! Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Earum quis doloremque dolore, consequatur animi dolores
+          iure inventore dolorum? Consectetur obcaecati sapiente ex aut optio aliquam
+          totam delectus. Quasi, iure facilis? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Voluptate tenetur eaque quam eius eveniet suscipit laborum
+          vero quasi? Quis reprehenderit, delectus inventore quia rerum deleniti
+          corrupti eaque eum facilis corporis?
+        </section>
+        <section>
+          <h3 id="structure">Estructura</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsam quidem
+          incidunt odit nam deleniti enim quo a aperiam, rem eaque dicta voluptatibus
+          similique? Reprehenderit hic labore autem ab quod. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Eaque, excepturi. Sapiente asperiores
+          atque officia inventore delectus quibusdam, quod voluptate itaque! Sequi
+          aliquid voluptatum cupiditate dolorem sapiente dignissimos reprehenderit
+          quisquam exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Nam, incidunt dolores beatae nisi at libero enim delectus eaque ad,
+          eveniet tenetur culpa eum eius. Error asperiores accusamus magnam quis
+          quisquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+          aliquid reprehenderit maxime odit, nostrum ut cum incidunt, deleniti architecto
+          aspernatur accusantium provident similique repudiandae totam aliquam. Possimus
+          blanditiis provident veritatis. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Quis doloremque repellendus minus exercitationem quod
+          excepturi iusto quam illo odit sit eligendi ea ipsam perspiciatis saepe
+          animi, nesciunt molestias, at cumque. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Vitae sint eius temporibus ipsam rerum assumenda placeat
+          aut ipsum est illum! Doloribus saepe beatae fugit blanditiis officiis animi
+          quibusdam optio numquam! Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Earum quis doloremque dolore, consequatur animi dolores iure inventore
+          dolorum? Consectetur obcaecati sapiente ex aut optio aliquam totam delectus.
+          Quasi, iure facilis? Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Voluptate tenetur eaque quam eius eveniet suscipit laborum vero quasi?
+          Quis reprehenderit, delectus inventore quia rerum deleniti corrupti eaque
+          eum facilis corporis?
+        </section>
+        <section>
+          <h3 id="evidence">Pruebas</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sit expedita
+          numquam temporibus, voluptates sed id minus commodi tempora molestiae quis
+          pariatur magnam rerum ex harum explicabo ducimus? Sed, quasi? Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Eaque, excepturi. Sapiente
+          asperiores atque officia inventore delectus quibusdam, quod voluptate itaque!
+          Sequi aliquid voluptatum cupiditate dolorem sapiente dignissimos reprehenderit
+          quisquam exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Nam, incidunt dolores beatae nisi at libero enim delectus eaque ad,
+          eveniet tenetur culpa eum eius. Error asperiores accusamus magnam quis
+          quisquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+          aliquid reprehenderit maxime odit, nostrum ut cum incidunt, deleniti architecto
+          aspernatur accusantium provident similique repudiandae totam aliquam. Possimus
+          blanditiis provident veritatis. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Quis doloremque repellendus minus exercitationem quod
+          excepturi iusto quam illo odit sit eligendi ea ipsam perspiciatis saepe
+          animi, nesciunt molestias, at cumque. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Vitae sint eius temporibus ipsam rerum assumenda placeat
+          aut ipsum est illum! Doloribus saepe beatae fugit blanditiis officiis animi
+          quibusdam optio numquam! Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Earum quis doloremque dolore, consequatur animi dolores iure inventore
+          dolorum? Consectetur obcaecati sapiente ex aut optio aliquam totam delectus.
+          Quasi, iure facilis? Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Voluptate tenetur eaque quam eius eveniet suscipit laborum vero quasi?
+          Quis reprehenderit, delectus inventore quia rerum deleniti corrupti eaque
+          eum facilis corporis?
+        </section>
+        <section>
+          <h3 id="problems">Problemas</h3>
+          Problemas con las medidas del termistor: En algunos casos se soluciona
+          cambiando de pin. La resistencia utilizada debe ser igual a la del termistor
+          Problemas con las medidas del HC-SR04 En algunos casos se presentan poblemas
+          en el voltaje, en caso de tener todas las conexiones a 3.3v probar con
+          5v para el HC-SR04
+        </section>
+        <section id="references">
+          <h3>Referencias</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, excepturi.
+          Sapiente asperiores atque officia inventore delectus quibusdam, quod voluptate
+          itaque! Sequi aliquid voluptatum cupiditate dolorem sapiente dignissimos
+          reprehenderit quisquam exercitationem. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Nam, incidunt dolores beatae nisi at libero enim delectus
+          eaque ad, eveniet tenetur culpa eum eius. Error asperiores accusamus magnam
+          quis quisquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Omnis aliquid reprehenderit maxime odit, nostrum ut cum incidunt, deleniti
+          architecto aspernatur accusantium provident similique repudiandae totam
+          aliquam. Possimus blanditiis provident veritatis. Lorem ipsum dolor sit,
+          amet consectetur adipisicing elit. Quis doloremque repellendus minus exercitationem
+          quod excepturi iusto quam illo odit sit eligendi ea ipsam perspiciatis
+          saepe animi, nesciunt molestias, at cumque. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Vitae sint eius temporibus ipsam rerum assumenda
+          placeat aut ipsum est illum! Doloribus saepe beatae fugit blanditiis officiis
+          animi quibusdam optio numquam! Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Earum quis doloremque dolore, consequatur animi dolores
+          iure inventore dolorum? Consectetur obcaecati sapiente ex aut optio aliquam
+          totam delectus. Quasi, iure facilis? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Voluptate tenetur eaque quam eius eveniet suscipit laborum
+          vero quasi? Quis reprehenderit, delectus inventore quia rerum deleniti
+          corrupti eaque eum facilis corporis?
+        </section>
+      </article>
+    </div>
+
+    <!-- <footer class="z-10 bottom-0 w-full flex items-center">
+      <Footer />
+    </footer> -->
+  </section>
 </Layout>
+
+<script>
+  document.addEventListener("scroll", function () {
+    const navbarLinks = document.querySelectorAll("#navbar a");
+
+    navbarLinks.forEach((navbarLink) => {
+      const target = navbarLink.getAttribute("href");
+      if (target) {
+        const targetSection = document.getElementById(target.substring(1));
+        if (targetSection) {
+          const rect = targetSection.getBoundingClientRect();
+          const sectionTop = rect.top;
+          const sectionBottom = rect.bottom;
+          const windowHeight = window.innerHeight;
+          const sectionHeight = targetSection.offsetHeight;
+
+          const minimumVisibleHeight = sectionHeight * 0.7;
+
+          if (
+            sectionTop >= 0 &&
+            sectionBottom >= minimumVisibleHeight &&
+            sectionTop <= windowHeight * 0.7
+          ) {
+            navbarLinks.forEach((link) => {
+              link.classList.remove("active-link");
+            });
+            navbarLink.classList.add("active-link");
+          }
+        }
+      }
+    });
+  });
+</script>
+<style>
+  a {
+    padding: 4px 0;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  h3 {
+    font-size: 33px;
+    font-weight: 500px;
+    line-height: 40px;
+    padding-bottom: 13px;
+    padding-top: 40px;
+  }
+  .active-link {
+    background-color: #3367a7;
+    color: #fff;
+  }
+</style>

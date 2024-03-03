@@ -1,6 +1,5 @@
 ---
 import Header from "../components/Header.astro";
-// Supports weights 100-900
 import "@fontsource-variable/onest";
 interface Props {
 	title: string;
@@ -25,7 +24,6 @@ const { title } = Astro.props;
 		<div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)] dark:bg-[radial-gradient(circle_800px_at_100%_200px,#000,transparent)]"></div>
 	</div>
 		
-	<div class="absolute inset-0 -z-10 h-full w-full"></div>
 		</div>
 		<Header />
 		<slot />
@@ -34,6 +32,7 @@ const { title } = Astro.props;
 	<style is:global>
 		:root {
 			color-scheme: light dark ;
+			background-color: black;
 			font-family: "Onest Variable", system-ui, sans-serif;
 		}
 		html {
