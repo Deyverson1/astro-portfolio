@@ -1,0 +1,64 @@
+---
+
+---
+
+<main class="hidden lg:block lg:fixed top-1/4 w-2/12">
+  <header class="w-7/12" id="navbar">
+    <nav
+      class="border-l-2 border-black dark:border-white flex flex-col gap-y-4"
+    >
+      <a href="#description">Descripcion</a>
+      <a href="#components">Componentes</a>
+      <a href="#installation">Instalación</a>
+      <a href="#structure">Estructura</a>
+      <a href="#evidence">Pruebas</a>
+      <a href="#problems">Problemas</a>
+      <a href="#references">Referencias</a>
+    </nav>
+  </header>
+</main>
+
+<script>
+  document.addEventListener("scroll", function () {
+    const navbarLinks = document.querySelectorAll("#navbar a");
+
+    navbarLinks.forEach((navbarLink) => {
+      const target = navbarLink.getAttribute("href");
+      if (target) {
+        const targetSection = document.getElementById(target.substring(1));
+        if (targetSection) {
+          const rect = targetSection.getBoundingClientRect();
+          const sectionTop = rect.top;
+          const sectionBottom = rect.bottom;
+          const windowHeight = window.innerHeight;
+          const sectionHeight = targetSection.offsetHeight;
+
+          const minimumVisibleHeight = sectionHeight * 0.7;
+
+          if (
+            sectionTop >= 0 &&
+            sectionBottom >= minimumVisibleHeight &&
+            sectionTop <= windowHeight * 0.7
+          ) {
+            navbarLinks.forEach((link) => {
+              link.classList.remove("active-link");
+            });
+            navbarLink.classList.add("active-link");
+          }
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  .active-link {
+    background-color: #3367a7;
+    color: #fff;
+  }
+  a {
+    padding: 4px 0;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+</style>

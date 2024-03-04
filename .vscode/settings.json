@@ -10,6 +10,7 @@
     "Latam",
     "Mecatrónica",
     "mechatronics",
+    "monitoreo",
     "Tersmistor"
   ],
   "typescript.tsdk": "node_modules/typescript/lib"

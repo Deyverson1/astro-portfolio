@@ -1,0 +1,120 @@
+---
+const data = [
+  {
+    title: "HC-SR04",
+    href: "https://blog.330ohms.com/2020/06/06/como-conectar-un-sensor-de-distancia-ultrasonico-hc-sr04-a-arduino/",
+    image: "https://i2.wp.com/blog.330ohms.com/wp-content/uploads/2020/06/Arduino_ultrasonico_bb.png?fit=696%2C392&ssl=1",
+    explanation: [
+      "GND – Alimentación negativa",
+      "ECHO – Pin para mandar la señal ultrasónica",
+      "TRIG – Pin para recibir el rebote de la señal ultrasónica",
+      "VCC – Alimentación positiva",
+    ],
+  },
+  {
+    title: "SHT-30",
+    href: "https://electropeak.com/learn/interfacing-sht30-temperature-humidity-sensor-with-arduino/",
+    image: "https://electropeak.com/learn/wp-content/uploads/2020/11/SHT30-Arduino-Circuit.jpg",
+    explanation: [
+      "GND – Ground",
+      "SDA – I2C data",
+      "SCL – I2C clock",
+      "VCC – Module power supply –2.4 V to 5 V",
+    ],
+  },
+  {
+    title: "Termistor",
+    href: "https://teknnologia.wordpress.com/2014/10/16/tutorial1-01-termistor-con-arduino/",
+    image: "https://teknnologia.files.wordpress.com/2014/10/4424e-termistor_esquema_2.jpg?w=1200",
+    explanation: [
+      "Resistencia –  Igual al valor del Termistor",
+      
+    ],
+  },
+];
+---
+
+<section id="installation">
+  <h3 >Instalación</h3>
+  <section class="flex flex-col">
+    <p>
+      Para la instalación puedes clonarlo mediante <code
+        class="rounded-sm border-2 bg-gray-800 border-gray-600 text-xs px-2 py-1"
+      >
+        git clone
+        https://github.com/Deyverson1/SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura.git</code
+      > o puedes descargar el .ZIP en el siguiente link
+    </p>
+    <div class="flex justify-center">
+      <a
+        class="bg-blue-600 w-fit px-3 py-2 rounded-md my-3"
+        href="https://github.com/Deyverson1/SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura"
+        >Repositorio</a
+      >
+    </div>
+    <div class="flex items-center justify-center">
+      <img class="w-11/12" src="/image/mechatronicsImages/Clone.png" alt="" />
+    </div>
+    <p class="py-4">
+      Una vez clonado tendremos una carpeta llamada
+      <code
+        class="rounded-sm border-2 bg-gray-800 border-gray-600 text-xs px-2 py-1"
+      >
+        SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura</code
+      >
+      En esta carpeta encontraras 4 archivos, entre ellos dos principales, los cuales
+      son Lab6Arduino y Lab6Processing.
+    </p>
+  </section>
+  <p>
+    <span class="font-bold text-lg border-b-2 mb-4 w-fit">Lab6Arduino:</span>
+    En esta carpeta encontraremos todo el código de Arduino necesario para el funcionamiento
+    de los sensores, desde definiciones de variables hasta el entorno de la pagina
+    web.
+  </p>
+  <p>
+    <span class="font-bold text-lg border-b-2 mb-4 w-fit">Lab6Processing:</span>
+    Aquí podremos encontrar todo el código de la interfaz gráfica que sera presentada
+    en Processing, a la cual le llegaran los datos registrados desde el ESP32 .
+  </p>
+  <section class="w-full">
+    <h1 class="font-bold text-xl py-8">⚠️ Conexiones:</h1>
+    <main class="flex flex-col gap-y-8">
+      {
+        data.map((dato) => (
+          <article class="w-full">
+            <h5 class="font-bold text-lg">{dato.title}</h5>
+            <a
+              class="flex py-4 justify-center w-full"
+              href={dato.href}
+              target="_blank"
+            >
+              <img
+                class="w-10/12 max-h-96 rounded-md"
+                src={dato.image}
+                alt={`Extracted from ${dato.title} `}
+              />
+            </a>
+            {dato.explanation.map((dato) => (
+              <code class="flex flex-col">{dato} </code>
+            ))}
+          </article>
+        ))
+      }
+    </main>
+    <h1 class="font-bold text-xl pt-8 pb-4">❗ Nota</h1>
+    <p>Para mas información acerca de cada conexión click sobre la imagen respectiva.</p>
+
+    <h1></h1>
+  </section>
+</section>
+
+<style>
+  h3 {
+    font-size: 33px;
+    font-weight: 500px;
+    line-height: 40px;
+    padding-bottom: 13px;
+    padding-top: 40px;
+  }
+</style>
