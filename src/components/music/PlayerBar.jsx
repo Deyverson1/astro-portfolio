@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { data } from '../database/DataBaseMusic'
-import Volume from "./icons/Volume";
-import VolumeOff from "./icons/VolumeOff";
-import ArrowRandom from "./icons/ArrowRandom";
+import { data } from '../../database/DataBaseMusic'
+import Volume from "../icons/Volume";
+import VolumeOff from "../icons/VolumeOff";
+import ArrowRandom from "../icons/ArrowRandom";
 import PlayList from "./Playlist";
 
 export default function AudioPlayer() {
