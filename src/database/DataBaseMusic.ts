@@ -1,5 +1,5 @@
 export const data = [
-  { title: 'Someone To Spend Time With', subTitle: 'Los Retros', src: 'music/Someone.ogg', image: "image/music/retros.webp" },
+  { title: 'Someone To Spend Time With', subTitle: 'Los Retros', src: 'music/someone.mp3', image: "image/music/retros.webp" },
   { title: "Everything Black", subTitle: 'Unlike Pluto, Mike Taylor', src: 'music/EverythingBlack.ogg', image: 'image/music/every.webp' },
   { title: "Surround Sound (feat. 21 Savage & Baby Tate) ", subTitle: 'JID, 21 Savage, Baby Tate', src: 'music/JIDSurroundSound.ogg', image: 'image/music/surround.webp' },
   { title: "Heathens", subTitle: 'Twenty One Pilots', src: 'music/Heathens.ogg', image: "image/music/heathens.webp" },
