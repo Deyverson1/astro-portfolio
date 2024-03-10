@@ -13,6 +13,6 @@ export const data = [
   { title: "idfc", subTitle: 'blackbear', src: 'music/idfc.ogg', image: 'image/music/idfc.webp' },
   { title: "High Enough", subTitle: 'K.Flay', src: 'music/High.ogg', image: 'image/music/high.webp' },
   { title: "Falling", subTitle: 'Trevor Daniel', src: 'music/falling.ogg', image: 'image/music/falling.webp' },
-  { title: "rockstar", subTitle: 'Post Malone, 21 Savage', src: 'music/rockstar.ogg', image: 'image/music/rockstar.webp' },
+  { title: "rockstar", subTitle: 'Post Malone, 21 Savage', src: 'music/rockstar.mp3', image: 'image/music/rockstar.webp' },
   { title: "Overwhelmed (Ryan Mack Remix)", subTitle: 'Ryan Mack', src: 'music/overwhelmed.ogg', image: 'image/music/over.webp' },
 ];
