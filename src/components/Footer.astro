@@ -1,26 +1,54 @@
 ---
-import AstroIcon from "./icons/AstroIcon.astro"
-
-const currentYear = new Date().getFullYear()
+import AstroIcon from "./icons/AstroIcon.astro";
+import Instagram from "./icons/Instagram.astro";
+import LinkedinIcon from "./icons/LinkedinIcon.astro";
+import Discord from "./icons/Discord.astro";
+const currentYear = new Date().getFullYear();
+const data = [
+  { name: "Instagram", link: 'https://www.instagram.com/deyverson08?igsh=MXFheHd5eXg3ZWxjcg==', icon: Instagram },
+  { name: "LinkedIn", link: 'https://www.linkedin.com/in/deyverson?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', icon: LinkedinIcon },
+  { name: "Discord", link: 'https://discord.com/invite/bBNutX3D',icon: Discord },
+];
 ---
 
-<footer class="py-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
->
+<footer class="py-12  w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
   <div
-    class="items-center flex flex-col lg:flex-row w-full max-w-screen-xl mx-auto md:flex md:items-center "
+    class="items-center border-b-2 border-black gap-y-8 md:gap-y-0  dark:border-white pb-8 justify-around flex flex-col lg:flex-row w-full max-w-screen-xl mx-auto md:flex md:items-center"
   >
-    <ul
-      class="flex justify-center w-full flex-wrap items-center gap-x-8 mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
-    >
-      <li>
-        <a href="mailto:deyversongp@gmail.com" class="underline">Contacto</a>
-      </li>
-      <li>
-        <a href="/"> <AstroIcon class="size-8 pt-2 lg:pt-0 fill-black dark:fill-white"/></a>
-      </li>
-      <li>
-        <a href="/curriculum" class="underline">Curriculum</a>
-      </li>
-    </ul>
+    Deyverson Herrera Valencia
+    <main class="flex gap-12">
+      <article>
+        <h2>Social</h2>
+        <section class="flex flex-col gap-y-2 pt-3">
+          {data.map((dato, index) => <a href={dato.link} target="_blank"><h3 >{dato.name}</h3></a> )}
+        </section>
+      </article>
+      <article>
+        <h2>OS</h2>
+        <section class="flex flex-col gap-y-2 pt-3">
+          <h3 >Linux</h3>
+          <h3 >Windows</h3>
+        </section>
+      </article>
+      <article>
+        <h2>Otros</h2>
+        <section class="flex flex-col gap-y-2 pt-3">
+          <a href="https://anime-search-deyverson1.vercel.app/"><h3 >Anime</h3></a>
+          <a href="https://search-movies-and-books.vercel.app/"><h3 >Libros</h3></a>
+          <a href="mailto:deyversongp@gmail.com"><h3>Contacto</h3></a>
+        </section>
+      </article>
+    </main>
+  </div>
+  <div>
+    <p></p>
   </div>
 </footer>
+<style>
+  h3{
+    color: #a0aec0;
+  }
+  h3:hover{
+    text-decoration: underline;
+  }
+</style>
