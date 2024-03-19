@@ -1,32 +1,48 @@
 ---
-import Theme from './Theme.astro'
+import Theme from "./Theme.astro";
+import Wolf from './icons/Wolf.astro'
 const contentNav = [
-  {title: "Inicio", label:'/', url:'/'},
+  { title: "Inicio", label: "/", url: "/" },
   { title: "Proyectos", label: "/#proyectos", url: "/#projects" },
   { title: "Sobre mi", label: "/#sobre-mi", url: "/#sobre-mi" },
-  { title: "Contacto", label: "/#contacto", url: "mailto:deyversongp@gmail.com",},
-  { title: "Curriculum", label: "/#curriculum", url: "/curriculum" },
+  {
+    title: "Contacto",
+    label: "/#contacto",
+    url: "mailto:deyversongp@gmail.com",
+  },
 ];
 ---
 
 <header
-  class="fixed top-0 z-10  flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-1"
 >
   <nav
-    class="flex lg:px-3 rounded-full text-medium font-medium  text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex lg:px-3 w-full py-2 text-medium font-medium text-gray-600 dark:text-gray-200 justify-around items-center"
   >
-    {
-      contentNav.map((content) => (
-        <a
-          class="  text-sm relative block px-2 py-2  hover:text-gray-500 dark:hover:text-gray-600"
-          aria-label={content.label}
-          href={content.url}
-        >
-          {content.title}
-        </a>
-      ))
-    }
-    <Theme/>
+    <div class="hidden md:flex md:w-10/12 pl-2 w-fit justify-center">
+      <a href="/">
+        <Wolf/>
+      </a>
+    </div>
+    <section class="flex justify-center md:justify-start w-full">
+      {
+        contentNav.map((content) => (
+          <a
+            class="text-sm md:text-base relative block px-2 py-2 hover:text-gray-800 dark:hover:text-gray-400"
+            aria-label={content.label}
+            href={content.url}
+          >
+            {content.title}
+          </a>
+        ))
+      }
+      <a
+        href="/curriculum"
+        class="text-sm md:text-base pl-2 border-blue-300 dark:border-blue-400 hover:text-gray-800 dark:hover:text-gray-400 rounded-md border-2 px-2 py-2"
+        >Curriculum</a
+      >
+    </section>
+    <Theme />
   </nav>
 </header>
 
@@ -36,11 +52,10 @@ const contentNav = [
     animation-timeline: scroll();
     animation-range: 0 100px;
   }
- 
+
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur text-white bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 ring-black/10;
+      @apply shadow-lg ring-1 backdrop-blur text-white bg-transparent ring-black/10;
     }
   }
-  
 </style>
