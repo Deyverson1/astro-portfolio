@@ -1,7 +1,7 @@
 export const data = [
   { title: 'Someone To Spend Time With', subTitle: 'Los Retros', src: 'music/someone.mp3', image: "image/music/retros.webp" },
   { title: "Everything Black", subTitle: 'Unlike Pluto, Mike Taylor', src: 'music/EverythingBlack.ogg', image: 'image/music/every.webp' },
-  { title: "Surround Sound (feat. 21 Savage & Baby Tate) ", subTitle: 'JID, 21 Savage, Baby Tate', src: 'music/JIDSurroundSound.ogg', image: 'image/music/surround.webp' },
+  { title: "Surround Sound", subTitle: 'JID, 21 Savage, Baby Tate', src: 'music/JIDSurroundSound.ogg', image: 'image/music/surround.webp' },
   { title: "Heathens", subTitle: 'Twenty One Pilots', src: 'music/Heathens.ogg', image: "image/music/heathens.webp" },
   { title: "Another Love", subTitle: "Tom Odell", src: "music/AnotherLove.ogg", image: "image/music/another.webp" },
   { title: "Sex, Drugs, Etc.", subTitle: "Beach Weather", src: "music/Sex.ogg", image: "image/music/sex.webp" },
@@ -14,5 +14,5 @@ export const data = [
   { title: "High Enough", subTitle: 'K.Flay', src: 'music/High.ogg', image: 'image/music/high.webp' },
   { title: "Falling", subTitle: 'Trevor Daniel', src: 'music/falling.ogg', image: 'image/music/falling.webp' },
   { title: "rockstar", subTitle: 'Post Malone, 21 Savage', src: 'music/rockstar.mp3', image: 'image/music/rockstar.webp' },
-  { title: "Overwhelmed (Ryan Mack Remix)", subTitle: 'Ryan Mack', src: 'music/overwhelmed.ogg', image: 'image/music/over.webp' },
+  { title: "Overwhelmed", subTitle: 'Ryan Mack', src: 'music/overwhelmed.ogg', image: 'image/music/over.webp' },
 ];
