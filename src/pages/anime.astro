@@ -6,36 +6,31 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Anime">
-  <SectionContainer class="pt-32 px-2" transition:name="anime box">
-    <section class="flex  flex-col gap-y-8">
+  <SectionContainer class="pt-20 pb-0 md:pt-32 px-2" transition:name="anime box">
+    <h1 class="pl-8 pb-3 text-xl">Anime:</h1>
+    <section class="flex flex-wrap gap-y-8">
       {
-        dataBase.map(({ title, image, synopsis, fact, color }) => (
-          <article class="flex-wrap sm:justify-center xl:flex-nowrap flex flex-1 md:gap-x-10  space-x-0 space-y-8 group md:flex-row  md:space-y-0">
-            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-              <img
-                class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-                src={image}
-                alt=""
-              />
-            </div>
-            <div class="w-full flex flex-col justify-center">
+        dataBase.map(({ title, image, color, id }) => (
+          <article class="flex-wrap items-center gap-4 w-4/12 h-2/6 flex-col sm:justify-center xl:flex-nowrap flex  md:gap-x-10  space-x-0 space-y-8 group md:space-y-0">
+            <a href={id} target="_blank" class="flex flex-col gap-4">
+              <div>
+              <img src={image} alt="" class="w-32 h-48 md:w-56 md:h-72 hover:scale-105 transition-all duration-300 rounded-md">
+              </div>
+            <div class="w-full flex flex-col max-w-56 justify-center">
               <p class=` pb-4 ${color}`>{title}</p>
-              <p class="pb-2 text-xs lg:text-sm">{synopsis}</p>
-              <h6 class=`${color} text-xs lg:text-sm italic font-medium`>{fact}</h6>
             </div>
+            </a>
           </article>
         ))
-      }
-     <footer class="flex items-center justify-center">
-      <a href="https://anime-search-deyverson1.vercel.app/" target="_blank" class="flex w-fit items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Ver mas.</a>
-     </footer>
-    </section>
+        }
+        </section>
+        <span class="flex items-center justify-center pb-4 pt-8 w-full">
+          ¿Te gustaría conocer mas animes?  
+        </span>
+        <footer class="flex items-center justify-center">
+         <a href="https://anime-search-deyverson1.vercel.app/" target="_blank" class="flex w-fit items-center gap-x-2 text-gray-900 bg-transparent border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700">Ver mas.</a>
+        </footer>
   </SectionContainer>
 </Layout>
 <Footer/>
-<style>
-  img {
-    width: 600px;
-    height: 400px;
-  }
-</style>
+
