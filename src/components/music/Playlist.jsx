@@ -1,7 +1,7 @@
 
 export default function PlayList({ data, handleClick }) {
   return (
-    <section className="pb-28 flex flex-col  mx-auto container lg:max-w-4xl md:max-w-2xl">
+    <section className="pb-6 flex flex-col  mx-auto container lg:max-w-4xl md:max-w-2xl">
       {data.map((dato, index) => (
         <article key={index} className="px-1 lg:px-40 cursor-pointer" onClick={(event) => handleClick(event, index)}>
           <section className="hover:bg-gray-800 hover:text-white  rounded-md">
