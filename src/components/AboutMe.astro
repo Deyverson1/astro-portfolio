@@ -1,60 +1,70 @@
 ---
+import GithubIcon from "./icons/GithubIcon.astro";
+import Instagram from "./icons/Instagram.astro";
 import Netflix from "./icons/Netflix.astro";
 import Spotify from "./icons/Spotify.astro";
 ---
-
-<article
-  class="flex justify-center px-2 lg:px-0 flex-wrap lg:flex-nowrap gap-x-2"
->
-  <div
-    class="w-6/12 flex items-center px-2 py-2 me-2 mb-2 "
-  >
-    <img class="rounded-xl border-box" src="/icon.jpg" alt="" />
-  </div>
-  <div>
-    <p class="pb-2">
-      Mi nombre es <strong> Deyverson Herrera,</strong> empecé en el mundo de la
-      programación en 2022, actualmente estudiante <strong
-        >de Mecatrónica y Desarrollo Web.</strong
-      >
-    </p>
-    <p class="pb-2">
+<article class="flex flex-col  gap-8">
+  <section class="flex  justify-center items-center flex-wrap gap-8">
+    <div class="">
+      <img
+        src="/icon.jpg"
+        class="rounded-3xl h-80 w-56 hover:scale-105 transition-all duration-500 border-2 border-cyan-400"
+        alt=""
+      />
+    </div>
+    <div class="flex flex-col max-w-xl gap-8">
+      <div class="rounded-3xl hover:scale-105 p-4 border-2 border-cyan-400 bg-gradient-to-b from-transparent to-gray-900 hover:to-gray-800 hover:transition-transform hover:duration-1000">
+        Mi nombre es <strong> Deyverson Herrera,</strong> empecé en el mundo de la
+        programación/desarrollo en 2022, actualmente estudiante <strong
+          >de Mecatrónica y Desarrollo Web.</strong>
+      </div>
+      <section class="flex w-full gap-8">
+        <div class="w-4/12 bg-gradient-to-b hover:scale-105 from-transparent via-transparent to-gray-900 hover:to-gray-800 hover:transition-transform hover:duration-1000 border-2 rounded-3xl p-3 border-cyan-400 items-center justify-center flex flex-col">
+          <img src="https://avatars.githubusercontent.com/u/126831007?v=4" class="w-14 rounded-full h-14" alt="" />
+          <div class="flex flex-col text-black dark:text-white justify-center items-center pt-2">
+            <h1>@Deyverson1</h1>
+          <GithubIcon class="size-6"/>
+          </div>
+        </div>
+        <div class="w-full bg-gradient-to-b from-transparent to-gray-900 hover:to-gray-800 hover:transition-transform hover:duration-1000 flex justify-around hover:scale-105  gap-4 rounded-3xl border-2 border-cyan-400 h-full p-4  -shadow-2xl shadow-bla">
+          <section>
+            Hobbies:
+          <div>
+            <h1>Música</h1>
+            <h1>Anime</h1>
+            <h1>Futbol</h1>
+            <h1>Videojuegos</h1>
+          </div>
+          </section>
+          <section>
+            Projects:
+            <div>
+              <h1>Replica Dropi.co</h1>
+              <h1>Replica Bancolombia</h1>
+              <h1>Búsqueda de Anime</h1>
+              <h1>Búsqueda de Libros</h1>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+    <section class="rounded-3xl hover:scale-105 md:mx-7 p-4 border-2 border-cyan-400 bg-gradient-to-b from-transparent to-gray-900 hover:to-gray-800 hover:transition-transform hover:duration-1000">
       Mi enfoque principal se encuentra en la creación de experiencia de usuario
-      atractivas y eficientes, por lo que como programador me he dedicado a adquirir diversos 
-      conocimientos que me
-      ayuden en el enfoque de diferentes proyectos, desde <strong
-        >ReactJs
-      </strong> hasta <strong>MySQL</strong>
-    </p>
-    <p>
-      En mi aprendizaje he desarrollado diferentes proyectos que me han ayudado
-      a mejorar mis habilidades, desde <strong
-        >replicas de paginas web como <a
-          target="_blank"
-          href="https://dropi-replic.vercel.app/">Dropi.co</a
-        >, Bancolombia,</strong
-      > hasta aplicaciones de lógica y encriptamiento.
-    </p>
-  </div>
+      atractivas y eficientes, por lo que como programador me he dedicado a
+      adquirir diversos conocimientos que me ayuden en el enfoque de diferentes
+      proyectos, desde <strong>ReactJs </strong> hasta <strong>MySQL</strong>
+    </section>
+  </section>
+  
 </article>
-<section class="display flex item-center justify-center gap-x-4 pt-4">
-  <a
-    class="inline-flex hover:animate-pulse items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-neutral-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-700 hover:border-gray-700 group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2"
-    href="/anime"
-  >
-    <Netflix class="size-4 fill-black dark:fill-white" />
-    Anime
-  </a>
-  <a
-    class="inline-flex hover:animate-pulse items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-neutral-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-700 hover:border-gray-700 group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2"
-    href="/music"
-  >
-    <Spotify class="size-4 fill-black dark:fill-white" />
-    Música
-  </a>
-</section>
+
+
 <style>
   strong {
     color: #4299e1;
+  }
+  h1{
+    color: #a0aec0;
   }
 </style>
