@@ -4,37 +4,57 @@ import React from "./icons/React.astro";
 import Svelte from "./icons/Svelte.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import JavaScript from "./icons/javaScript.astro";
-import TypeScript from "./icons/TypeScript.astro"
+import TypeScript from "./icons/TypeScript.astro";
 import Node from "./icons/Node.astro";
 import Php from "./icons/Php.astro";
 import MySQL from "./icons/MySQL.astro";
 import Next from "./icons/Next.astro";
+import Database from './icons/Database.astro'
 const data = [
   { name: "JavaScript", icon: JavaScript },
   { name: "TypeScript", icon: TypeScript },
+  { name: "Php", icon: Php },
+  {name: 'SQL', icon: Database}
+];
+const data2 = [
   { name: "React", icon: React },
   { name: "Astro", icon: AstroIcon },
   { name: "Svelte", icon: Svelte },
-  { name: "Tailwind", icon: Tailwind },
   { name: "NodeJs", icon: Node },
-  { name: "Php", icon: Php },
-
+  { name: "Tailwind", icon: Tailwind },
+  {name: 'MySQL', icon: MySQL},
 ];
 ---
 
-<div class="flex flex-1 flex-wrap px-2 lg:px-0 gap-x-2 gap-y-2">
- {
-  data.map((data) => (
-  <article class="flex flex-wrap">
-    <div class="gap-x-2">
-      <div
-        class="flex items-center gap-x-2 text-gray-900  border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2  dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-      >
-        <data.icon class="size-10 fill-black dark:fill-white"/>
-        <h3 class="text-gray-900 dark:text-white font-sm">{data.name}</h3>
-      </div>
-    </div>
-  </article>
-  ))
- }
+<div class="flex flex-col flex-1 flex-wrap px-2 lg:px-0 gap-x-2 gap-y-2">
+  <h1 class="text-lg">Lenguajes:</h1>
+  <section class="flex flex-wrap">
+    {
+      data.map((data) => (
+        <article class="flex flex-wrap">
+          <div class="gap-x-2">
+            <div class="flex items-center gap-x-2 text-gray-900  border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2  dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+              <data.icon class="size-10 fill-black dark:fill-white" />
+              <h3 class="text-gray-900 dark:text-white font-sm">{data.name}</h3>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </section>
+  <h1 class="text-lg pt-4">Frameworks/Librerías/Otros:</h1>
+  <section class="flex flex-wrap">
+    {
+      data2.map((data) => (
+        <article class="flex flex-wrap">
+          <div class="gap-x-2">
+            <div class="flex items-center gap-x-2 text-gray-900  border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2  dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+              <data.icon class="size-10 fill-black dark:fill-white" />
+              <h3 class="text-gray-900 dark:text-white font-sm">{data.name}</h3>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </section>
 </div>
