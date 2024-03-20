@@ -6,28 +6,28 @@ import Spotify from "./icons/Spotify.astro";
 ---
 <article class="flex flex-col  gap-8">
   <section class="flex  justify-center items-center flex-wrap gap-8">
-    <div class="">
+    <div class="shadow-lg">
       <img
         src="/icon.jpg"
-        class="rounded-3xl h-80 w-56 hover:scale-105 transition-all duration-500 border-2 border-cyan-400"
+        class="rounded-3xl h-80 w-56 hover:scale-105 transition-all duration-500 border-2 border-blue-400"
         alt=""
       />
     </div>
     <div class="flex flex-col max-w-xl gap-8">
-      <div class="rounded-3xl hover:scale-105 p-4 border-2 border-cyan-400 bg-gradient-to-b from-transparent to-gray-900 hover:to-gray-800 hover:transition-transform hover:duration-1000">
+      <div class="rounded-3xl hover:scale-105 p-4 border-2 border-blue-400 bg-gradient-to-b from-transparent to-gray-200 hover:to-gray-300 dark:to-gray-900 dark:hover:to-gray-800 hover:transition-transform hover:duration-1000 shadow-lg">
         Mi nombre es <strong> Deyverson Herrera,</strong> empecé en el mundo de la
         programación/desarrollo en 2022, actualmente estudiante <strong
           >de Mecatrónica y Desarrollo Web.</strong>
       </div>
       <section class="flex w-full gap-8">
-        <div class="w-4/12 bg-gradient-to-b hover:scale-105 from-transparent via-transparent to-gray-900 hover:to-gray-800 hover:transition-transform hover:duration-1000 border-2 rounded-3xl p-3 border-cyan-400 items-center justify-center flex flex-col">
+        <div class="w-4/12 cursor-pointer bg-gradient-to-b hover:scale-105 from-transparent via-transparent to-gray-200 hover:to-gray-300 dark:to-gray-900 dark:hover:to-gray-800 hover:transition-transform hover:duration-1000 border-2 rounded-3xl p-3 border-blue-400 items-center justify-center flex flex-col shadow-lg">
           <img src="https://avatars.githubusercontent.com/u/126831007?v=4" class="w-14 rounded-full h-14" alt="" />
           <div class="flex flex-col text-black dark:text-white justify-center items-center pt-2">
-            <h1>@Deyverson1</h1>
+            <h2 class="dark:text-gray-400 text-gray-800">@Deyverson1</h2>
           <GithubIcon class="size-6"/>
           </div>
         </div>
-        <div class="w-full bg-gradient-to-b from-transparent to-gray-900 hover:to-gray-800 hover:transition-transform hover:duration-1000 flex justify-around hover:scale-105  gap-4 rounded-3xl border-2 border-cyan-400 h-full p-4  -shadow-2xl shadow-bla">
+        <div class="w-full bg-gradient-to-b text-black dark:text-white from-transparent to-gray-200 dark:to-gray-900 dark:hover:to-gray-800 hover:to-gray-300 hover:transition-transform hover:duration-1000 flex justify-around hover:scale-105  gap-4 rounded-3xl border-2 border-blue-400 h-full p-4 shadow-lg">
           <section>
             Hobbies:
           <div>
@@ -49,14 +49,13 @@ import Spotify from "./icons/Spotify.astro";
         </div>
       </section>
     </div>
-    <section class="rounded-3xl hover:scale-105 md:mx-7 p-4 border-2 border-cyan-400 bg-gradient-to-b from-transparent to-gray-900 hover:to-gray-800 hover:transition-transform hover:duration-1000">
+    <section class="rounded-3xl hover:scale-105 md:mx-7 p-4 border-2 border-blue-400 dark:border-blue-400 bg-gradient-to-b from-transparent to-gray-200 hover:to-gray-300 dark:to-gray-900 dark:hover:to-gray-800 dark:only:hover:to-gray-800  hover:transition-transform hover:duration-1000 shadow-lg">
       Mi enfoque principal se encuentra en la creación de experiencia de usuario
       atractivas y eficientes, por lo que como programador me he dedicado a
       adquirir diversos conocimientos que me ayuden en el enfoque de diferentes
       proyectos, desde <strong>ReactJs </strong> hasta <strong>MySQL</strong>
     </section>
   </section>
-  
 </article>
 
 
