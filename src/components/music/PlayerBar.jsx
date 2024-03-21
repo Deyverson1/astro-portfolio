@@ -229,7 +229,7 @@ export default function AudioPlayer() {
 
           <section className="hidden lg:flex w-full justify-center items-center gap-2">
 
-            <p className="text-sm">{formattedTime}</p>
+            <p className="text-sm text-white">{formattedTime}</p>
             <div
               className="w-full gap-8 bg-gray-200 flex justify-between items-center rounded-full h-1 dark:bg-gray-700"
               ref={progressBarRef}
@@ -240,7 +240,7 @@ export default function AudioPlayer() {
             >
               <div className="bg-blue-600 h-1 rounded-full" style={{ width: `${progress}%` }}></div>
             </div>
-            <p className="text-sm">{formattedDuration}</p>
+            <p className="text-sm text-white">{formattedDuration}</p>
           </section>
         </section>
         <section className="hidden px-2 w-full pb-0 lg:flex justify-center items-center gap-x-2">
