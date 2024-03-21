@@ -19,27 +19,29 @@ export default function AudioPlayer() {
   const [isRandom, setRandom] = useState(false)
   const audioRef = useRef();
   const progressBarRef = useRef();
-  const checkBox = useRef(true)
+  const checkBox = true
   const volumeRef = useRef()
 
-  let isHandleCheckRunning = false;
+  // let isHandleCheckRunning = false;
 
-  const handleCheck = () => {
-    if (isHandleCheckRunning) {
-      return;
-    }
+  // const handleCheck = () => {
+  //   if (isHandleCheckRunning) {
+  //     return;
+  //   }
 
-    isHandleCheckRunning = true;
+  //   isHandleCheckRunning = true;
 
-    const timing = Math.floor(duration);
-    if (timing == currentTime && checkBox.current.checked) {
-      playNextTrack();
-    } else {
-      console.log('no activo');
-    }
+  //   const timing = Math.floor(duration);
+  //   if (timing == currentTime) {
+      
+  //     playNextTrack();
+  //   } else {
+  //     console.log('no activo');
+  //   }
 
-    isHandleCheckRunning = false;
-  };
+  //   isHandleCheckRunning = false;
+  // };
+  
 
   function playNextTrack() {
    if(isRandom){
@@ -73,7 +75,7 @@ export default function AudioPlayer() {
     const audioElement = audioRef.current;
 
     const handleEnded = () => {
-      if (checkBox.current.checked) {
+      if (true) {
         playNextTrack();
       }
     };
