@@ -17,18 +17,18 @@ const contentNav = [
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-1"
 >
   <nav
-    class="flex lg:px-3 w-full py-2 text-medium font-medium text-black dark:text-white justify-around items-center"
+    class="flex lg:px-6 text-medium font-medium text-black dark:text-white justify-center items-center"
   >
-    <div class="hidden md:flex md:w-10/12 pl-2 w-fit justify-center">
+    <!-- <div class="hidden md:flex md:w-10/12 pl-2 w-fit justify-center">
       <a href="/" class="text-black dark:text-white">
         <Wolf/>
       </a>
-    </div>
-    <section class="flex justify-center md:justify-start w-full">
+    </div> -->
+    <section class="flex justify-center md:justify-center w-full">
       {
         contentNav.map((content) => (
           <a
-            class="text-sm md:text-base relative block px-2 py-2 hover:text-gray-800 dark:hover:text-gray-400"
+            class="text-sm md:text-base relative block px-2 py-2 hover:text-gray-800 dark:hover:text-gray-800"
             aria-label={content.label}
             href={content.url}
           >
@@ -38,7 +38,7 @@ const contentNav = [
       }
       <a
         href="/curriculum"
-        class="text-sm md:text-base pl-2 border-blue-300 dark:border-blue-400 hover:text-gray-800 dark:hover:text-gray-400 rounded-md border-2 px-2 py-2"
+        class="text-sm md:text-base pl-2 md:border-blue-300 md:dark:border-blue-500 hover:text-gray-800 dark:hover:text-gray-800 md:rounded-md md:border-2 px-2 py-2"
         >Curriculum</a
       >
     </section>
@@ -55,7 +55,7 @@ const contentNav = [
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur bg-transparent ring-black/10;
+      @apply shadow-lg ring-1 backdrop-blur rounded-full bg-blue-500 ring-black/10;
     }
   }
 </style>
