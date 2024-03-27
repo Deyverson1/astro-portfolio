@@ -11,7 +11,6 @@
       <a href="#components">Componentes</a>
       <a href="#installation">Instalación</a>
       <a href="#structure">Estructura</a>
-      <a href="#evidence">Pruebas</a>
       <a href="#problems">Problemas</a>
       <a href="#references">Referencias</a>
     </nav>
@@ -33,12 +32,12 @@
           const windowHeight = window.innerHeight;
           const sectionHeight = targetSection.offsetHeight;
 
-          const minimumVisibleHeight = sectionHeight * 0.7;
+          const minimumVisibleHeight = sectionHeight * 0.2;
 
           if (
             sectionTop >= 0 &&
             sectionBottom >= minimumVisibleHeight &&
-            sectionTop <= windowHeight * 0.7
+            sectionTop <= windowHeight * 0.2
           ) {
             navbarLinks.forEach((link) => {
               link.classList.remove("active-link");

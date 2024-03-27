@@ -1,12 +1,14 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/dashboard/Footer.astro";
 import SectionContainer from "../../components/SectionContainer.astro";
 import Mecatronica from "../../components/mechatronics/Mecatronica.astro";
 ---
 
-<Layout title="Mecatrónica ">
-  <SectionContainer class="pt-48">
+<Layout title="Mecatrónica Industrial">
+  <SectionContainer class="md:pt-48 pt-32">
     <h1 class="flex px-2 lg:px-0 items-center mb-6 text-xl font-semibold gap-x-3 text-black/80 dark:text-white">Proyectos Mecatrónica:</h1>
     <Mecatronica />
   </SectionContainer>
+  <Footer/>
 </Layout>

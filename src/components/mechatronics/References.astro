@@ -1,0 +1,36 @@
+---
+const data = [
+  {
+    title: "Cómo conectar un Sensor de distancia ultrasónico HC-SR04 a Arduino",
+    link: "https://blog.330ohms.com/2020/06/06/como-conectar-un-sensor-de-distancia-ultrasonico-hc-sr04-a-arduino/",
+  },
+  { title: "Interfacing SHT30 Temperature & Humidity Sensor with Arduino", link: "https://electropeak.com/learn/interfacing-sht30-temperature-humidity-sensor-with-arduino/" },
+  { title: "Termistor con Arduino", link: "https://teknnologia.wordpress.com/2014/10/16/tutorial1-01-termistor-con-arduino/" },
+  { title: "¿Cómo funciona el sensor ultrasónico HC-SR04 y cómo se conecta con Arduino?", link: "https://cursos.mcielectronics.cl/2022/12/06/como-funciona-el-sensor-ultrasonico-hc-sr04-y-como-se-conecta-con-arduino/" },
+  { title: "Best Temperature/Humidity Sensor For Arduino? Accuracy Test", link: "https://www.youtube.com/watch?v=ynNeiFEJnrA&ab_channel=InterlinkKnight" },
+
+];
+---
+
+<section id="references">
+  <h3>Referencias</h3>
+  <div class="flex flex-col gap-6">
+    {
+      data.map((dato) => (
+        <a href={dato.link} class="w-fit" target="_blank">
+          <p class="underline hover:text-blue-600 ">{dato.title}</p>
+        </a>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  h3 {
+    font-size: 33px;
+    font-weight: 500px;
+    line-height: 40px;
+    padding-bottom: 13px;
+    padding-top: 40px;
+  }
+</style>

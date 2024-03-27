@@ -1,0 +1,59 @@
+---
+
+---
+
+<section>
+  <h3 id="structure">Estructura</h3>
+  <main class="bg-gray-800 text-white p-8">
+    <code class="bg-gray-800" lang="cpp">
+      <p>//Definición de librerías y pines</p>
+      #include &lt;Wire.h&gt; <br />
+      #include &lt;SHT31.h&gt; <br />
+      #include &lt;WiFi.h&gt; <br />
+      #include &lt;WiFiMulti.h&gt; <br />
+      #define Led1 17 <br />
+      #define OK 16 <br />
+      <br />
+      <p>//Inicio configuración de Wi-fi</p>
+      WiFiMulti wifiMulti;<br />
+      WiFiServer Servidor(80); //puerto de red<br />
+      SHT31 sht; //inicio sensor<br />
+      <br />
+      <p>//Configuración del Termistor</p>
+      const double voltageReference = 3.3; //Voltaje de alimentación <br />
+      const double R1 = 10000.0; //ohms valor del termistor <br />
+      const double R2 = 10000.0; //Valor de las resistencias en serie <br />
+      const double betaCoefficient = -4013.0; //Coeficiente beta ntc termistor <br
+      />
+      bool lecturasActivas = false; <br />
+      double steinhart; <br />
+      <br>
+      <p>//Void Setup</p>
+      Se inicia la comunicación serial con una velocidad de 9600 baudios,
+      igual que la del SHT-30 a través del protocolo I2C usando la biblioteca Wire.h, se configura los pines para el HC-SR04, el pinTrigger como salida para enviar señales de activación y el pinEcho como entrada para recibir la señal, por ultimo se configura la conexión wifi y se la inicio al servidor web.
+      <br> <br>
+      <p>//Bucle Loop()</p>
+      En el bucle loop(), se verifica si las lecturas están activas. Si es así, se realizan las siguientes acciones: primero, se lee el valor analógico del termistor y se calcula la temperatura utilizando la fórmula de Steinhart-Hart. Luego, se activa el sensor de ultrasonido HC-SR04 para medir la distancia. Los valores de temperatura, humedad y distancia se imprimen a través de la comunicación serial para la depuración. Después, se espera un segundo antes de repetir el proceso. Mientras tanto, el ESP32 verifica si hay solicitudes entrantes de clientes conectados al servidor web. Si hay una solicitud, se procesa para determinar si es una solicitud de encendido o apagado de un dispositivo, y se responde en consecuencia.
+      <br> <br>
+      <p>//Función Verificar()</p>
+      La función Verificar() procesa los mensajes recibidos desde un cliente web. Si el mensaje indica encender un dispositivo ("GET /on1"), activa la señal correspondiente y marca el estado como "Encendido". Si el mensaje es para apagar un dispositivo ("GET /off1"), desactiva la señal y restablece las lecturas de sensores. Esta función facilita el control remoto de dispositivos a través de solicitudes web.
+      <br> <br>
+      <p>//Función Response()</p>
+      La función Responder() se encarga de enviar la respuesta a un cliente web que ha realizado una solicitud. Primero, envía las cabeceras HTTP para indicar que la solicitud fue exitosa. Luego, envía el contenido HTML que representa un panel de control web. Este panel incluye botones para iniciar y detener acciones, así como información sobre la temperatura, humedad y distancia. Además, si las lecturas están activas, la página se recarga automáticamente cada segundo para actualizar los valores mostrados. Esta función permite la visualización y control remoto de dispositivos a través de una interfaz web.
+      <br>
+    </code>
+  </main>
+</section>
+
+<style>
+  p{
+    color: rgb(70, 136, 242);
+  }
+  h3 {
+    font-size: 33px;
+    font-weight: 500px;
+    line-height: 40px;
+    padding-bottom: 13px;
+    padding-top: 40px;
+  }
+</style>

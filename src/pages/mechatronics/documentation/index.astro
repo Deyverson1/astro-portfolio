@@ -5,6 +5,8 @@ import Navigation from "../../../components/mechatronics/Navigation.astro";
 import Components from "../../../components/mechatronics/Components.astro";
 import Description from "../../../components/mechatronics/Description.astro";
 import Installation from "../../../components/mechatronics/Installation.astro";
+import Structure from "../../../components/mechatronics/Structure.astro";
+import References from "../../../components/mechatronics/References.astro";
 ---
 
 <Layout title="Documentación">
@@ -18,64 +20,9 @@ import Installation from "../../../components/mechatronics/Installation.astro";
       >
         <Description />
         <Components />
-
         <Installation/>
-        <section>
-          <h3 id="structure">Estructura</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ipsam quidem
-          incidunt odit nam deleniti enim quo a aperiam, rem eaque dicta voluptatibus
-          similique? Reprehenderit hic labore autem ab quod. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Eaque, excepturi. Sapiente asperiores
-          atque officia inventore delectus quibusdam, quod voluptate itaque! Sequi
-          aliquid voluptatum cupiditate dolorem sapiente dignissimos reprehenderit
-          quisquam exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Nam, incidunt dolores beatae nisi at libero enim delectus eaque ad,
-          eveniet tenetur culpa eum eius. Error asperiores accusamus magnam quis
-          quisquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-          aliquid reprehenderit maxime odit, nostrum ut cum incidunt, deleniti architecto
-          aspernatur accusantium provident similique repudiandae totam aliquam. Possimus
-          blanditiis provident veritatis. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Quis doloremque repellendus minus exercitationem quod
-          excepturi iusto quam illo odit sit eligendi ea ipsam perspiciatis saepe
-          animi, nesciunt molestias, at cumque. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Vitae sint eius temporibus ipsam rerum assumenda placeat
-          aut ipsum est illum! Doloribus saepe beatae fugit blanditiis officiis animi
-          quibusdam optio numquam! Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Earum quis doloremque dolore, consequatur animi dolores iure inventore
-          dolorum? Consectetur obcaecati sapiente ex aut optio aliquam totam delectus.
-          Quasi, iure facilis? Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Voluptate tenetur eaque quam eius eveniet suscipit laborum vero quasi?
-          Quis reprehenderit, delectus inventore quia rerum deleniti corrupti eaque
-          eum facilis corporis?
-        </section>
-        <section>
-          <h3 id="evidence">Pruebas</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sit expedita
-          numquam temporibus, voluptates sed id minus commodi tempora molestiae quis
-          pariatur magnam rerum ex harum explicabo ducimus? Sed, quasi? Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Eaque, excepturi. Sapiente
-          asperiores atque officia inventore delectus quibusdam, quod voluptate itaque!
-          Sequi aliquid voluptatum cupiditate dolorem sapiente dignissimos reprehenderit
-          quisquam exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Nam, incidunt dolores beatae nisi at libero enim delectus eaque ad,
-          eveniet tenetur culpa eum eius. Error asperiores accusamus magnam quis
-          quisquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-          aliquid reprehenderit maxime odit, nostrum ut cum incidunt, deleniti architecto
-          aspernatur accusantium provident similique repudiandae totam aliquam. Possimus
-          blanditiis provident veritatis. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Quis doloremque repellendus minus exercitationem quod
-          excepturi iusto quam illo odit sit eligendi ea ipsam perspiciatis saepe
-          animi, nesciunt molestias, at cumque. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Vitae sint eius temporibus ipsam rerum assumenda placeat
-          aut ipsum est illum! Doloribus saepe beatae fugit blanditiis officiis animi
-          quibusdam optio numquam! Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Earum quis doloremque dolore, consequatur animi dolores iure inventore
-          dolorum? Consectetur obcaecati sapiente ex aut optio aliquam totam delectus.
-          Quasi, iure facilis? Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Voluptate tenetur eaque quam eius eveniet suscipit laborum vero quasi?
-          Quis reprehenderit, delectus inventore quia rerum deleniti corrupti eaque
-          eum facilis corporis?
-        </section>
+        <Structure/>
+       
         <section>
           <h3 id="problems">Problemas</h3>
           Problemas con las medidas del termistor: En algunos casos se soluciona
@@ -84,37 +31,13 @@ import Installation from "../../../components/mechatronics/Installation.astro";
           en el voltaje, en caso de tener todas las conexiones a 3.3v probar con
           5v para el HC-SR04
         </section>
-        <section id="references">
-          <h3>Referencias</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, excepturi.
-          Sapiente asperiores atque officia inventore delectus quibusdam, quod voluptate
-          itaque! Sequi aliquid voluptatum cupiditate dolorem sapiente dignissimos
-          reprehenderit quisquam exercitationem. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Nam, incidunt dolores beatae nisi at libero enim delectus
-          eaque ad, eveniet tenetur culpa eum eius. Error asperiores accusamus magnam
-          quis quisquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Omnis aliquid reprehenderit maxime odit, nostrum ut cum incidunt, deleniti
-          architecto aspernatur accusantium provident similique repudiandae totam
-          aliquam. Possimus blanditiis provident veritatis. Lorem ipsum dolor sit,
-          amet consectetur adipisicing elit. Quis doloremque repellendus minus exercitationem
-          quod excepturi iusto quam illo odit sit eligendi ea ipsam perspiciatis
-          saepe animi, nesciunt molestias, at cumque. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Vitae sint eius temporibus ipsam rerum assumenda
-          placeat aut ipsum est illum! Doloribus saepe beatae fugit blanditiis officiis
-          animi quibusdam optio numquam! Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Earum quis doloremque dolore, consequatur animi dolores
-          iure inventore dolorum? Consectetur obcaecati sapiente ex aut optio aliquam
-          totam delectus. Quasi, iure facilis? Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Voluptate tenetur eaque quam eius eveniet suscipit laborum
-          vero quasi? Quis reprehenderit, delectus inventore quia rerum deleniti
-          corrupti eaque eum facilis corporis?
-        </section>
+        <References/>
+        <footer class="z-10 bottom-0 w-full flex items-center">
+          <Footer />
+        </footer>
       </article>
     </div>
 
-    <!-- <footer class="z-10 bottom-0 w-full flex items-center">
-      <Footer />
-    </footer> -->
   </section>
 </Layout>
 
