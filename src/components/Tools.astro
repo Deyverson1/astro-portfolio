@@ -1,14 +1,21 @@
 ---
-import GithubCat from './icons/GithubCat.astro'
-import VisualSC from './icons/VisualSC.astro'
-import Vite from './icons/Vite.astro'
-const datos = [{title: 'Visual Studio Code', icon: VisualSC },{title: 'Vite', icon: Vite},{title: 'Github', icon: GithubCat}, ]
+import GithubCat from "./icons/GithubCat.astro";
+import VisualSC from "./icons/VisualSC.astro";
+import Vite from "./icons/Vite.astro";
+const datos = [
+  { title: "Visual Studio Code", icon: VisualSC },
+  { title: "Vite", icon: Vite },
+  { title: "Github", icon: GithubCat },
+];
 ---
+
 <section class="flex flex-wrap gap-4 pt-4">
-{datos.map((dato) => (
-  <div class="flex items-center gap-x-2 ">
-    <dato.icon class="size-6 fill-yellow-500"/>
-    {dato.title}
-  </div>
-))}
+  {
+    datos.map((dato) => (
+      <div class="flex items-center gap-x-2 ">
+        <dato.icon class="size-6 fill-yellow-500" />
+        {dato.title}
+      </div>
+    ))
+  }
 </section>

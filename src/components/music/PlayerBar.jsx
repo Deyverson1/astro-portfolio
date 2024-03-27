@@ -6,7 +6,6 @@ import ArrowRandom from "../icons/ArrowRandom";
 import PlayList from "./Playlist";
 
 export default function AudioPlayer() {
-
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -19,47 +18,34 @@ export default function AudioPlayer() {
   const [isRandom, setRandom] = useState(false)
   const audioRef = useRef();
   const progressBarRef = useRef();
-  const checkBox = true
   const volumeRef = useRef()
 
-  // let isHandleCheckRunning = false;
+  //VARIABLES
+  const totalDurationMinutes = Math.floor(duration / 60)
+  const totalSecondDuration = Math.floor(duration % 60)
+  const progress = duration ? (currentTime / duration) * 100 : 0;
+  const volumeProgress = volumePosition;
+  const formattedTime = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  const formattedDuration = `${totalDurationMinutes}:${totalSecondDuration}`
 
-  // const handleCheck = () => {
-  //   if (isHandleCheckRunning) {
-  //     return;
-  //   }
-
-  //   isHandleCheckRunning = true;
-
-  //   const timing = Math.floor(duration);
-  //   if (timing == currentTime) {
-      
-  //     playNextTrack();
-  //   } else {
-  //     console.log('no activo');
-  //   }
-
-  //   isHandleCheckRunning = false;
-  // };
-  
-
+  // FUNCTIONS
   function playNextTrack() {
-   if(isRandom){
-    console.log('its random')
-    const randomIndex = Math.floor(Math.random() * data.length);
-    setCurrentTrackIndex(randomIndex);
-    setTimeout(() => {
-      setIsPlaying(true);
-      audioRef.current.play();
-    }, 300);
-   } else {
-    const nextIndex = (currentTrackIndex + 1) % data.length;
-    setCurrentTrackIndex(nextIndex);
-    setTimeout(() => {
-      setIsPlaying(true);
-      audioRef.current.play();
-    }, 300);
-   }
+    if (isRandom) {
+      console.log('its random')
+      const randomIndex = Math.floor(Math.random() * data.length);
+      setCurrentTrackIndex(randomIndex);
+      setTimeout(() => {
+        setIsPlaying(true);
+        audioRef.current.play();
+      }, 300);
+    } else {
+      const nextIndex = (currentTrackIndex + 1) % data.length;
+      setCurrentTrackIndex(nextIndex);
+      setTimeout(() => {
+        setIsPlaying(true);
+        audioRef.current.play();
+      }, 300);
+    }
   }
 
   function playPreviousTrack() {
@@ -71,55 +57,6 @@ export default function AudioPlayer() {
       audioRef.current.play();
     }, 300);
   }
-  useEffect(() => {
-    const audioElement = audioRef.current;
-
-    const handleEnded = () => {
-      if (true) {
-        playNextTrack();
-      }
-    };
-
-    audioElement.addEventListener("ended", handleEnded);
-
-    return () => {
-      audioElement.removeEventListener("ended", handleEnded);
-    };
-  }, [currentTrackIndex]);
-
-  useEffect(() => {
-    const audioElement = audioRef.current;
-
-    if (isPlaying) {
-      audioElement.play();
-    } else {
-      audioElement.pause();
-    }
-  }, [isPlaying]);
-
-  useEffect(() => {
-    audioRef.current.src = data[currentTrackIndex].src;
-    audioRef.current.load();
-  }, [currentTrackIndex]);
-
-  useEffect(() => {
-    const audioElement = audioRef.current;
-    audioElement.addEventListener('loadedmetadata', () => {
-      setDuration(audioElement.duration);
-    });
-    const handleTimeUpdate = () => {
-      const newCurrentTime = Math.floor(audioElement.currentTime);
-      setCurrentTime(newCurrentTime);
-      setMinutes(Math.floor(newCurrentTime / 60));
-      setSeconds(newCurrentTime % 60);
-    };
-
-    audioElement.addEventListener('timeupdate', handleTimeUpdate);
-
-    return () => {
-      audioElement.removeEventListener('timeupdate', handleTimeUpdate);
-    };
-  }, []);
 
   function togglePlayPause() {
     setIsPlaying(prevState => !prevState);
@@ -171,9 +108,9 @@ export default function AudioPlayer() {
     audioRef.current.volume = setVolume
   }
   function handleRandom() {
-    if(!isRandom){
+    if (!isRandom) {
       setRandom(true)
-    } else{
+    } else {
       setRandom(false)
     }
     console.log(isRandom)
@@ -194,32 +131,75 @@ export default function AudioPlayer() {
     }
   }
 
-  const totalDurationMinutes = Math.floor(duration / 60)
-  const totalSecondDuration = Math.floor(duration % 60)
+  //USE EFFECTS
+  useEffect(() => {
+    const audioElement = audioRef.current;
 
-  const progress = duration ? (currentTime / duration) * 100 : 0;
-  const volumeProgress = volumePosition;
+    const handleEnded = () => {
+      if (true) {
+        playNextTrack();
+      }
+    };
 
-  const formattedTime = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-  const formattedDuration = `${totalDurationMinutes}:${totalSecondDuration}`
+    audioElement.addEventListener("ended", handleEnded);
+
+    return () => {
+      audioElement.removeEventListener("ended", handleEnded);
+    };
+  }, [currentTrackIndex]);
+
+  useEffect(() => {
+    const audioElement = audioRef.current;
+
+    if (isPlaying) {
+      audioElement.play();
+    } else {
+      audioElement.pause();
+    }
+  }, [isPlaying]);
+
+  useEffect(() => {
+    audioRef.current.src = data[currentTrackIndex].src;
+    audioRef.current.load();
+  }, [currentTrackIndex]);
+
+  useEffect(() => {
+    const audioElement = audioRef.current;
+    audioElement.addEventListener('loadedmetadata', () => {
+      setDuration(audioElement.duration);
+    });
+    const handleTimeUpdate = () => {
+      const newCurrentTime = Math.floor(audioElement.currentTime);
+      setCurrentTime(newCurrentTime);
+      setMinutes(Math.floor(newCurrentTime / 60));
+      setSeconds(newCurrentTime % 60);
+    };
+
+    audioElement.addEventListener('timeupdate', handleTimeUpdate);
+
+    return () => {
+      audioElement.removeEventListener('timeupdate', handleTimeUpdate);
+    };
+  }, []);
+
 
   return (
     <section>
       <PlayList data={data} handleClick={handleClick} />
       <section className="fixed bottom-0 pb-4 justify-between px-2 py-4 w-full box-sizing flex bg-black  shadow-2xl shadow-white">
         <main className="w-full">
-        <div className="w-full flex gap-2 pl-2 items-center">
-          <img src={data[currentTrackIndex].image} alt="" className="h-14 rounded-md" />
-          <div className="flex flex-col pl-2 justify-center">
-            <h1 className="text-xs md:text-base text-white leading-5 tracking-tight">{data[currentTrackIndex].title}</h1>
-            <h2 className="text-xs text-gray-400">{data[currentTrackIndex].subTitle}</h2>
+          <div className="w-full flex gap-2 pl-2 items-center">
+            <img src={data[currentTrackIndex].image} alt="" className="h-14 rounded-md" />
+            <div className="flex flex-col pl-2 justify-center">
+              <h1 className="text-xs md:text-base text-white leading-5 tracking-tight">{data[currentTrackIndex].title}</h1>
+              <h2 className="text-xs text-gray-400">{data[currentTrackIndex].subTitle}</h2>
+            </div>
+            <audio ref={audioRef}>
+              <source src={data[currentTrackIndex].src} type="audio/mpeg" />
+              Tu navegador no soporta el elemento de audio.
+            </audio>
           </div>
-          <audio ref={audioRef}>
-            <source src={data[currentTrackIndex].src} type="audio/mpeg" />
-            Tu navegador no soporta el elemento de audio.
-          </audio>
-        </div>
-      </main>
+        </main>
         <section className="flex w-full flex-col justify-center items-center">
           <section className="w-full gap-8 pb-1 flex items-center justify-center">
             <button onClick={handleRandom}><ArrowRandom stroke={isRandom ? 'green' : 'white'} size={'size-5'} />

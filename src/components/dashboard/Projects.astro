@@ -1,6 +1,6 @@
 ---
-import Cards from './Cards.astro'
-import { tags } from './Tags.astro'
+import Cards from "../Cards.astro";
+import { tags } from "../Tags.astro";
 const projects = [
   {
     title: "Dropi.co - Replica con ReactJS",
@@ -10,18 +10,17 @@ const projects = [
     github: "https://github.com/Deyverson1/dropi-replic",
     image: "/projects/dropies.webp",
     tags: [tags.React, tags.JavaScript],
-    color: 'border-orange-500'
+    color: "border-orange-500",
   },
   {
     title: "Anime Search - Consumo de APIs",
     description:
       "Tiene como objetivo la implementación de búsqueda de anime a partir del consumo de varias APIS como https://jikan.moe/, https://animechan.xyz/, https://nekos.best/, presento una implementación de TypeScript para mejorar la calidad del código con respecto a los errores",
-    github:
-      "https://github.com/Deyverson1/anime-search",
+    github: "https://github.com/Deyverson1/anime-search",
     link: "https://anime-search-deyverson1.vercel.app/",
     image: "/projects/animesearch.webp",
     tags: [tags.TypeScript, tags.Tailwind, tags.React],
-    color: 'border-yellow-600'
+    color: "border-yellow-600",
   },
   {
     title: "Bancolombia - Replica con Astro",
@@ -31,27 +30,27 @@ const projects = [
     link: "https://bancolombia-replic.vercel.app/",
     image: "/projects/bancolombia.webp",
     tags: [tags.Astro, tags.Tailwind, tags.TypeScript],
-    color: 'border-green-500'
+    color: "border-green-500",
   },
   {
     title: "Search Movies and books!",
     description:
-    "Fue creado con el propósito de aprender acerca de Svelte, actualmente presenta dos funciones principales las cuales son la búsqueda de libros y películas",
+      "Fue creado con el propósito de aprender acerca de Svelte, actualmente presenta dos funciones principales las cuales son la búsqueda de libros y películas",
     link: "https://search-movies-and-books.vercel.app/",
     github: "https://github.com/Deyverson1/search-movies-and-books",
     image: "/projects/searchmovie.webp",
     tags: [tags.Svelte, tags.JavaScript],
-    color: 'border-sky-500'
+    color: "border-sky-500",
   },
 ];
 ---
-  <Cards projects={projects}/>
-  <div class="flex justify-center pt-8">
-    <a
-      href="https://github.com/Deyverson1?tab=repositories"
-      target="_blank"
-      class="lex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-neutral-950 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-      >Ver mas...</a
-    >
-  </div>
+
+<Cards projects={projects} />
+<div class="flex justify-center pt-8">
+  <a
+    href="https://github.com/Deyverson1?tab=repositories"
+    target="_blank"
+    class="lex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-neutral-950 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+    >Ver mas...</a
+  >
 </div>

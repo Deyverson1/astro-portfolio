@@ -1,4 +1,3 @@
-
 export default function PlayList({ data, handleClick }) {
   return (
     <section className="pb-6 flex flex-col  mx-auto container lg:max-w-4xl md:max-w-2xl">
@@ -22,8 +21,3 @@ export default function PlayList({ data, handleClick }) {
     </section>
   )
 }
-
-
-
-
-
