@@ -20,27 +20,27 @@ const data = [
   >
     <div class="flex justify-center items-center md:items-start flex-col gap-y-4">
       <h1>Deyverson Herrera Valencia</h1>
-      <section class="flex gap-x-2 text-base">Hecho con: <AstroIcon class="size-6 hover:scale-110"/> Astro <React class="size-6 hover:scale-110"/> ReactJS <Tailwind class="size-6 hover:scale-110"/> Tailwind </section>
+      <section class="gap-x-2 text-base hidden md:flex">Hecho con: <AstroIcon class="size-6 hover:scale-110"/> Astro <React class="size-6 hover:scale-110"/> ReactJS <Tailwind class="size-6 hover:scale-110"/> Tailwind </section>
       
     </div>
     
     <main class="flex gap-12">
       <article>
         <h2>Social</h2>
-        <section class="flex flex-col gap-y-2 pt-3">
+        <section class="flex flex-col gap-y-2 pt-3  text-gray-800 dark:text-gray-400">
           {data.map((dato, index) => <a href={dato.link} target="_blank"><h3 >{dato.name}</h3></a> )}
         </section>
       </article>
       <article>
         <h2>OS</h2>
-        <section class="flex flex-col gap-y-2 pt-3">
+        <section class="flex flex-col gap-y-2 pt-3 text-gray-800 dark:text-gray-400">
           <h3 >Linux</h3>
           <h3 >Windows</h3>
         </section>
       </article>
       <article>
         <h2>Otros</h2>
-        <section class="flex flex-col gap-y-2 pt-3">
+        <section class="flex flex-col gap-y-2 pt-3 text-gray-800 dark:text-gray-400">
           <a href="https://anime-search-deyverson1.vercel.app/"><h3 >Anime</h3></a>
           <a href="https://search-movies-and-books.vercel.app/"><h3 >Libros</h3></a>
           <a href="mailto:deyversongp@gmail.com"><h3>Contacto</h3></a>
@@ -54,9 +54,6 @@ const data = [
   </div>
 </footer>
 <style>
-  h3{
-    color: #a0aec0;
-  }
   h3:hover{
     text-decoration: underline;
   }
