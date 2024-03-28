@@ -80,19 +80,15 @@ function ProjectDetails({ image, title }: Props) {
                         </p>
                       </main>
                       <div className="w-5/12">
-                        <img className="bg-opacity-100" src="/projects/dropies.webp" alt="" />
+                        <img className="bg-opacity-100 rounded-3xl" src="/projects/dropies.webp" alt="" />
                       </div>
                     </div>
                     <div className="h-full flex justify-center gap-x-8 items-center">
-                      <main className="w-4/12">
-                        <h1 className="text-3xl font-semibold">Dropi.co - Replica con ReactJS</h1>
-                        <p className="w-full">
-                          Tiene como objetivo replicar la página web existente en https://dropi.co utilizando ReactJS principalmente, por medio del cual busco mejorar el rendimiento utilizando el enfoque SPA, ademas de presentar ciertos aportes propios con respecto al diseño de la pagina.
-                        </p>
+                      <main className="w-10/12 h-creen gap-x-8 flex justify-center">
+                        <img src="DropiMobile.png" className="w-1/4 pt-40" alt="" />
+                        <img src="DropiDesktop.png" className="w-4/12 pb-20 h-1/3" alt="" />
                       </main>
-                      <div className="w-5/12">
-                        <img className="bg-opacity-100" src="/projects/dropies.webp" alt="" />
-                      </div>
+                      
                     </div>
 
                   </Carousel>
