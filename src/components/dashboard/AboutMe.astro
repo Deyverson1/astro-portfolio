@@ -12,46 +12,20 @@ const data = [
 ]
 ---
 <article class="flex flex-col px-2 gap-8">
-  <section class="flex  justify-center items-center flex-wrap gap-8">
-    <div class="shadow-lg">
+  <section class="flex flex-col md-flex-row w-full items-center justify-center gap-8">
+    <div class="shadow-lg pb-4">
       <img
         src="/icon.jpg"
-        class="rounded-3xl h-80 w-56 border-2 border-white"
+        class="rounded-3xl h-full w-56 border-2 border-white"
         alt=""
       />
     </div>
-    <div class="flex flex-col max-w-xl gap-8">
-      <div class="rounded-3xl p-4 border-2 border-white bg-gradient-to-b from-transparent to-gray-200 hover:to-gray-300 dark:to-blue-950 dark:hover:to-blue-900 shadow-lg">
-        Mi nombre es <strong> Deyverson Herrera,</strong> empecé en el mundo de la
-        programación en 2022, actualmente estudiante <strong
-          >de Mecatrónica y Desarrollo Web.</strong>
-      </div>
-      <section class="flex w-full gap-8">
-        <div class="w-4/12 cursor-pointer bg-gradient-to-b from-transparent via-transparent to-gray-200 hover:to-gray-300 dark:to-blue-950 dark:hover:to-blue-900  border-2 rounded-3xl p-3 border-white items-center justify-center flex flex-col shadow-lg">
-          <img src="https://avatars.githubusercontent.com/u/126831007?v=4" class="w-14 rounded-full h-14" alt="" />
-          <a href="https://github.com/Deyverson1" target="_blank" class="flex flex-col text-black dark:text-white justify-center items-center pt-2">
-            <h2 class="dark:text-gray-400 text-gray-800">@Deyverson1</h2>
-          <GithubIcon class="size-6"/>
-          </a>
-        </div>
-        <div class="w-full bg-gradient-to-b text-black dark:text-white from-transparent to-gray-200 dark:to-blue-950 dark:hover:to-blue-900 hover:to-gray-300 flex justify-around  gap-4 rounded-3xl border-2 border-white h-full p-4 shadow-lg">
-          <section>
-            Projects:
-           <article class="flex flex-wrap gap-x-4">
-            {data.map(({link, name}) => ( 
-            <a href={link} target="_blank" class="hover:underline dark:text-gray-400 text-gray-800">{name}</a>
-           ))}
-           </article>
-          </section>
-        </div>
-      </section>
+    <div class="md:w-7/12 pt-2">
+      <h1 class="text-3xl">Deyverson Herrera Valencia</h1>
+      <h2 class="text-blue-500">- Desarrollador Web</h2>
+      <p class="pt-4">Empecé en el mundo de la programación en 2022, actualmente estudiante de Mecatrónica y Desarrollo Web. Mi enfoque principal se encuentra en la creación de experiencias de usuario atractivas y eficientes. Mi objetivo es integrar a mis conocimientos diversas tecnologías, tanto en el frontend como en el backend, para contribuir de manera integral a proyectos innovadores.</p>
     </div>
-    <section class="rounded-3xl md:mx-7 p-4 border-2 border-white  bg-gradient-to-b from-transparent to-gray-200 hover:to-gray-300 dark:to-blue-950 dark:hover:to-blue-900 dark:only:hover:to-gray-800  shadow-lg">
-      Mi enfoque principal se encuentra en la creación de experiencias de usuario
-      atractivas y eficientes, por lo que como programador me he dedicado a
-      adquirir diversos conocimientos que me ayuden en el enfoque de diferentes
-      proyectos, desde <strong>ReactJs </strong> hasta <strong>MySQL</strong>
-    </section>
+    
   </section>
 </article>
 

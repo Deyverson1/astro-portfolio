@@ -3,7 +3,7 @@ import Gmail from "../icons/Gmail.astro";
 import GithubCat from "../icons/GithubCat.astro";
 import LinkedinIcon from "../icons/LinkedinIcon.astro";
 import Twenty from "../icons/Twenty.astro";
-import Robot from '../icons/Robot.astro'
+import Robot from "../icons/Robot.astro";
 import Netflix from "../icons/Netflix.astro";
 import Spotify from "../icons/Spotify.astro";
 const data = [
@@ -28,21 +28,20 @@ const data = [
   { name: "Mecatrónica", link: "/mechatronics", icon: Robot },
   { name: "Música", link: "/music", icon: Spotify },
   { name: "Anime", link: "/anime", icon: Netflix },
-
 ];
 ---
 
-<section class="pt-20 px-2 lg:pt-0 w-full">
+<section class="pt-20 flex flex-col px-2 lg:pt-0 w-full">
   <Twenty />
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
     Hola, Soy Deyverson
   </h1>
-  <p class="mt-6 text-xl text-gray-800 dark:text-gray-300 max-w-xl">
+  <p class="mt-5 text-xl text-gray-800 dark:text-gray-300 max-w-xl">
     <strong class="text-blue-500"
       >Estudiante de Mecatrónica Industrial y Desarrollo de aplicaciones web
-    </strong> de Cali, Colombia🇨🇴. 
+    </strong> de Cali, Colombia🇨🇴.
   </p>
   <div class="flex flex-wrap gap-4 mt-8">
     {
@@ -53,8 +52,7 @@ const data = [
           href={data.link}
           transition:name="anime box"
         >
-          <data.icon class="size-4 fill-black dark:fill-white " />{" "}
-          {data.name}
+          <data.icon class="size-4 fill-black dark:fill-white " /> {data.name}
         </a>
       ))
     }

@@ -21,10 +21,14 @@ import Footer from "../components/dashboard/Footer.astro";
 			<Hero />
 		</section>
 		<SectionContainer id="projects">
-			<TitleContainer>
-				<Presentation class="size-7 pb-0.5"/>
-				Proyectos
-			</TitleContainer>
+			<div class="flex justify-center px-2 lg:px-0 items-center mb-4 text-3xl font-semibold gap-x-3 text-neutral-950 dark:text-white">
+				<!-- <Presentation class="size-7 pb-0.5"/> -->
+				<div class="flex justify-center items-center gap-x-4">
+					<span class="w-24 md:w-28 border-b-4 border-blue-600"></span>
+					<p>Proyectos</p>
+					<span class="w-24 md:w-28 border-b-4 border-blue-600"></span>
+				</div>
+			</div>
 			<Projects />
 		</SectionContainer>
 		<SectionContainer>

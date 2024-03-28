@@ -19,8 +19,6 @@ const data = [
   { name: "TypeScript", icon: TypeScript },
   { name: "Php", icon: Php },
   { name: "SQL", icon: Database },
-];
-const data2 = [
   { name: "Html", icon: Html },
   { name: "Css", icon: Css },
   { name: "Astro", icon: AstroIcon },
@@ -33,11 +31,12 @@ const data2 = [
   { name: "Bootstrap", icon: Bootstrap },
   { name: "Material UI", icon: MaterialUI },
 ];
+const data2 = [
+];
 ---
 
 <div class="flex flex-col flex-1 flex-wrap px-2 lg:px-0 gap-x-2 gap-y-2">
-  <h1 class="text-lg">Lenguajes:</h1>
-  <section class="flex flex-wrap">
+  <section class="flex flex-wrap justify-center">
     {
       data.map((data) => (
         <article class="flex flex-wrap cursor-default">
@@ -51,19 +50,6 @@ const data2 = [
       ))
     }
   </section>
-  <h1 class="text-lg pt-4">Frameworks/Librerías/Otros:</h1>
-  <section class="flex flex-wrap">
-    {
-      data2.map((data) => (
-        <article class="flex flex-wrap cursor-default">
-          <div class="gap-x-2">
-            <div class="flex items-center gap-x-2 text-gray-900  border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2  dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-              <data.icon class="size-10 fill-black dark:fill-white" />
-              <h3 class="text-gray-900 dark:text-white font-sm">{data.name}</h3>
-            </div>
-          </div>
-        </article>
-      ))
-    }
-  </section>
+
+  
 </div>

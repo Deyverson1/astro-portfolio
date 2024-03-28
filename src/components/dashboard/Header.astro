@@ -14,10 +14,10 @@ const contentNav = [
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-1"
+  class="absolute top-2 z-10 flex items-center justify-center w-full mx-auto mt-1"
 >
   <nav
-    class="flex lg:px-6 text-medium font-medium text-black dark:text-white justify-center items-center"
+    class="flex lg:px-6 text-medium font-medium   justify-center items-center"
   >
     <!-- <div class="hidden md:flex md:w-10/12 pl-2 w-fit justify-center">
       <a href="/" class="text-black dark:text-white">
@@ -28,7 +28,7 @@ const contentNav = [
       {
         contentNav.map((content) => (
           <a
-            class="text-sm md:text-base relative block px-2 py-2 hover:text-gray-800 dark:hover:text-gray-800"
+            class="text-sm md:text-base relative text-gray-700 dark:text-gray-200 block px-2 py-2 hover:text-gray-800 dark:hover:text-gray-400"
             aria-label={content.label}
             href={content.url}
           >
@@ -38,7 +38,7 @@ const contentNav = [
       }
       <a
         href="/curriculum"
-        class="text-sm md:text-base pl-2 md:border-blue-500 hover:text-gray-800 dark:hover:text-gray-800 md:rounded-md md:border px-2 py-2"
+        class="text-sm md:text-base md:ml-6 md:border-blue-500 hover:text-gray-800 dark:text-gray-100  dark:hover:text-gray-300 md:rounded-md md:border px-2 py-2"
         >Curriculum</a
       >
     </section>
@@ -47,7 +47,7 @@ const contentNav = [
 </header>
 
 <style>
-  nav {
+  /* nav {
     animation: nav-shadown 1s linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
@@ -57,5 +57,5 @@ const contentNav = [
     to {
       @apply shadow-lg ring-1 backdrop-blur rounded-full bg-blue-500 ring-black/10;
     }
-  }
+  } */
 </style>
