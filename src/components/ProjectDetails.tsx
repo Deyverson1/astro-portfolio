@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Exit } from "./icons/Exit";
+import { Checkbox } from "./icons/CheckIcon";
 
 
 interface Props {
@@ -34,7 +35,7 @@ function ProjectDetails({ image, title }: Props) {
   function handleDetails() {
     setDetailsOpen(!detailsOpen);
   }
-  function handleExit(){
+  function handleExit() {
     setDetailsOpen(!detailsOpen);
     console.log('Click')
   }
@@ -54,8 +55,8 @@ function ProjectDetails({ image, title }: Props) {
       {
         detailsOpen && (
           <section className="fixed z-50 -ml-5 md:-ml-5 p-0 w-full h-screen top-0 bg-black bg-opacity-40 md:bg-opacity-90 text-white">
-            <div className="absolute z-50 top-10 right-40 cursor-pointer hover:animate-spin" onClick={handleExit}>
-              <Exit/>
+            <div className="absolute z-50 top-10 right-40 cursor-pointer hover:animate-pulse" onClick={handleExit}>
+              <Exit />
             </div>
             <main>
               <div className='w-full h-full'>
@@ -85,12 +86,20 @@ function ProjectDetails({ image, title }: Props) {
                     </div>
                     <div className="h-full flex justify-center gap-x-8 items-center">
                       <main className="w-10/12 h-creen gap-x-8 flex justify-center">
-                        <img src="DropiMobile.png" className="w-1/4 pt-40" alt="" />
-                        <img src="DropiDesktop.png" className="w-4/12 pb-20 h-1/3" alt="" />
+                        <img src="DropiMobile.png" className="w-1/4 mt-40" alt="" />
+                        <div className="w-5/12 h-1/3">
+                          <img src="DropiDesktop.png" className="w-full h-full" alt="" />
+                          <ul className="flex flex-col gap-y-2">
+                            <li className="flex gap-x-4 max-w-10/12"><Checkbox /> Mejora de la adaptabilidad en diversos dispositivos.</li>
+                            <li className="flex gap-x-4 max-w-10/12"><Checkbox /> Integración de SPA.</li>
+                            <li className="flex gap-x-4  max-w-10/12"><Checkbox /> Actualizaciones en el diseño de la interfaz.</li>
+                            <li className="flex gap-x-4"><Checkbox /> Optimización de la navegación.</li>
+                            <li className="flex gap-x-4  w-full"><Checkbox /> <p>Implementación de la metodología BEM.</p></li>
+                          </ul>
+                        </div>
                       </main>
-                      
-                    </div>
 
+                    </div>
                   </Carousel>
                 </div>
               </div>
