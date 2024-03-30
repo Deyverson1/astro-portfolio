@@ -33,7 +33,9 @@ function ProjectDetails({ image, title, id }: Props) {
   }
   const data: { [key: string]: { title: string; description: string; points: string[]; image: string; imageInfoMobile: string, imageInfoDesktop: string, video: string; } } = {
     '1': { title: 'Dropi.co - Replica con ReactJS', description: ' Tiene como objetivo replicar la página web existente en https://dropi.co utilizando ReactJS principalmente, por medio del cual busco mejorar el rendimiento utilizando el enfoque SPA, ademas de presentar ciertos aportes propios con respecto al diseño de la pagina.', points: ['Mejora de la adaptabilidad en diversos dispositivos.', 'Integración de SPA.', 'Actualizaciones en el diseño de la interfaz.', 'Optimización de la navegación.', 'Implementación de la metodología BEM.'], image: '/projects/dropies.webp', imageInfoMobile: 'DropiMobile.png', imageInfoDesktop: 'DropiDesktop.png', video: '/video/DropiWeb.mp4' },
-    '2': { title: 'Anime Search - Consumo de APIs', description: 'Tiene como objetivo la implementación de búsqueda de anime a partir del consumo de varias APIS como https://jikan.moe/, https://animechan.xyz/, https://nekos.best/, presento una implementación de TypeScript para mejorar la calidad del código con respecto a los errores', points: [], imageInfoMobile: '', imageInfoDesktop: '', image: '/projects/animesearch.webp', video: '' },
+    '2': { title: 'Anime Search - Consumo de APIs', description: 'Tiene como objetivo la implementación de búsqueda de anime a partir del consumo de varias APIS como https://jikan.moe/, https://animechan.xyz/, https://nekos.best/, presento una implementación de TypeScript para mejorar la calidad del código con respecto a los errores', points: [], imageInfoMobile: 'SearchMobile.png', imageInfoDesktop: 'SearchDesktop.png', image: '/projects/animesearch.webp', video: '' },
+    '3': { title: 'Bancolombia - Replica con Astro', description: 'Actualmente en proceso de replica del sitio web de Bancolombia https://www.bancolombia.com/personas, esta desarrollado principalmente con Astro, ademas de una pequeña integración de TypeScript, por la parte los estilos se realizan por medio de Tailwind', points: [], imageInfoMobile: 'BancolombiaMobile.png', imageInfoDesktop: 'BancolombiaDesktop.png', image: '/projects/bancolombia.webp', video: '' },
+    '4': { title: 'Search Movies and books!', description: 'Fue creado con el propósito de aprender acerca de Svelte, actualmente presenta dos funciones principales las cuales son la búsqueda de libros y películas', points: [], imageInfoMobile: 'MovieMobile.png', imageInfoDesktop: 'MovieDesktop.png', image: '/projects/searchmovie.webp', video: '' },
   }
 
 
@@ -59,68 +61,68 @@ function ProjectDetails({ image, title, id }: Props) {
         </div>
       </div>
       {detailsOpen && (
-  <section className="fixed z-50 -ml-5 md:-ml-5 p-0 w-full h-screen top-0 bg-black bg-opacity-40 md:bg-opacity-90 text-white">
-    <div className="absolute z-50 top-10 right-40 cursor-pointer hover:animate-pulse" onClick={handleExit}>
-      <Exit />
-    </div>
-    <main>
-      <div className='w-full h-full'>
-        {Object.keys(data).map(dataId => {
-          const numericId = parseInt(dataId);
-          if (!isNaN(numericId) && numericId === parseInt(id)) {
-            return (
-              <div key={dataId} className="h-full w-full">
-                <Carousel
-                  className='w-full'
-                  arrows={true}
-                  responsive={responsive}
-                  draggable={true}
-                  swipeable={true}
-                  autoPlay={true}
-                  // autoPlaySpeed={4000}
-                  shouldResetAutoplay
-                  minimumTouchDrag={100}
-                  rewind={true}
-                >
-                  <div className="h-screen flex justify-center gap-x-8 items-center">
-                    <main className="w-4/12">
-                      <h1 className="text-3xl font-semibold">{data[dataId].title}</h1>
-                      <p className="w-full">
-                        {data[dataId].description}
-                      </p>
-                    </main>
-                    <div className="w-5/12">
-                      <img className="bg-opacity-100 rounded-3xl" src={data[dataId].image} alt="" />
+        <section className="fixed z-50 -ml-5 md:-ml-5 p-0 w-full h-screen top-0 bg-black bg-opacity-95 md:bg-opacity-90 text-white">
+          <div className="absolute z-50 top-10 right-5 md:right-40 cursor-pointer hover:animate-pulse" onClick={handleExit}>
+            <Exit />
+          </div>
+          <main>
+            <div className='w-full h-full'>
+              {Object.keys(data).map(dataId => {
+                const numericId = parseInt(dataId);
+                if (!isNaN(numericId) && numericId === parseInt(id)) {
+                  return (
+                    <div key={dataId} className="h-full w-full">
+                      <Carousel
+                        className='w-full'
+                        arrows={true}
+                        responsive={responsive}
+                        draggable={true}
+                        swipeable={true}
+                        // autoPlay={true}
+                        // autoPlaySpeed={4000}
+                        shouldResetAutoplay
+                        minimumTouchDrag={100}
+                        rewind={true}
+                      >
+                        <div className="h-screen flex flex-col md:flex-row justify-center gap-x-8 items-center">
+                          <main className="w-9/12 md:w-4/12">
+                            <h1 className="text-3xl font-semibold">{data[dataId].title}</h1>
+                            <p className="w-full">
+                              {data[dataId].description}
+                            </p>
+                          </main>
+                          <div className="w-9/12 pt-10 md:w-5/12">
+                            <img className="bg-opacity-100 rounded-3xl" src={data[dataId].image} alt="" />
+                          </div>
+                        </div>
+                        <div className="h-full flex justify-center gap-x-8 items-center">
+                          <main className="w-10/12 h-creen gap-x-8 items-center flex flex-col md:flex-row justify-center">
+                            <img src={data[dataId].imageInfoMobile} className="w-4/12 pb-8 md:pb-0 md:w-1/4 md:mt-40" alt="" />
+                            <div className="w-10/12 md:w-5/12 h-1/3">
+                              <img src={data[dataId].imageInfoDesktop} className="w-full hidden md:block h-full" alt="" />
+                              <ul className="flex flex-col gap-y-2">
+                                {data[dataId].points.map((point, index) => (
+                                  <li key={index} className="flex gap-x-4 w-full md:max-w-10/12">
+                                    <Checkbox /> {point}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </main>
+                        </div>
+                        <div className="flex justify-center items-center w-full h-full">
+                          <video src={data[dataId].video} className="aspect-video flex items-center justify-center w-12/12 md:w-6/12 md:h-2/3" autoPlay loop></video>
+                        </div>
+                      </Carousel>
                     </div>
-                  </div>
-                  <div className="h-full flex justify-center gap-x-8 items-center">
-                    <main className="w-10/12 h-creen gap-x-8 flex justify-center">
-                      <img src={data[dataId].imageInfoMobile} className="w-1/4 mt-40" alt="" />
-                      <div className="w-5/12 h-1/3">
-                        <img src={data[dataId].imageInfoDesktop} className="w-full h-full" alt="" />
-                        <ul className="flex flex-col gap-y-2">
-                          {data[dataId].points.map((point, index) => (
-                            <li key={index} className="flex gap-x-4 max-w-10/12">
-                              <Checkbox /> {point}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </main>
-                  </div>
-                  <div className="flex justify-center items-center w-full h-full">
-                    <video src={data[dataId].video} className="aspect-video flex items-center justify-center w-6/12 h-2/3" autoPlay loop></video>
-                  </div>
-                </Carousel>
-              </div>
-            );
-          }
-          return null;
-        })}
-      </div>
-    </main>
-  </section>
-)}
+                  );
+                }
+                return null;
+              })}
+            </div>
+          </main>
+        </section>
+      )}
 
 
 
