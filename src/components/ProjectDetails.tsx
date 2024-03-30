@@ -8,9 +8,10 @@ import { Checkbox } from "./icons/CheckIcon";
 interface Props {
   image: string;
   title: string;
+  id: string
 }
 
-function ProjectDetails({ image, title }: Props) {
+function ProjectDetails({ image, title, id }: Props) {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const responsive = {
     superLargeDesktop: {
@@ -30,14 +31,18 @@ function ProjectDetails({ image, title }: Props) {
       items: 1
     }
   }
+  const data: { [key: string]: { title: string; description: string; points: string[]; image: string; imageInfoMobile: string, imageInfoDesktop: string, video: string; } } = {
+    '1': { title: 'Dropi.co - Replica con ReactJS', description: ' Tiene como objetivo replicar la página web existente en https://dropi.co utilizando ReactJS principalmente, por medio del cual busco mejorar el rendimiento utilizando el enfoque SPA, ademas de presentar ciertos aportes propios con respecto al diseño de la pagina.', points: ['Mejora de la adaptabilidad en diversos dispositivos.', 'Integración de SPA.', 'Actualizaciones en el diseño de la interfaz.', 'Optimización de la navegación.', 'Implementación de la metodología BEM.'], image: '/projects/dropies.webp', imageInfoMobile: 'DropiMobile.png', imageInfoDesktop: 'DropiDesktop.png', video: '/video/DropiWeb.mp4' },
+    '2': { title: 'Anime Search - Consumo de APIs', description: 'Tiene como objetivo la implementación de búsqueda de anime a partir del consumo de varias APIS como https://jikan.moe/, https://animechan.xyz/, https://nekos.best/, presento una implementación de TypeScript para mejorar la calidad del código con respecto a los errores', points: [], imageInfoMobile: '', imageInfoDesktop: '', image: '/projects/animesearch.webp', video: '' },
+  }
 
 
-  function handleDetails() {
+  function handleDetails(id: string) {
     setDetailsOpen(!detailsOpen);
   }
   function handleExit() {
     setDetailsOpen(!detailsOpen);
-    console.log('Click')
+
   }
 
   return (
@@ -45,69 +50,80 @@ function ProjectDetails({ image, title }: Props) {
       <div className="w-full md:w-1/2">
         <div className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
           <img
-            onClick={handleDetails}
+            onClick={() => handleDetails(id)}
             className="object-cover cursor-pointer object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
             src={image}
             alt={"Extraido de" + title}
+            id={id}
           />
         </div>
       </div>
-      {
-        detailsOpen && (
-          <section className="fixed z-50 -ml-5 md:-ml-5 p-0 w-full h-screen top-0 bg-black bg-opacity-40 md:bg-opacity-90 text-white">
-            <div className="absolute z-50 top-10 right-40 cursor-pointer hover:animate-pulse" onClick={handleExit}>
-              <Exit />
-            </div>
-            <main>
-              <div className='w-full h-full'>
-
-                <div className="h-full w-full">
-                  <Carousel
-                    className='w-full'
-                    arrows={true}
-                    responsive={responsive}
-                    draggable={true}
-                    swipeable={true}
-                    autoPlay={true}
-                    autoPlaySpeed={300000}
-                    rewind={true}
-                  // centerMode={true}
-                  >
-                    <div className="h-screen flex justify-center gap-x-8 items-center">
-                      <main className="w-4/12">
-                        <h1 className="text-3xl font-semibold">Dropi.co - Replica con ReactJS</h1>
-                        <p className="w-full">
-                          Tiene como objetivo replicar la página web existente en https://dropi.co utilizando ReactJS principalmente, por medio del cual busco mejorar el rendimiento utilizando el enfoque SPA, ademas de presentar ciertos aportes propios con respecto al diseño de la pagina.
-                        </p>
-                      </main>
-                      <div className="w-5/12">
-                        <img className="bg-opacity-100 rounded-3xl" src="/projects/dropies.webp" alt="" />
+      {detailsOpen && (
+  <section className="fixed z-50 -ml-5 md:-ml-5 p-0 w-full h-screen top-0 bg-black bg-opacity-40 md:bg-opacity-90 text-white">
+    <div className="absolute z-50 top-10 right-40 cursor-pointer hover:animate-pulse" onClick={handleExit}>
+      <Exit />
+    </div>
+    <main>
+      <div className='w-full h-full'>
+        {Object.keys(data).map(dataId => {
+          const numericId = parseInt(dataId);
+          if (!isNaN(numericId) && numericId === parseInt(id)) {
+            return (
+              <div key={dataId} className="h-full w-full">
+                <Carousel
+                  className='w-full'
+                  arrows={true}
+                  responsive={responsive}
+                  draggable={true}
+                  swipeable={true}
+                  autoPlay={true}
+                  // autoPlaySpeed={4000}
+                  shouldResetAutoplay
+                  minimumTouchDrag={100}
+                  rewind={true}
+                >
+                  <div className="h-screen flex justify-center gap-x-8 items-center">
+                    <main className="w-4/12">
+                      <h1 className="text-3xl font-semibold">{data[dataId].title}</h1>
+                      <p className="w-full">
+                        {data[dataId].description}
+                      </p>
+                    </main>
+                    <div className="w-5/12">
+                      <img className="bg-opacity-100 rounded-3xl" src={data[dataId].image} alt="" />
+                    </div>
+                  </div>
+                  <div className="h-full flex justify-center gap-x-8 items-center">
+                    <main className="w-10/12 h-creen gap-x-8 flex justify-center">
+                      <img src={data[dataId].imageInfoMobile} className="w-1/4 mt-40" alt="" />
+                      <div className="w-5/12 h-1/3">
+                        <img src={data[dataId].imageInfoDesktop} className="w-full h-full" alt="" />
+                        <ul className="flex flex-col gap-y-2">
+                          {data[dataId].points.map((point, index) => (
+                            <li key={index} className="flex gap-x-4 max-w-10/12">
+                              <Checkbox /> {point}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                    </div>
-                    <div className="h-full flex justify-center gap-x-8 items-center">
-                      <main className="w-10/12 h-creen gap-x-8 flex justify-center">
-                        <img src="DropiMobile.png" className="w-1/4 mt-40" alt="" />
-                        <div className="w-5/12 h-1/3">
-                          <img src="DropiDesktop.png" className="w-full h-full" alt="" />
-                          <ul className="flex flex-col gap-y-2">
-                            <li className="flex gap-x-4 max-w-10/12"><Checkbox /> Mejora de la adaptabilidad en diversos dispositivos.</li>
-                            <li className="flex gap-x-4 max-w-10/12"><Checkbox /> Integración de SPA.</li>
-                            <li className="flex gap-x-4  max-w-10/12"><Checkbox /> Actualizaciones en el diseño de la interfaz.</li>
-                            <li className="flex gap-x-4"><Checkbox /> Optimización de la navegación.</li>
-                            <li className="flex gap-x-4  w-full"><Checkbox /> <p>Implementación de la metodología BEM.</p></li>
-                          </ul>
-                        </div>
-                      </main>
-
-                    </div>
-                  </Carousel>
-                </div>
+                    </main>
+                  </div>
+                  <div className="flex justify-center items-center w-full h-full">
+                    <video src={data[dataId].video} className="aspect-video flex items-center justify-center w-6/12 h-2/3" autoPlay loop></video>
+                  </div>
+                </Carousel>
               </div>
+            );
+          }
+          return null;
+        })}
+      </div>
+    </main>
+  </section>
+)}
 
-            </main>
-          </section>
-        )
-      }
+
+
     </>
   );
 }

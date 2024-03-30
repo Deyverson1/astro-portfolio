@@ -11,6 +11,7 @@ const projects = [
     image: "/projects/dropies.webp",
     tags: [tags.React, tags.JavaScript],
     color: "border-orange-500",
+    id: '1'
   },
   {
     title: "Anime Search - Consumo de APIs",
@@ -21,6 +22,7 @@ const projects = [
     image: "/projects/animesearch.webp",
     tags: [tags.TypeScript, tags.Tailwind, tags.React],
     color: "border-yellow-600",
+    id: '2'
   },
   {
     title: "Bancolombia - Replica con Astro",
@@ -31,6 +33,7 @@ const projects = [
     image: "/projects/bancolombia.webp",
     tags: [tags.Astro, tags.Tailwind, tags.TypeScript],
     color: "border-green-500",
+    id: '3'
   },
   {
     title: "Search Movies and books!",
@@ -41,12 +44,15 @@ const projects = [
     image: "/projects/searchmovie.webp",
     tags: [tags.Svelte, tags.JavaScript],
     color: "border-sky-500",
+    id: '4'
   },
 ];
 ---
 
 <div class="flex justify-center pb-10">
- <a href="https://github.com/Deyverson1?tab=repositories"> <span class="text-sx underline text-blue-600">Todos los proyectos</span></a>
+  <a href="https://github.com/Deyverson1?tab=repositories">
+    <span class="text-sx underline text-blue-600">Todos los proyectos</span></a
+  >
 </div>
 <Cards projects={projects} />
 <!-- <div class="flex justify-center pt-8">
