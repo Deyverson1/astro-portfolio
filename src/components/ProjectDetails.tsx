@@ -8,7 +8,7 @@ import { Checkbox } from "./icons/CheckIcon";
 interface Props {
   image: string;
   title: string;
-  id: string
+  id: string;
 }
 
 function ProjectDetails({ image, title, id }: Props) {
@@ -103,7 +103,9 @@ function ProjectDetails({ image, title, id }: Props) {
                               <ul className="flex flex-col gap-y-2">
                                 {data[dataId].points.map((point, index) => (
                                   <li key={index} className="flex gap-x-4 w-full md:max-w-10/12">
-                                    <Checkbox /> {point}
+                                   <div>
+                                   <Checkbox />
+                                    </div> {point}
                                   </li>
                                 ))}
                               </ul>
