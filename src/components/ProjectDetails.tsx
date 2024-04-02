@@ -113,7 +113,7 @@ function ProjectDetails({ image, title, id }: Props) {
                           </main>
                         </div>
                         <div className="flex justify-center items-center w-full h-full">
-                          <video src={data[dataId].video} className="aspect-video flex items-center justify-center w-12/12 md:w-6/12 md:h-2/3" autoPlay loop></video>
+                          <video src={data[dataId].video} className="aspect-video flex items-center justify-center w-12/12 md:w-6/12 md:h-2/3" autoPlay loop muted></video>
                         </div>
                       </Carousel>
                     </div>
