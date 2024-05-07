@@ -9,9 +9,10 @@ interface Props {
   image: string;
   title: string;
   id: string;
+  active: boolean;
 }
 
-function ProjectDetails({ image, title, id }: Props) {
+function ProjectDetails({ image, title, id, active }: Props) {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const responsive = {
     superLargeDesktop: {
@@ -60,7 +61,7 @@ function ProjectDetails({ image, title, id }: Props) {
           />
         </div>
       </div>
-      {detailsOpen && (
+      {detailsOpen && active && (
         <section className="fixed z-50 -ml-5 md:-ml-5 p-0 w-full h-screen top-0 bg-black bg-opacity-95 md:bg-opacity-90 text-white">
           <div className="absolute z-50 top-10 right-5 md:right-40 cursor-pointer hover:animate-pulse" onClick={handleExit}>
             <Exit />

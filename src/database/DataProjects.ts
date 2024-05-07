@@ -1,7 +1,5 @@
----
-import Cards from "../Cards.astro";
-import { tags } from "../Tags.astro";
-const projects = [
+import { tags } from "../components/Tags.astro";
+export const projects = [
   {
     title: "Dropi.co - Replica con ReactJS",
     description:
@@ -12,6 +10,18 @@ const projects = [
     tags: [tags.React, tags.JavaScript, tags.Css],
     color: "border-orange-500",
     id: "1",
+  },
+  {
+    title: "Implementación de sensores",
+    description:
+      "Este proyecto contiene código de Arduino y Processing para la medida con los sensores SHT-30, HC-SR04, Termistor.",
+    github:
+      "https://github.com/Deyverson1/SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura",
+    link: "",
+    documentation: '/mechatronics/documentation',
+    image: "/projects/sensores.webp",
+    color: "border-pink-600",
+    tags: [tags.C]
   },
   {
     title: "Anime Search - Consumo de APIs",
@@ -36,6 +46,26 @@ const projects = [
     id: "3",
   },
   {
+    title: "Replica de Netflix",
+    description: "Este proyecto tiene objetivo la replica/adaptación tanto de la Landing page de la pagina web https://www.netflix.com/co/, como de su browser principal el cual se encarga de la búsqueda de contenido disponible en la plataforma de Netflix ",
+    link: "netflix-replic.vercel.app/",
+    github: "https://github.com/Deyverson1/netflix-replic",
+    image: "",
+    tags: [tags.TypeScript, tags.React,  tags.Tailwind],
+    color: "border-red-500",
+    id: "5"
+  },
+    {
+    title: "Script de Python - Clonar repositorios",
+    description: "Consiste en un script de Python que automatiza el proceso de clonación de todos los repositorios públicos de un usuario de GitHub en un directorio específico en el sistema local.",
+    link: "",
+    github: "https://github.com/Deyverson1/clone-respositories/blob/master/clone-repos.py",
+    image: "",
+    tags: [tags.Python],
+    color: "border-blue-600",
+    id: ""
+  },
+  {
     title: "Search Movies and books!",
     description:
       "Fue creado con el propósito de aprender acerca de Svelte, actualmente presenta dos funciones principales las cuales son la búsqueda de libros y películas",
@@ -46,20 +76,15 @@ const projects = [
     color: "border-sky-500",
     id: "4",
   },
-];
----
+  // {
+  //   title: "Replica de Netflix",
+  //   description: "",
+  //   link: "",
+  //   github: "",
+  //   image: "",
+  //   tags: [],
+  //   color: "border-red-500",
+  //   id: ""
+  // }
 
-<div class="flex justify-center pb-10">
-  <a href="/projects">
-    <span class="text-sx underline text-blue-600">Todos los proyectos</span></a
-  >
-</div>
-<Cards projects={projects} active={true}/>
-<!-- <div class="flex justify-center pt-8">
-  <a
-    href="https://github.com/Deyverson1?tab=repositories"
-    target="_blank"
-    class="lex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-neutral-950 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-    >Ver mas...</a
-  >
-</div> -->
+];
