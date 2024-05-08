@@ -98,9 +98,9 @@ function ProjectDetails({ image, title, id, active }: Props) {
                         </div>
                         <div className="h-full flex justify-center gap-x-8 items-center">
                           <main className="w-10/12 h-creen gap-x-8 items-center flex flex-col md:flex-row justify-center">
-                            <img src={data[dataId].imageInfoMobile} className="w-4/12 pb-8 md:pb-0 md:w-1/4 md:mt-40" alt="" />
-                            <div className="w-10/12 md:w-5/12 h-1/3">
-                              <img src={data[dataId].imageInfoDesktop} className="w-full hidden md:block h-full" alt="" />
+                            <img src={data[dataId].imageInfoMobile} className="flex justify-center items-center w-4/12 pb-8 md:pb-0 md:w-3/12 " alt="" />
+                            <div className="w-10/12 md:w-5/12 h-1/3 flex flex-col items-center justify-center">
+                              <img src={data[dataId].imageInfoDesktop} className="w-8/12 hidden md:block h-full" alt="" />
                               <ul className="flex flex-col gap-y-2">
                                 {data[dataId].points.map((point, index) => (
                                   <li key={index} className="flex gap-x-4 w-full md:max-w-10/12">
