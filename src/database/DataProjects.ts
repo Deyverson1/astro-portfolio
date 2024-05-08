@@ -24,6 +24,16 @@ export const projects = [
     tags: [tags.C]
   },
   {
+    title: "Script de Python - Clonar repositorios",
+    description: "Consiste en un script de Python que automatiza el proceso de clonación de todos los repositorios públicos de un usuario de GitHub en un directorio específico en el sistema local.",
+    link: "",
+    github: "https://github.com/Deyverson1/clone-respositories/blob/master/clone-repos.py",
+    image: "/projects/script-repos.png",
+    tags: [tags.Python],
+    color: "border-blue-600",
+    id: ""
+  },
+  {
     title: "Anime Search - Consumo de APIs",
     description:
       "Tiene como objetivo la implementación de búsqueda de anime a partir del consumo de varias APIS como https://jikan.moe/, https://animechan.xyz/, https://nekos.best/, presento una implementación de TypeScript para mejorar la calidad del código con respecto a los errores",
@@ -50,20 +60,10 @@ export const projects = [
     description: "Este proyecto tiene objetivo la replica/adaptación tanto de la Landing page de la pagina web https://www.netflix.com/co/, como de su browser principal el cual se encarga de la búsqueda de contenido disponible en la plataforma de Netflix ",
     link: "netflix-replic.vercel.app/",
     github: "https://github.com/Deyverson1/netflix-replic",
-    image: "",
+    image: "/projects/netflix-replic.png",
     tags: [tags.TypeScript, tags.React,  tags.Tailwind],
     color: "border-red-500",
     id: "5"
-  },
-    {
-    title: "Script de Python - Clonar repositorios",
-    description: "Consiste en un script de Python que automatiza el proceso de clonación de todos los repositorios públicos de un usuario de GitHub en un directorio específico en el sistema local.",
-    link: "",
-    github: "https://github.com/Deyverson1/clone-respositories/blob/master/clone-repos.py",
-    image: "",
-    tags: [tags.Python],
-    color: "border-blue-600",
-    id: ""
   },
   {
     title: "Search Movies and books!",
