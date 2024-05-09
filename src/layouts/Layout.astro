@@ -1,10 +1,12 @@
 ---
 import Header from "../components/dashboard/Header.astro";
 import "@fontsource-variable/onest";
+import BarMusicPlayer from "../components/music/PlayerBar";
 interface Props {
 	title: string;
 }
 const { title } = Astro.props;
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -16,6 +18,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body class="relative text-black dark:text-white">
 		<div
@@ -31,12 +34,17 @@ const { title } = Astro.props;
 	</body>
 	<Header />
 	<slot />
+	<BarMusicPlayer
+		client:load
+		transition:name="media-player"
+		transition:persist
+	/>
 </html>
 
 <style is:global>
 	:root {
 		color-scheme: light dark;
-		
+
 		font-family: "Onest Variable", system-ui, sans-serif;
 	}
 	html {
@@ -61,8 +69,8 @@ const { title } = Astro.props;
 			border-radius: 9999px;
 		}
 	}
-	@media (prefers-color-scheme: dark){
-		:root{
+	@media (prefers-color-scheme: dark) {
+		:root {
 			background-color: black;
 		}
 	}

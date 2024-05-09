@@ -5,7 +5,9 @@ import VolumeOff from "../icons/VolumeOff";
 import ArrowRandom from "../icons/ArrowRandom";
 import PlayList from "./Playlist";
 
-export default function AudioPlayer() {
+
+export default function BarMusicPlayer() {
+  const [active, setActive] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -27,6 +29,17 @@ export default function AudioPlayer() {
   const volumeProgress = volumePosition;
   const formattedTime = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   const formattedDuration = `${totalDurationMinutes}:${totalSecondDuration}`
+
+  console.log('Mounted')
+  // URL 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActive(window.location.pathname.includes("/music"));
+    }, 1000);
+
+    return () => clearInterval(interval)
+  }, [])
+
 
   // FUNCTIONS
   function playNextTrack() {
@@ -59,6 +72,7 @@ export default function AudioPlayer() {
   }
 
   function togglePlayPause() {
+    // console.log('click')
     setIsPlaying(prevState => !prevState);
     if (!isPlaying) {
       audioRef.current.play();
@@ -185,11 +199,13 @@ export default function AudioPlayer() {
 
   return (
     <section>
-      <PlayList data={data} handleClick={handleClick} />
+      {active === true && (
+        <PlayList data={data} handleClick={handleClick} />
+      )}
       <section className="fixed bottom-0 pb-4 justify-between px-2 py-4 w-full box-sizing flex bg-black  shadow-2xl shadow-white">
         <main className="w-full">
           <div className="w-full flex gap-2 pl-2 items-center">
-            <img src={data[currentTrackIndex].image} alt="" className="h-14 rounded-md" />
+            <img src={data[currentTrackIndex].image} alt="" className="h-14 aspect-square object-cover rounded-md" />
             <div className="flex flex-col pl-2 justify-center">
               <h1 className="text-xs md:text-base text-white leading-5 tracking-tight">{data[currentTrackIndex].title}</h1>
               <h2 className="text-xs text-gray-400">{data[currentTrackIndex].subTitle}</h2>

@@ -1,4 +1,5 @@
 export const data = [
+  { title: 'chill, lofi & synth ', subTitle: 'Nate Gentile', src: 'music/chill-nate.mp3', image: "image/music/chill-picture.jpg" },
   { title: 'Someone To Spend Time With', subTitle: 'Los Retros', src: 'music/someone.mp3', image: "image/music/retros.webp" },
   { title: "Everything Black", subTitle: 'Unlike Pluto, Mike Taylor', src: 'music/EverythingBlack.ogg', image: 'image/music/every.webp' },
   { title: "Surround Sound", subTitle: 'JID, 21 Savage, Baby Tate', src: 'music/JIDSurroundSound.ogg', image: 'image/music/surround.webp' },

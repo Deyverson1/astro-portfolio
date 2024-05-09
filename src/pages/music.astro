@@ -3,12 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import AudioPlayer from "../components/music/Player.jsx";
 import SectionContainer from "../components/SectionContainer.astro";
 import Footer from "../components/dashboard/Footer.astro";
-import Spotify from "../components/icons/Spotify.astro";
 ---
 
 <Layout title="Music - Playlist Deyverson">
   <AudioPlayer client:load />
-  <footer class="flex items-center justify-center gap-1 pb-28">
-    Puedes encontrar más en <a href="https://open.spotify.com/playlist/4l8qi8XKy2LLr0tMxwNOlr?si=lklsHrGOSoKmKDm5eODvxg" target="_blank" class="flex items-center underline gap-x-1">Spotify <Spotify width="20" height="20" dark:fill="white"/></a>
-  </footer>
 </Layout>
