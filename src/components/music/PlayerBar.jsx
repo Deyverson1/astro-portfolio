@@ -30,7 +30,6 @@ export default function BarMusicPlayer() {
   const formattedTime = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   const formattedDuration = `${totalDurationMinutes}:${totalSecondDuration}`
 
-  console.log('Mounted')
   // URL 
   useEffect(() => {
     const interval = setInterval(() => {
