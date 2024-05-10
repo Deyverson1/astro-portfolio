@@ -50,8 +50,8 @@ function ProjectDetails({ image, title, id, active }: Props) {
 
   return (
     <>
-      <div className="w-full md:w-1/2">
-        <div className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+      <div className="w-full flex items-center justify-center md:w-1/2">
+        <div className="relative flex flex-col items-center justify-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
           <img
             onClick={() => handleDetails(id)}
             className="object-cover cursor-pointer object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"

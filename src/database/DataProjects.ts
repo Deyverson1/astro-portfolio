@@ -12,18 +12,6 @@ export const projects = [
     id: "1",
   },
   {
-    title: "Implementación de sensores",
-    description:
-      "Este proyecto contiene código de Arduino y Processing para la medida con los sensores SHT-30, HC-SR04, Termistor.",
-    github:
-      "https://github.com/Deyverson1/SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura",
-    link: "",
-    documentation: '/mechatronics/documentation',
-    image: "/projects/sensores.webp",
-    color: "border-pink-600",
-    tags: [tags.C]
-  },
-  {
     title: "Script de Python - Clonar repositorios",
     description: "Consiste en un script de Python que automatiza el proceso de clonación de todos los repositorios públicos de un usuario de GitHub en un directorio específico en el sistema local.",
     link: "",
@@ -56,16 +44,6 @@ export const projects = [
     id: "3",
   },
   {
-    title: "Replica de Netflix",
-    description: "Este proyecto tiene objetivo la replica/adaptación tanto de la Landing page de la pagina web https://www.netflix.com/co/, como de su browser principal el cual se encarga de la búsqueda de contenido disponible en la plataforma de Netflix ",
-    link: "netflix-replic.vercel.app/",
-    github: "https://github.com/Deyverson1/netflix-replic",
-    image: "/projects/netflix-replic.png",
-    tags: [tags.TypeScript, tags.React,  tags.Tailwind],
-    color: "border-red-500",
-    id: "5"
-  },
-  {
     title: "Search Movies and books!",
     description:
       "Fue creado con el propósito de aprender acerca de Svelte, actualmente presenta dos funciones principales las cuales son la búsqueda de libros y películas",
@@ -76,6 +54,58 @@ export const projects = [
     color: "border-sky-500",
     id: "4",
   },
+  {
+    title: "Proyecto de CRUD en PHP",
+    description: "Proyecto basado en CRUD, desarrollado como proyecto de aprendizaje, esta creado principalmente en el lenguaje de Php con la ayuda de base de datos de MySQL. Se basa en el control de empleados para una organización.",
+    link: "",
+    github: "https://github.com/Deyverson1/mechatronic-digital-logic",
+    image: "/projects/crud-picture.png",
+    tags: [tags.Php],
+    color: "border-violet-500",
+    id: ""
+  },
+  {
+    title: "Replica de Netflix",
+    description: "Este proyecto tiene objetivo la replica/adaptación tanto de la Landing page de la pagina web https://www.netflix.com/co/, como de su browser principal el cual se encarga de la búsqueda de contenido disponible en la plataforma de Netflix ",
+    link: "netflix-replic.vercel.app/",
+    github: "https://github.com/Deyverson1/netflix-replic",
+    image: "/projects/netflix-replic.png",
+    tags: [tags.TypeScript, tags.React, tags.Tailwind],
+    color: "border-red-500",
+    id: "5"
+  },
+  {
+    title: "Encriptador de texto",
+    description: "Fue presentado como Challenge en la formación de Desarrollo Front-end Grupo 5 Oracle Next Education, la cual consiste en desarrollar un encriptador/desenciptador de texto basado en parámetros establecidos por Oracle y Alura Latam.",
+    link: "https://encriptador-github-io.vercel.app/",
+    github: "https://github.com/Deyverson1/encrypter",
+    image: "/projects/encriptador-picture.png",
+    tags: [tags.Html, tags.Css, tags.JavaScript],
+    color: "border-blue-800",
+    id: ""
+  },
+  {
+    title: "Implementación de sensores",
+    description:
+      "Este proyecto contiene código de Arduino y Processing para la medida con los sensores SHT-30, HC-SR04, Termistor.",
+    github:
+      "https://github.com/Deyverson1/SHT-30-Humidity-HC-SR04-Distance-Termistor-Temperatura",
+    link: "",
+    documentation: '/mechatronics/documentation',
+    image: "/projects/sensores.webp",
+    color: "border-pink-600",
+    tags: [tags.C]
+  },
+  {
+    title: "Lógica Digital Mecatrónica Industrial",
+    description: "Se presentan diferentes soluciones para diversos problemas relacionadas con lógica digital, entre ellas la implementación de un reloj con el uso de diversas compuertas lógicas, implementación de Sumadores, Decodificadores, Codificadores, Multiplexores, Memorias, Sistemas de control, Secuencias, Registros y Contadores. Resueltos en el software de Proteus",
+    link: "",
+    github: "https://github.com/Deyverson1/mechatronic-digital-logic",
+    image: "/projects/logic-picture.png",
+    tags: [],
+    color: "border-red-500",
+    id: ""
+  }
   // {
   //   title: "Replica de Netflix",
   //   description: "",

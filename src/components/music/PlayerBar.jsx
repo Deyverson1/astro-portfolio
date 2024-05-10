@@ -5,7 +5,6 @@ import VolumeOff from "../icons/VolumeOff";
 import ArrowRandom from "../icons/ArrowRandom";
 import PlayList from "./Playlist";
 
-
 export default function BarMusicPlayer() {
   const [active, setActive] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -15,7 +14,7 @@ export default function BarMusicPlayer() {
   const [duration, setDuration] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
-  const [volumePosition, setVolumePosition] = useState(100)
+  const [volumePosition, setVolumePosition] = useState(50)
   const [isVolumeOff, setVolumeOff] = useState(false)
   const [isRandom, setRandom] = useState(false)
   const audioRef = useRef();
@@ -38,7 +37,6 @@ export default function BarMusicPlayer() {
 
     return () => clearInterval(interval)
   }, [])
-
 
   // FUNCTIONS
   function playNextTrack() {
