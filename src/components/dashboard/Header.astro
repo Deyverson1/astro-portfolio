@@ -1,29 +1,15 @@
 ---
-import Theme from "../Theme.astro";
-import Wolf from '../icons/Wolf.astro'
 const contentNav = [
   { title: "Inicio", label: "/", url: "/" },
   { title: "Proyectos", label: "/#proyectos", url: "/projects" },
   { title: "Sobre mi", label: "/#sobre-mi", url: "/#sobre-mi" },
-  {
-    title: "Contacto",
-    label: "/#contacto",
-    url: "mailto:deyversongp@gmail.com",
-  },
+  { title: "Contacto",  label: "/#contacto", url: "mailto:deyversongp@gmail.com" },
 ];
 ---
 
 <header
-  class="absolute top-2 z-10 flex items-center justify-center w-full mx-auto mt-1"
->
-  <nav
-    class="flex lg:px-6 text-medium font-medium   justify-center items-center"
-  >
-    <!-- <div class="hidden md:flex md:w-10/12 pl-2 w-fit justify-center">
-      <a href="/" class="text-black dark:text-white">
-        <Wolf/>
-      </a>
-    </div> -->
+  class="absolute top-2 z-10 flex items-center justify-center w-full mx-auto mt-1">
+  <nav class="flex lg:px-6 text-medium font-medium justify-center items-center">
     <section class="flex pt-px justify-center md:justify-center w-full">
       {
         contentNav.map((content) => (
@@ -38,24 +24,9 @@ const contentNav = [
       }
       <a
         href="/curriculum"
-        class="text-sm md:text-base md:ml-6 md:border-blue-500 hover:text-gray-800 dark:text-gray-100  dark:hover:text-gray-300 md:rounded-md md:border px-2 py-2"
+        class="text-sm md:text-base md:ml-6 md:border-blue-500 hover:text-gray-800 dark:text-gray-100 dark:hover:text-gray-300 md:rounded-md md:border px-2 py-2"
         >Curriculum</a
       >
     </section>
-    <Theme />
   </nav>
 </header>
-
-<style>
-  /* nav {
-    animation: nav-shadown 1s linear both;
-    animation-timeline: scroll();
-    animation-range: 0 100px;
-  }
-
-  @keyframes nav-shadown {
-    to {
-      @apply shadow-lg ring-1 backdrop-blur rounded-full bg-blue-500 ring-black/10;
-    }
-  } */
-</style>

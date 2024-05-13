@@ -4,7 +4,7 @@ represents a project and contains properties such as `title`, `description`, `li
 their titles, descriptions, links to the project and GitHub repository, images, tags indicating
 technologies used, colors for styling, and unique identifiers. */
 import { tags } from "../components/Tags.astro";
-export const projects = [
+export const ProjectData = [
   {
     title: "Dropi.co - Replica con ReactJS",
     description:

@@ -1,7 +1,7 @@
 ---
 import BrandVercel from "./icons/BrandVercel.astro";
 import GithubCat from "./icons/GithubCat.astro";
-import Analytics from './icons/Analytics.astro'
+import Analytics from "./icons/Analytics.astro";
 import ProjectDetails from "./ProjectDetails";
 
 const { projects, active } = Astro.props;
@@ -10,23 +10,41 @@ const { projects, active } = Astro.props;
 <div class="flex px-2 lg:px-0 flex-col gap-y-16 flex-wrap">
   {
     projects.map(
-      (( data: { id: string,title: string, image: string, description: string, tags: any, github: string, link: string, color: string, documentation: string }) => (
+      (data: {
+        id: string;
+        title: string;
+        image: string;
+        description: string;
+        tags: any;
+        github: string;
+        link: string;
+        color: string;
+        documentation: string;
+      }) => (
         <article
           class={`border-l-4 pl-2 lg:pl-4 ${data.color} flex-wrap sm:justify-center xl:flex-nowrap flex flex-1 md:gap-x-10  space-x-0 space-y-8 group md:flex-row-reverse  md:space-y-0`}
         >
-         <ProjectDetails image={data.image} title={data.title} id={data.id} active={active} client:load/>
+          <ProjectDetails
+            image={data.image}
+            title={data.title}
+            id={data.id}
+            active={active}
+            client:load
+          />
           <div class="w-full md:w-1/2 md:max-w-lg">
             <h3 class="text-2xl font-bold pt-0 mt-0">{data.title}</h3>
             <div class="flex flex-row flex-wrap mt-2">
               <ul class="gap-x-2 flex mb-2">
-                {data.tags.map((tag: { icon: any; name: string; class: string }) => (
-                  <li
-                    class={`flex text-white dark:text-white items-center gap-x-2 rounded-full py-0.5 px-2 text-sn ${tag.class}`}
-                  >
-                    <tag.icon class="size-4" />
-                    {tag.name}
-                  </li>
-                ))}
+                {data.tags.map(
+                  (tag: { icon: any; name: string; class: string }) => (
+                    <li
+                      class={`flex text-white dark:text-white items-center gap-x-2 rounded-full py-0.5 px-2 text-sn ${tag.class}`}
+                    >
+                      <tag.icon class="size-4" />
+                      {tag.name}
+                    </li>
+                  ),
+                )}
               </ul>
               <div class="mt-2 text-gray-700 dark:text-gray-400">
                 {data.description}
@@ -65,6 +83,7 @@ const { projects, active } = Astro.props;
             </div>
           </div>
         </article>
-      )))}
+      ),
+    )
+  }
 </div>
-

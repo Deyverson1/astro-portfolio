@@ -3,7 +3,7 @@
  * like play/pause, track navigation, volume control, and progress tracking.
  */
 import { useEffect, useRef, useState } from "react";
-import { data } from '../../database/DataBaseMusic'
+import { data } from '../../info/DataBaseMusic'
 import Volume from "../icons/Volume";
 import VolumeOff from "../icons/VolumeOff";
 import ArrowRandom from "../icons/ArrowRandom";

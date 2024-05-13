@@ -1,50 +1,11 @@
 ---
-import AstroIcon from "../icons/AstroIcon.astro";
-import React from "../icons/React.astro";
-import Svelte from "../icons/Svelte.astro";
-import Tailwind from "../icons/Tailwind.astro";
-import JavaScript from "../icons/javaScript.astro";
-import TypeScript from "../icons/TypeScript.astro";
-import Node from "../icons/Node.astro";
-import Php from "../icons/Php.astro";
-import MySQL from "../icons/MySQL.astro";
-import Next from "../icons/Next.astro";
-import Database from "../icons/Database.astro";
-import Html from "../icons/Html.astro";
-import Css from "../icons/Css.astro";
-import Bootstrap from "../icons/Bootstrap.astro";
-import MaterialUI from "../icons/MaterialUI.astro";
-import Linux from "../icons/Linux.astro";
-import Windows from "../icons/Windows.astro"
-import Git from "../icons/Git.astro";
-const data = [
-  { name: "JavaScript", icon: JavaScript },
-  { name: "TypeScript", icon: TypeScript },
-  { name: "Php", icon: Php },
-  { name: "SQL", icon: Database },
-  { name: "Html", icon: Html },
-  { name: "Css", icon: Css },
-  { name: "Astro", icon: AstroIcon },
-  { name: "ReactJS", icon: React },
-  { name: "Svelte", icon: Svelte },
-  { name: "NodeJs", icon: Node },
-  { name: "NextJS", icon: Next },
-  { name: "Tailwind Css", icon: Tailwind },
-  { name: "MySQL", icon: MySQL },
-  { name: "Bootstrap", icon: Bootstrap },
-  { name: "Material UI", icon: MaterialUI },
-  { name: "Linux", icon: Linux},
-  { name: "Windows", icon: Windows},
-  { name: "Git", icon: Git}
-
-];
-const data2 = [
-];
+import { SkillData } from "../../info/SkillsData";
 ---
+
 <div class="flex flex-col flex-1 flex-wrap px-2 lg:px-0 gap-x-2 gap-y-2">
   <section class="flex flex-wrap justify-center">
     {
-      data.map((data) => (
+      SkillData.map((data) => (
         <article class="flex flex-wrap cursor-default">
           <div class="gap-x-2">
             <div class="flex items-center gap-x-2 text-gray-900  border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-nromal rounded-xl text-base px-4 py-2 me-2 mb-2  dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
