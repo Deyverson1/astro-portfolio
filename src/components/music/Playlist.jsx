@@ -1,3 +1,7 @@
+/* The code snippet is a React functional component named `PlayList` that renders a list of items based
+on the `data` prop passed to it. Each item in the list is displayed within an `<article>` element
+and includes an image, title, and subtitle. The `handleClick` function is called when an item is
+clicked. */
 import { Spotify } from "../icons/Spotify";
 
 export default function PlayList({ data, handleClick }) {
@@ -14,14 +18,12 @@ export default function PlayList({ data, handleClick }) {
                 <h1 className="w-full  hover:underline">{dato.title}</h1>
                 <h2 className="text-sm  dark:text-gray-400">{dato.subTitle}</h2>
               </div>
-              <div>
-              </div>
             </main>
           </section>
         </article>
       ))}
       <footer className="flex items-center justify-center pt-5 gap-1 pb-28">
-        Puedes encontrar más en <a href="https://open.spotify.com/playlist/4l8qi8XKy2LLr0tMxwNOlr?si=lklsHrGOSoKmKDm5eODvxg" target="_blank" className="flex items-center underline gap-x-1">Spotify <Spotify size={20}  dark:fill="white" /></a>
+        Puedes encontrar más en <a href="https://open.spotify.com/playlist/4l8qi8XKy2LLr0tMxwNOlr?si=lklsHrGOSoKmKDm5eODvxg" target="_blank" className="flex items-center underline gap-x-1">Spotify <Spotify size={20} dark:fill="white" /></a>
       </footer>
     </section>
   )

@@ -1,6 +1,8 @@
-import BarMusicPlayer from "./PlayerBar";
-import AudioPlayerBar from "./PlayerBar";
-import PlayerBar from "./PlayerBar";
+/**
+ * The AudioPlayer function returns a section element containing a playlist icon and text.
+ * @returns The AudioPlayer component is being returned. It consists of a section element with a nested
+ * section containing an SVG icon and a heading displaying "Playlist".
+ */
 function AudioPlayer() {
   return (
     <section className="pt-20 w-full ">

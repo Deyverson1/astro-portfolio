@@ -1,27 +1,10 @@
 ---
-import Instagram from "../icons/Instagram.astro";
-import LinkedinIcon from "../icons/LinkedinIcon.astro";
-import Discord from "../icons/Discord.astro";
-const data = [
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/deyverson08?igsh=MXFheHd5eXg3ZWxjcg==",
-    icon: Instagram,
-  },
-  {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/deyverson?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    icon: LinkedinIcon,
-  },
-  {
-    name: "Discord",
-    link: "https://discord.com/invite/bBNutX3D",
-    icon: Discord,
-  },
-];
+import { data } from "../../database/DataFooter";
 ---
 
-<footer class="py-0 pb-20 md:pb-0 md:mb-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+<footer
+  class="py-0 pb-20 md:pb-0 md:mb-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+>
   <div
     class="items-center border-b-2 border-black gap-y-8 md:gap-y-0 dark:border-white pb-8 justify-around flex flex-col lg:flex-row w-full max-w-screen-xl mx-auto md:flex md:items-center"
   >
@@ -46,14 +29,16 @@ const data = [
         class="w-80 ml-4 text-xs border-transparent bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent"
         >ㅤ</span
       >
-      <a href="/"><h1 class="hover:text-blue-600">Deyverson Herrera Valencia</h1></a>
+      <a href="/"
+        ><h1 class="hover:text-blue-600">Deyverson Herrera Valencia</h1></a
+      >
       <span
         class="ml-1 w-64 text-xs border-transparent bg-gradient-to-r from-pink-400 to-blue-500 text-transparent"
         >ㅤ</span
       >
 
-        <div class="ml-2 w-full flex gap-2">
-          <span
+      <div class="ml-2 w-full flex gap-2">
+        <span
           class="w-36 text-xs border-transparent bg-gradient-to-r from-blue-600 to-cyan-500 text-transparent"
           >ㅤ</span
         >
@@ -62,56 +47,56 @@ const data = [
           >ㅤ</span
         >
         <span
-        class="text-xs rounded-full border-transparent bg-gradient-to-r from-gray-400 to-gray-400 text-transparent"
-        >...</span
-      >
-        </div>
+          class="text-xs rounded-full border-transparent bg-gradient-to-r from-gray-400 to-gray-400 text-transparent"
+          >...</span
+        >
       </div>
+    </div>
 
-      <main class="flex gap-12">
-        <article>
-          <h2>Social</h2>
-          <section
-            class="flex flex-col gap-y-2 pt-3 text-gray-800 dark:text-gray-400"
+    <main class="flex gap-12">
+      <article>
+        <h2>Social</h2>
+        <section
+          class="flex flex-col gap-y-2 pt-3 text-gray-800 dark:text-gray-400"
+        >
+          {
+            data.map((dato) => (
+              <a href={dato.link} target="_blank">
+                <h3>{dato.name}</h3>
+              </a>
+            ))
+          }
+        </section>
+      </article>
+      <article>
+        <h2>Otros</h2>
+        <section
+          class="flex flex-col gap-y-2 pt-3 text-gray-800 dark:text-gray-400"
+        >
+          <a href="https://anime-search-deyverson1.vercel.app/"
+            ><h3>Anime</h3></a
           >
-            {
-              data.map((dato, index) => (
-                <a href={dato.link} target="_blank">
-                  <h3>{dato.name}</h3>
-                </a>
-              ))
-            }
-          </section>
-        </article>
-        <article>
-          <h2>Otros</h2>
-          <section
-            class="flex flex-col gap-y-2 pt-3 text-gray-800 dark:text-gray-400"
+          <a href="https://search-movies-and-books.vercel.app/"
+            ><h3>Libros</h3></a
           >
-            <a href="https://anime-search-deyverson1.vercel.app/"
-              ><h3>Anime</h3></a
-            >
-            <a href="https://search-movies-and-books.vercel.app/"
-              ><h3>Libros</h3></a
-            >
-            <a href="mailto:deyversongp@gmail.com"><h3>Contacto</h3></a>
-          </section>
-        </article>
-      </main>
-    </div>
-    <div>
-      <p></p>
-    </div>
+          <a href="mailto:deyversongp@gmail.com"><h3>Contacto</h3></a>
+        </section>
+      </article>
+    </main>
   </div>
-  <style>
-    h2{
-      text-decoration: underline;
-    }
-    h3:hover {
-      text-decoration: underline;
-    }
-    span{
-      line-height: 8px;
-    }
-  </style>
+  <div>
+    <p></p>
+  </div>
 </footer>
+
+<style>
+  h2 {
+    text-decoration: underline;
+  }
+  h3:hover {
+    text-decoration: underline;
+  }
+  span {
+    line-height: 8px;
+  }
+</style>

@@ -1,3 +1,7 @@
+/* The code is defining an array of project objects in TypeScript. Each project object
+represents a specific project with properties such as title, description, link, github repository,
+image, tags, color, and id. The `import { tags } from "../components/Tags.astro";` statement is
+importing a module that contains tag constants used to categorize the projects. */
 import { tags } from "../components/Tags.astro";
 export const projects = [
   {

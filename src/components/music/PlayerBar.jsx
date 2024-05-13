@@ -1,3 +1,7 @@
+/**
+ * The `BarMusicPlayer` component in JavaScript React manages a music player interface with features
+ * like play/pause, track navigation, volume control, and progress tracking.
+ */
 import { useEffect, useRef, useState } from "react";
 import { data } from '../../database/DataBaseMusic'
 import Volume from "../icons/Volume";
@@ -8,15 +12,15 @@ import PlayList from "./Playlist";
 export default function BarMusicPlayer() {
   const [active, setActive] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [isVolumeOff, setVolumeOff] = useState(false)
+  const [isRandom, setRandom] = useState(false)
+  const [volumePosition, setVolumePosition] = useState(50)
   const [currentTime, setCurrentTime] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
-  const [volumePosition, setVolumePosition] = useState(50)
-  const [isVolumeOff, setVolumeOff] = useState(false)
-  const [isRandom, setRandom] = useState(false)
   const audioRef = useRef();
   const progressBarRef = useRef();
   const volumeRef = useRef()
@@ -41,7 +45,6 @@ export default function BarMusicPlayer() {
   // FUNCTIONS
   function playNextTrack() {
     if (isRandom) {
-      console.log('its random')
       const randomIndex = Math.floor(Math.random() * data.length);
       setCurrentTrackIndex(randomIndex);
       setTimeout(() => {
