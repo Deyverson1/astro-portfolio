@@ -8,6 +8,8 @@ import Volume from "../icons/Volume";
 import VolumeOff from "../icons/VolumeOff";
 import ArrowRandom from "../icons/ArrowRandom";
 import PlayList from "./Playlist";
+import MobileBar from "./MobileBar";
+import ScrollTop from "../ScrollTop";
 
 export default function BarMusicPlayer() {
   const [active, setActive] = useState(false);
@@ -15,6 +17,7 @@ export default function BarMusicPlayer() {
   const [isDragging, setIsDragging] = useState(false);
   const [isVolumeOff, setVolumeOff] = useState(false)
   const [isRandom, setRandom] = useState(false)
+  const [varMobile, setVarMobile] = useState(false)
   const [volumePosition, setVolumePosition] = useState(50)
   const [currentTime, setCurrentTime] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -43,6 +46,11 @@ export default function BarMusicPlayer() {
   }, [])
 
   // FUNCTIONS
+  function handleMusicMobile() {
+    setVarMobile(!varMobile)
+    ScrollTop()
+  }
+
   function playNextTrack() {
     if (isRandom) {
       const randomIndex = Math.floor(Math.random() * data.length);
@@ -206,7 +214,7 @@ export default function BarMusicPlayer() {
         <main className="w-full">
           <div className="w-full flex gap-2 pl-2 items-center">
             <img src={data[currentTrackIndex].image} alt="" className="h-14 aspect-square object-cover rounded-md" />
-            <div className="flex flex-col pl-2 justify-center">
+            <div onClick={handleMusicMobile} className="flex flex-col pl-2 justify-center">
               <h1 className="text-xs md:text-base text-white leading-5 tracking-tight">{data[currentTrackIndex].title}</h1>
               <h2 className="text-xs text-gray-400">{data[currentTrackIndex].subTitle}</h2>
             </div>
@@ -250,8 +258,11 @@ export default function BarMusicPlayer() {
           >
             <div className="bg-blue-600 h-1.5 rounded-full" style={{ width: `${volumeProgress}%` }}></div>
           </div>
-        </section>
       </section>
+        </section>
+        {varMobile == true && (
+          <MobileBar handleMusicMobile={handleMusicMobile} image={data[currentTrackIndex].image}/>
+        )}
     </section>
   )
 }
