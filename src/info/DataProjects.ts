@@ -64,7 +64,7 @@ export const projects = [
     link: "",
     github: "https://github.com/Deyverson1/mechatronic-digital-logic",
     image: "/projects/crud-picture.png",
-    tags: [tags.Php],
+    tags: [tags.Php, tags.MySql],
     color: "border-violet-500",
     id: ""
   },
