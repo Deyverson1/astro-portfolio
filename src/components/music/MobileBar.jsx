@@ -3,8 +3,9 @@ import ControlPlayer from "./ControlPlayer";
 import ProgressBar from "./ProgressBar";
 
 export default function MobileBar({ handleMusicMobile, image, props, propsControl, title, subTitle }) {
+  
   return (
-    <section className="absolute top-0 flex flex-col  bottom-0 left-0 right-0 z-10 min-h-screen bg-black pt-8 px-5">
+    <section className="fixed flex flex-col top-0 bottom-0 left-0 right-0 z-10  bg-black pt-8 px-5">
       <div className=" pb-10 flex ">
         <div onClick={handleMusicMobile}>
           <ChevronDown />
