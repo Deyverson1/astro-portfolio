@@ -1,20 +1,21 @@
 ---
 import Cards from "../Cards.astro";
 import { ProjectData } from "../../info/Projects";
+import { ProjectsMecatronicaPreview } from "../../info/DataProjectsMecatronica"
 ---
 
-<div class="flex justify-center pb-10">
-  <a href="/projects">
-    <span class="text-sx underline text-blue-600">Todos los proyectos</span></a
-  >
-</div>
+
+<span>
+  <h1 class="text-2xl pb-10 font-bold underline">Desarrollo de aplicaciones web: </h1>
+</span>
 <Cards projects={ProjectData} active={true} />
+<span>
+  <h1 class="text-2xl pt-10 pb-10 font-bold underline">Mecatrónica Industrial: </h1>
+</span>
+<Cards projects={ProjectsMecatronicaPreview} active={false} />
 
 <div class="flex justify-center pt-10">
-  <a
-    class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition hover:motion-safe:animate-pulse bg-gray-100 border border-gray-300 rounded-full dark:bg-neutral-950 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-300 hover:border-gray-700 group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 dark:hover:bg-neutral-600"
-    href="/projects"
+  <a href="/projects">
+    <span class="text-xl underline hover:text-white text-blue-600">Todos los proyectos</span></a
   >
-    Proyectos
-  </a>
 </div>
