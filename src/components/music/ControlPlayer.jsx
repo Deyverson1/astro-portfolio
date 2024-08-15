@@ -23,7 +23,7 @@ export default function ControlPlayer({ isPlaying, playPreviousTrack, playNextTr
     console.log(isRandom)
   }
   return (
-    <section className="w-full gap-8 pb-1 flex items-center justify-center">
+    <section className="w-full gap-8 pb-1 flex items-center justify-center pr-8">
       <button onClick={handleRandom}><ArrowRandom stroke={isRandom ? 'green' : 'white'} size={'size-5'} />
       </button>
       <button onClick={playPreviousTrack} className={`${display} lg:block`}> <ChevronLeft /></button>

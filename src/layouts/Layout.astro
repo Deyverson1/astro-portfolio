@@ -34,11 +34,7 @@ import { ViewTransitions } from 'astro:transitions';
 	</body>
 	<Header />
 	<slot />
-	<BarMusicPlayer
-		client:load
-		transition:name="media-player"
-		transition:persist
-	/>
+	
 </html>
 
 <style is:global>

@@ -1,8 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import AudioPlayer from "../components/music/Player.jsx";
+import BarMusicPlayer from "../components/music/PlayerBar";
+
 ---
 
 <Layout title="Music - Playlist Deyverson">
   <AudioPlayer client:load />
+  <BarMusicPlayer
+		client:load
+		transition:name="media-player"
+		transition:persist
+	/>
 </Layout>
