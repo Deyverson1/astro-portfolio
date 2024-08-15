@@ -46,7 +46,7 @@ export default function BarMusicPlayer() {
     isPlaying: isPlaying,
     setRandom: setRandom,
     isRandom: isRandom,
-    setIsPlaying: setIsPlaying, 
+    setIsPlaying: setIsPlaying,
     audioRef: audioRef
   }
   function playNextTrack() {
@@ -178,6 +178,15 @@ export default function BarMusicPlayer() {
   }, []);
 
 
+  function handleClickControl() {
+    console.log();
+    if(window.innerWidth > 700){
+      return
+    } else {
+      handleMusicMobile()
+    }
+  }
+
   return (
     <section>
       {active === true && (
@@ -187,7 +196,7 @@ export default function BarMusicPlayer() {
         <main className="w-full">
           <div className="w-full flex gap-2 pl-2 items-center">
             <img src={data[currentTrackIndex].image} alt="" className="h-14 aspect-square object-cover rounded-md" />
-            <div onClick={handleMusicMobile} className="flex flex-col pl-2 justify-center">
+            <div onClick={handleClickControl} className="flex flex-col pl-2 justify-center">
               <h1 className="text-xs md:text-base text-white leading-5 tracking-tight">{data[currentTrackIndex].title}</h1>
               <h2 className="text-xs text-gray-400">{data[currentTrackIndex].subTitle}</h2>
             </div>
@@ -198,7 +207,7 @@ export default function BarMusicPlayer() {
           </div>
         </main>
         <section className="flex w-full flex-col justify-center items-center">
-          <ControlPlayer {...PropsControl} display='hidden'/>
+          <ControlPlayer {...PropsControl} display='hidden' />
           <ProgressBar {...PropsProgressBar} display='hidden' />
         </section>
         <section className="hidden px-2 w-full pb-0 lg:flex justify-center items-center gap-x-2">
@@ -213,7 +222,7 @@ export default function BarMusicPlayer() {
         </section>
       </section>
       {varMobile == true && (
-        <MobileBar handleMusicMobile={handleMusicMobile} title={data[currentTrackIndex].title} subTitle={data[currentTrackIndex].subTitle} image={data[currentTrackIndex].image} props={PropsProgressBar} propsControl={PropsControl}/>
+        <MobileBar handleMusicMobile={handleMusicMobile} title={data[currentTrackIndex].title} subTitle={data[currentTrackIndex].subTitle} image={data[currentTrackIndex].image} props={PropsProgressBar} propsControl={PropsControl} />
       )}
     </section>
   )
