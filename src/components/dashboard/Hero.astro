@@ -1,33 +1,46 @@
 ---
-import { HeroData } from "../../info/HeroData"
+import { HeroData } from "../../info/HeroData";
+const buttonBase =
+  // Styles base
+  "inline-flex items-center justify-center gap-2 px-4 py-2 transition border rounded-full text-md max-w-fit hover:motion-safe:animate-pulse hover:bg-gray-300 hover:border-gray-700  " +
+  // Dark color styles 
+  "dark:bg-neutral-900 dark:border-gray-600 dark:text-white dark:hover:bg-neutral-600" +
+  // White color styles
+  " text-gray-800 bg-gray-100 border-gray-300"
+  ;
 ---
 
 <section
-  class="flex flex-col items-center justify-center w-full px-2 pt-20 lg:pt-10"
+  class="flex flex-col items-center justify-center w-full px-2 pt-20 lg:py-32"
 >
-
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
     Hola, Soy Deyverson
   </h1>
-  <p class="max-w-xl mt-5 text-xl text-center text-gray-800 dark:text-gray-300">
-    <strong class="text-blue-500"
-      >Tecnólogo en Mecatrónica Industrial y estudiante de Desarrollo de aplicaciones web
-    </strong> de Cali, Colombia 🇨🇴.
+  <p
+    class="max-w-xl text-center text-2xl pt-4 text dark:text-gray-300 leading-relaxed"
+  >
+    Diseño y desarrollo soluciones digitales con enfoque lógico, industrial y
+    centrado en el usuario
   </p>
-<!-- Mapeamos los iconos y enlaces de mayor interés para generar un tipo de botones con animaciones -->
-  <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
-    {
-      HeroData.map((data) => (
-        <a
-          target={data.target}
-          class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full hover:motion-safe:animate-pulse dark:bg-neutral-950 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-300 hover:border-gray-700 group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 dark:hover:bg-neutral-600"
-          href={data.link}
-        >
-          <data.icon class="size-4 fill-black dark:fill-white " /> {data.name}
-        </a>
-      ))
-    }
-  </div>
+  <p class="max-w-xl mt-5 text-xl text-center text-gray-800 dark:text-gray-300">
+    <strong class="dark:text-gray-300"
+      >Tecnólogo Mecatrónico y estudiante de Desarrollo de aplicaciones web de
+      Cali, Colombia 🇨🇴.
+    </strong>
+  </p>
+    <div class="flex flex-wrap items-center justify-center gap-4 mt-16">
+      {
+        HeroData.map((data) => (
+          <a
+            target={data.target}
+            class={`${buttonBase}`}
+            href={data.link}
+          >
+            <data.icon class={`size-4 ${data.iconClass}`}/> {data.name}
+          </a>
+        ))
+      }
+    </div>
 </section>

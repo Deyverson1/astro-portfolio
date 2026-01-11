@@ -6,10 +6,9 @@ data for a hero section with links to contact information and various interests.
 import Gmail from "../components/icons/Gmail.astro";
 import GithubCat from "../components/icons/GithubCat.astro";
 import LinkedinIcon from "../components/icons/LinkedinIcon.astro";
-import Robot from "../components/icons/Robot.astro";
 import Spotify from "../components/icons/Spotify.astro";
+import ProjectIcon from "../components/icons/ProjectIcon.astro";
 
-// import Netflix from "../components/icons/Netflix.astro";
 export const HeroData = [
   {
     name: "Contáctame",
@@ -23,13 +22,13 @@ export const HeroData = [
     icon: LinkedinIcon,
     target: "_blank",
   },
+  { name: "Proyectos", link: "/projects", icon: ProjectIcon, iconClass: "fill-black" },
   {
     name: "Github",
     link: "https://github.com/Deyverson1",
     icon: GithubCat,
     target: "_blank",
+    iconClass: "fill-white"
   },
-  { name: "Mecatrónica", link: "/mechatronics", icon: Robot },
   { name: "Música", link: "/music", icon: Spotify },
-  // { name: "Anime", link: "/anime", icon: Netflix },
 ];
