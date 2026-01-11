@@ -1,35 +1,43 @@
 ---
-import Layout from "../layouts/Layout.astro";
+// BarMusic usada para reproducir música en toda la aplicación 
+// import BarMusicPlayer from "../components/music/PlayerBar";
+// import Border from "../components/Border.astro";
+// import Presentation from "../components/icons/Presentation.astro";
 import AboutMe from "../components/dashboard/AboutMe.astro";
-import Github from "../components/Github.astro";
-import Hero from "../components/dashboard/Hero.astro";
-import Projects from "../components/dashboard/Projects.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import Skills from "../components/dashboard/Skills.astro";
-import TitleContainer from "../components/TitleContainer.astro";
-import Presentation from "../components/icons/Presentation.astro";
-import Shield from '../components/icons/Shield.astro'
 import Dna from '../components/icons/Dna.astro'
 import Footer from "../components/dashboard/Footer.astro";
-import Border from "../components/Border.astro";
-import BarMusicPlayer from "../components/music/PlayerBar";
+import Github from "../components/Github.astro";
+import Hero from "../components/dashboard/Hero.astro";
+import Layout from "../layouts/Layout.astro";
+import ProfesionalExperience from "../components/dashboard/ProfesionalExperience.astro"
+import Projects from "../components/dashboard/Projects.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Shield from '../components/icons/Shield.astro'
+import Skills from "../components/dashboard/Skills.astro";
+import TitleContainer from "../components/TitleContainer.astro";
 ---
 
 <Layout title="Portfolio de Deyverson - Desarrollador Web">
 	<main>
+		<!-- Contempla la presentacion y los enlaces de interes -->
 		<section
-			class="section pt-16 pb-10 md:pt-36 md:pb-20 light: w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+			class="container w-full pt-16 pb-10 mx-auto section md:pt-36 md:pb-20 light: lg:max-w-4xl md:max-w-2xl"
 		>
 			<Hero />
 		</section>
-		<!-- <Border/> -->
+		<!-- Experiencia profesional actual -->
+		 <!-- El sectioncontainer son estilos generales que se utilizan en multiples elementos, por lo que se genero un elemento que cumple esa función -->
+		<!-- <SectionContainer>
+			<ProfesionalExperience/>
+		</SectionContainer> -->
+	
 		<SectionContainer id="projects">
-			<div class="flex justify-center px-2 lg:px-0 items-center mb-4 text-3xl font-semibold gap-x-3 text-neutral-950 dark:text-white">
+			<div class="flex items-center justify-center px-2 mb-4 text-3xl font-semibold lg:px-0 gap-x-3 text-neutral-950 dark:text-white">
 				<!-- <Presentation class="size-7 pb-0.5"/> -->
-				<div class="flex justify-center items-center gap-x-4">
-					<span class="w-24 md:w-28 border-b-4 border-blue-600"></span>
+				<div class="flex items-center justify-center gap-x-4">
+					<span class="w-24 border-b-4 border-blue-600 md:w-28"></span>
 					<p>Proyectos</p>
-					<span class="w-24 md:w-28 border-b-4 border-blue-600"></span>
+					<span class="w-24 border-b-4 border-blue-600 md:w-28"></span>
 				</div>
 			</div>
 			<Projects />

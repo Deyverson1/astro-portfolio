@@ -3,27 +3,26 @@ import { HeroData } from "../../info/HeroData"
 ---
 
 <section
-  class="pt-20 flex justify-center items-center flex-col px-2 lg:pt-10 w-full"
+  class="flex flex-col items-center justify-center w-full px-2 pt-20 lg:pt-10"
 >
-  <!-- <Twenty /> -->
 
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
     Hola, Soy Deyverson
   </h1>
-  <p class="mt-5 text-xl text-center text-gray-800 dark:text-gray-300 max-w-xl">
+  <p class="max-w-xl mt-5 text-xl text-center text-gray-800 dark:text-gray-300">
     <strong class="text-blue-500"
-      >Estudiante de Mecatrónica Industrial y Desarrollo de aplicaciones web
+      >Tecnólogo en Mecatrónica Industrial y estudiante de Desarrollo de aplicaciones web
     </strong> de Cali, Colombia 🇨🇴.
   </p>
-
-  <div class="flex flex-wrap justify-center items-center gap-4 mt-8">
+<!-- Mapeamos los iconos y enlaces de mayor interés para generar un tipo de botones con animaciones -->
+  <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
     {
       HeroData.map((data) => (
         <a
           target={data.target}
-          class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition hover:motion-safe:animate-pulse bg-gray-100 border border-gray-300 rounded-full dark:bg-neutral-950 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-300 hover:border-gray-700 group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 dark:hover:bg-neutral-600"
+          class="inline-flex items-center justify-center gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full hover:motion-safe:animate-pulse dark:bg-neutral-950 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-300 hover:border-gray-700 group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 dark:hover:bg-neutral-600"
           href={data.link}
         >
           <data.icon class="size-4 fill-black dark:fill-white " /> {data.name}
