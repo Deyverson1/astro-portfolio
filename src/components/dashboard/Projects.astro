@@ -1,21 +1,31 @@
 ---
 import Cards from "../Cards.astro";
 import { ProjectData } from "../../info/Projects";
-import { ProjectsMecatronicaPreview } from "../../info/DataProjectsMecatronica"
+import { ProjectsMecatronicaPreview } from "../../info/DataProjectsMecatronica";
 ---
 
+<section>
+  <div class="text-center">
+    <h2
+      class="pl-2 text-xl md:text-2xl text-gray-300 pt-4 pb-10 underline decoration-gray-400 decoration-2"
+    >
+      Aplicaciones web y experiencias digitales:
+    </h2>
+    <Cards projects={ProjectData} active={true} />
+  </div>
+  <!-- <div class="text-center pt-20">
+    <h2
+      class="pl-2 text-xl md:text-2xl text-gray-300 pb-10 underline decoration-gray-400 decoration-2"
+    >
+      Mecatrónica Industrial:
+    </h2>
 
-<span>
-  <h1 class="pl-2 text-xl md:text-2xl pt-4 pb-10 font-bold underline">Desarrollo de aplicaciones web: </h1>
-</span>
-<Cards projects={ProjectData} active={true} />
-<span>
-  <h1 class="pl-2 text-xl md:text-2xl pt-10 pb-10 font-bold underline">Mecatrónica Industrial: </h1>
-</span>
-<Cards projects={ProjectsMecatronicaPreview} active={false} />
+    <Cards projects={ProjectsMecatronicaPreview} active={false} />
+  </div> -->
 
-<div class="flex justify-center pt-10">
-  <a href="/projects">
-    <span class="text-xl underline hover:text-white text-blue-600">Todos los proyectos</span></a
-  >
-</div>
+  <div class="flex justify-center pt-10">
+    <a href="/projects" class="text-xl underline hover:text-white text-blue-600"
+      >Todos los proyectos
+    </a>
+  </div>
+</section>

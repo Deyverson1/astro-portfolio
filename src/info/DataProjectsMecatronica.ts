@@ -17,14 +17,14 @@ export const ProjectsMecatronicaPreview = [
     color: "border-pink-600",
     tags: [tags.C]
   },
-  {
-    title: "Lógica Digital Mecatrónica Industrial",
-    description: "Se presentan diferentes soluciones para diversos problemas relacionadas con lógica digital, entre ellas la implementación de un reloj con el uso de diversas compuertas lógicas, implementación de Sumadores, Decodificadores, Codificadores, Multiplexores, Memorias, Sistemas de control, Secuencias, Registros y Contadores. Resueltos en el software de Proteus",
-    link: "",
-    github: "https://github.com/Deyverson1/mechatronic-digital-logic",
-    image: "/projects/logic-picture.png",
-    tags: [],
-    color: "border-red-500",
-    id: ""
-  }
+  // {
+  //   title: "Lógica Digital Mecatrónica Industrial",
+  //   description: "Se presentan diferentes soluciones para diversos problemas relacionadas con lógica digital, entre ellas la implementación de un reloj con el uso de diversas compuertas lógicas, implementación de Sumadores, Decodificadores, Codificadores, Multiplexores, Memorias, Sistemas de control, Secuencias, Registros y Contadores. Resueltos en el software de Proteus",
+  //   link: "",
+  //   github: "https://github.com/Deyverson1/mechatronic-digital-logic",
+  //   image: "/projects/logic-picture.png",
+  //   tags: [],
+  //   color: "border-red-500",
+  //   id: ""
+  // }
 ];
