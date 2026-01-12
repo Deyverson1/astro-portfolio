@@ -6,12 +6,12 @@ technologies used, colors for styling, and unique identifiers. */
 import { tags } from "../components/Tags.astro";
 export const ProjectData = [
   {
-    title: "Dropi.co - Replica con ReactJS",
+    title: "Dropi.co - Clon IU/UX",
     description:
       "Es la replica de una pagina web de E-Commerce",
     link: "https://dropi-replic.vercel.app/",
     github: "https://github.com/Deyverson1/dropi-replic",
-    image: "/projects/dropies.webp",
+    image: "/projects/DropiTry.png",
     tags: [tags.React, tags.JavaScript, tags.Css],
     color: "border-orange-500",
     id: "1",
