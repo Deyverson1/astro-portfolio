@@ -24,10 +24,10 @@ function ProjectDetails({ image, title, id, active }: Props) {
   return (
     <>
       <div className="w-full flex items-center justify-center">
-        <div className="relative w-full flex flex-col items-center justify-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+        <div className="relative w-3/4 flex flex-col items-center justify-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
           <img
             onClick={() => handleDetails(id)}
-            className="object-cover cursor-pointer object-top w-full aspect-[16/9] transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+            className="object-cover cursor-pointer opacity-95 object-top w-full aspect-[16/9] transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
             src={image}
             alt={"Extraido de" + title}
             id={id}
@@ -86,9 +86,9 @@ function ProjectDetails({ image, title, id, active }: Props) {
                             </div>
                           </main>
                         </div>
-                        <div className="flex justify-center items-center w-full h-full">
+                        {/* <div className="flex justify-center items-center w-full h-full">
                           <video src={dataDetails[dataId].video} className="aspect-video flex items-center justify-center w-12/12 md:w-6/12 md:h-2/3" autoPlay loop muted></video>
-                        </div>
+                        </div> */}
                       </Carousel>
                     </div>
                   );
