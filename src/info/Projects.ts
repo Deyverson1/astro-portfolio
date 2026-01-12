@@ -8,7 +8,7 @@ export const ProjectData = [
   {
     title: "Dropi.co - Replica con ReactJS",
     description:
-      "Tiene como objetivo replicar la página web existente en https://dropi.co utilizando ReactJS principalmente, por medio del cual busco mejorar el rendimiento utilizando el enfoque SPA, ademas de presentar ciertos aportes propios con respecto al diseño de la pagina.",
+      "Es la replica de una pagina web de E-Commerce",
     link: "https://dropi-replic.vercel.app/",
     github: "https://github.com/Deyverson1/dropi-replic",
     image: "/projects/dropies.webp",

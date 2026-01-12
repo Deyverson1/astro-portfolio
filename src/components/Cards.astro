@@ -22,7 +22,7 @@ const { projects, active } = Astro.props;
         documentation: string;
       }) => (
         <article
-          class={`border-l-4 pl-2 lg:pl-4 ${data.color} flex-wrap sm:justify-center xl:flex-nowrap flex flex-1 md:gap-x-10  space-x-0 space-y-8 group md:flex-row-reverse  md:space-y-0`}
+          class={`  flex-wrap sm:justify-center  flex flex-1 md:gap-x-10  space-x-0 space-y-8 group md:flex-row-reverse  md:space-y-0`}
         >
           <ProjectDetails
             image={data.image}
@@ -34,7 +34,10 @@ const { projects, active } = Astro.props;
           <div class="w-full md:w-1/2 md:max-w-lg">
             <h3 class="text-2xl font-bold pt-0 mt-0">{data.title}</h3>
             <div class="flex flex-row flex-wrap mt-2">
-              <ul class="gap-x-2 flex mb-2">
+               <div class="mt-2 text-gray-700 dark:text-gray-400">
+                {data.description}
+              </div>
+              <ul class="gap-x-2 w-full flex py-4 items-center text-center mb-2">
                 {data.tags.map(
                   (tag: { icon: any; name: string; class: string }) => (
                     <li
@@ -46,9 +49,7 @@ const { projects, active } = Astro.props;
                   ),
                 )}
               </ul>
-              <div class="mt-2 text-gray-700 dark:text-gray-400">
-                {data.description}
-              </div>
+             
               <footer class="flex items-end justify-start mt-4 gap-x-2">
                 {data.github && (
                   <a

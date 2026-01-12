@@ -22,13 +22,13 @@ export const HeroData = [
     icon: LinkedinIcon,
     target: "_blank",
   },
-  { name: "Proyectos", link: "/projects", icon: ProjectIcon, iconClass: "fill-black" },
+  { name: "Proyectos", link: "/projects", icon: ProjectIcon, iconClass: "fill-white" },
   {
     name: "Github",
     link: "https://github.com/Deyverson1",
     icon: GithubCat,
     target: "_blank",
-    iconClass: "fill-white"
+    iconClass: "fill-black"
   },
   { name: "Música", link: "/music", icon: Spotify },
 ];
