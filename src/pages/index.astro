@@ -1,61 +1,65 @@
 ---
-// BarMusic usada para reproducir música en toda la aplicación 
+// BarMusic usada para reproducir música en toda la aplicación
 // import BarMusicPlayer from "../components/music/PlayerBar";
 // import Border from "../components/Border.astro";
 // import Presentation from "../components/icons/Presentation.astro";
-import AboutMe from "../components/dashboard/AboutMe.astro";
-import Dna from '../components/icons/Dna.astro'
-import Footer from "../components/dashboard/Footer.astro";
-import Github from "../components/Github.astro";
-import Hero from "../components/dashboard/Hero.astro";
-import Layout from "../layouts/Layout.astro";
-import ProfesionalExperience from "../components/dashboard/ProfesionalExperience.astro"
-import Projects from "../components/dashboard/Projects.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import Shield from '../components/icons/Shield.astro'
-import Skills from "../components/dashboard/Skills.astro";
-import TitleContainer from "../components/TitleContainer.astro";
-import ProjectIcon from "../components/icons/ProjectIcon.astro";
+import AboutMe from '../components/dashboard/AboutMe.astro';
+import Dna from '../components/icons/Dna.astro';
+import Footer from '../components/dashboard/Footer.astro';
+import Github from '../components/Github.astro';
+import Hero from '../components/dashboard/Hero.astro';
+import Layout from '../layouts/Layout.astro';
+import ProfesionalExperience from '../components/dashboard/ProfesionalExperience.astro';
+import Projects from '../components/dashboard/Projects.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Shield from '../components/icons/Shield.astro';
+import Skills from '../components/dashboard/Skills.astro';
+import TitleContainer from '../components/TitleContainer.astro';
+import ProjectIcon from '../components/icons/ProjectIcon.astro';
 ---
 
 <Layout title="Portfolio de Deyverson - Desarrollador Web">
-	<main>
-		<!-- Contempla la presentacion y los enlaces de interes -->
-		<section
-			class="container w-full pt-16 pb-10 mx-auto section md:pt-36 md:pb-20 light: lg:max-w-4xl md:max-w-2xl"
-		>
-			<Hero />
-		</section>
-		<!-- Experiencia profesional actual -->
-		 <!-- El sectioncontainer son estilos generales que se utilizan en multiples elementos, por lo que se genero un elemento que cumple esa función -->
-		<!-- <SectionContainer>
+  <main>
+    <!-- Contempla la presentacion y los enlaces de interes -->
+    <section
+      class="container w-full pt-16 pb-10 mx-auto section md:pt-36 md:pb-20 light: lg:max-w-4xl md:max-w-2xl"
+    >
+      <Hero />
+    </section>
+    <!-- Experiencia profesional actual -->
+    <!-- El sectioncontainer son estilos generales que se utilizan en multiples elementos, por lo que se genero un elemento que cumple esa función -->
+    <!-- <SectionContainer>
 			<ProfesionalExperience/>
 		</SectionContainer> -->
-	
-		<SectionContainer id="projects">
-			<div class="flex items-center text-center justify-center px-2 mb-4 text-4xl font-bold lg:px-0 gap-x-3 text-neutral-950 dark:text-white pb-4">
-				<!-- <Presentation class="size-7 pb-0.5"/> -->
-				 <ProjectIcon/>
-					<p class="flex items-center justify-center gap-x-4">Proyectos</p>
-			</div>
-			<Projects />
-		</SectionContainer>
-		<SectionContainer>
-			<TitleContainer>
-			<Dna class="size-7 pb-0.5"/>
-				Habilidades
-			</TitleContainer>
-			<Skills />
-		</SectionContainer>
-		
-		<SectionContainer id="sobre-mi" class="pb-36">
-			<TitleContainer>
-				<!-- <Shield class="size-7 pb-0.5"/> -->
-				<!-- Quien soy -->
-			</TitleContainer>
-			<AboutMe/>
-		</SectionContainer>
-		<Github/>
-	</main>
-	<Footer/>
+
+    <SectionContainer id="projects">
+      <TitleContainer>
+        <div
+          class="flex items-center text-center justify-center px-2 mb-4 font-bold lg:px-0 gap-x-3 text-neutral-950 dark:text-white pb-4"
+        >
+          <!-- <Presentation class="size-7 pb-0.5"/> -->
+          <ProjectIcon class="size-5" />
+          <p class="flex items-center justify-center gap-x-4">Proyectos</p>
+        </div>
+      </TitleContainer>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer>
+      <TitleContainer>
+        <Dna class="size-7 xl:size-10 pb-0.5" />
+        Habilidades
+      </TitleContainer>
+      <Skills />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi" class="pb-36">
+      <TitleContainer>
+        <!-- <Shield class="size-7 pb-0.5"/> -->
+        <!-- Quien soy -->
+      </TitleContainer>
+      <AboutMe />
+    </SectionContainer>
+    <Github />
+  </main>
+  <Footer />
 </Layout>
