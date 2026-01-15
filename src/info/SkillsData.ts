@@ -21,7 +21,7 @@ export const SkillData = [
   { name: "JavaScript", icon: JavaScript },
   { name: "TypeScript", icon: TypeScript },
   { name: "Php", icon: Php },
-  { name: "SQL", icon: Database },
+  // { name: "SQL", icon: Database },
   { name: "Html", icon: Html },
   { name: "Css", icon: Css },
   { name: "Astro", icon: AstroIcon },
