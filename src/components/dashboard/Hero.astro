@@ -10,7 +10,7 @@ const buttonBase =
 ---
 
 <section
-  class="flex flex-col items-center justify-center w-full px-2 xl:pt-8 2xl:py-36"
+  class="flex flex-col items-center justify-center w-full px-2 pt-10 xl:pt-8 2xl:py-36"
 >
   <h1
     class="xl:text-3xl 2xl:text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white"
@@ -31,11 +31,17 @@ const buttonBase =
       Colombia
     </strong>
   </p>
-  <div class="flex flex-wrap items-center justify-center gap-4 mt-16">
+  <div class="flex flex-wrap items-center justify-center gap-4 mt-8 md:mt-16">
     {
       HeroData.map((data) => (
-        <a target={data.target} class={`${buttonBase}`} href={data.link}>
-          <data.icon class={`size-4 dark:fill-white ${data.iconClass}`} />{' '}
+        <a
+          target={data.target}
+          class={`${buttonBase} text-xs md:text-lg`}
+          href={data.link}
+        >
+          <data.icon
+            class={`size-3 md:size-4 dark:fill-white ${data.iconClass}`}
+          />{' '}
           {data.name}
         </a>
       ))

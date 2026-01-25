@@ -2,9 +2,11 @@
 import { data } from '../../info/DataFooter';
 ---
 
-<footer class="py-0 mb-7 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+<footer
+  class="py-0 w-full mx-auto container my-5 2xl:my-10 lg:max-w-4xl md:max-w-2xl"
+>
   <div
-    class="items-center border-b-2 border-black gap-y-8 md:gap-y-0 dark:border-white pb-8 justify-around flex flex-col lg:flex-row w-full max-w-screen-xl mx-auto md:flex md:items-center"
+    class="items-center justify-center gap-y-8 md:gap-y-0 pb-8 flex flex-col lg:flex-row w-full max-w-screen-xl mx-auto md:flex md:items-center"
   >
     <!-- <div
       class="flex justify-center items-center md:items-start flex-col gap-y-2"
@@ -51,50 +53,41 @@ import { data } from '../../info/DataFooter';
       </div>
     </div> -->
 
-    <main class="flex gap-12">
+    <main
+      class="flex-wrap md:flex-nowrap md:flex items-center 2xl:w-3/5 2xl:justify-between"
+    >
       <article>
-        <h2>Social</h2>
-        <section
-          class="flex flex-col gap-y-2 pt-3 text-gray-800 dark:text-gray-400"
-        >
-          {
-            data.map((dato) => (
-              <a href={dato.link} target="_blank">
-                <h3>{dato.name}</h3>
-              </a>
-            ))
-          }
-        </section>
+        <h2 class="text-lg 2xl:text-2xl font-semibold">Deyverson Herrera</h2>
+        <p class="2xl:text-lg text-gray-400 pt-1">
+          Tecnólogo Mecatrónico | Desarrollador Web
+        </p>
       </article>
       <article>
-        <h2>Otros</h2>
         <section
           class="flex flex-col gap-y-2 pt-3 text-gray-800 dark:text-gray-400"
         >
-          <a href="https://anime-search-deyverson1.vercel.app/"
-            ><h3>Anime</h3></a
+          <a href="mailto:deyversongp@gmail.com"
+            ><h3 class="2xl:text-lg">Contacto</h3></a
+          >
+          <a class="target-blank" href="https://www.linkedin.com/in/deyverson/"
+            ><h3 class="2xl:text-lg">LinkedIn</h3></a
           >
           <a href="https://search-movies-and-books.vercel.app/"
-            ><h3>Libros</h3></a
+            ><h3 class="2xl:text-lg">GitHub</h3></a
           >
-          <a href="mailto:deyversongp@gmail.com"><h3>Contacto</h3></a>
         </section>
       </article>
     </main>
   </div>
-  <div>
-    <p></p>
+  <div class="text-center">
+    <p class="2xl:text-lg text-gray-200 pt-4">
+      Construido con Astro y Tailwind CSS — © 2026
+    </p>
   </div>
 </footer>
 
 <style>
-  h2 {
-    text-decoration: underline;
-  }
   h3:hover {
     text-decoration: underline;
-  }
-  span {
-    line-height: 8px;
   }
 </style>
