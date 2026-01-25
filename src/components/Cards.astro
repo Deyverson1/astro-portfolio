@@ -33,30 +33,32 @@ const { projects, active } = Astro.props;
             active={active}
             client:load
           />
-          <div class="w-full items-center justify-center md:w-1/2 md:max-w-lg pt-4">
-            <h3 class="text-2xl font-bold pt-0 mt-0">{data.title}</h3>
+          <div class="w-full items-center justify-center md:w-1/2 md:max-w-lg 2xl:w-4/6 2xl:max-w-full pt-4">
+            <h3 class="text-2xl font-bold pt-0 mt-0 2xl:text-3xl">
+              {data.title}
+            </h3>
             <div class="flex flex-row items-center justify-center flex-wrap mt-2">
-              <div class="mt-2 text-gray-700 dark:text-gray-400">
+              <div class="2xl:text-xl mt-2 text-gray-700 dark:text-gray-400">
                 {data.description}
               </div>
-              <ul class="gap-x-2 w-full justify-center flex py-4 items-center text-center mb-2">
+              <ul class="gap-x-2 w-full hover:cursor-default justify-center flex py-4 gap-y-8 items-center text-center mb-2">
                 {data.tags.map(
                   (tag: { icon: any; name: string; class: string }) => (
                     <li
-                      class={`flex text-white dark:text-white items-center gap-x-2 rounded-full py-1 px-3 text-sn ${tag.class} opacity-90 hover:opacity-100`}
+                      class={`flex text-white dark:text-white items-center gap-x-2 rounded-full 2xl:py-2 2xl:text-base 2xl:px-4 py-1 px-3 text-sm ${tag.class} opacity-90 hover:opacity-100`}
                     >
-                      <tag.icon class="size-4" />
+                      <tag.icon class="size-4 2xl:size-6" />
                       {tag.name}
                     </li>
                   )
                 )}
               </ul>
 
-              <footer class="flex items-end justify-start mt-4 gap-x-2">
+              <footer class="flex items-end justify-start mt-4 gap-x-2 2xl:gap-x-3">
                 {data.github && (
                   <a
                     target="_blank"
-                    class=" flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text- px-4 py-2 me-2 mb-2 dark:bg-neutral-900 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                    class=" flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl 2xl:text-base px-4 py-2 me-2 mb-2 dark:bg-neutral-900 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                     href={data.github}
                   >
                     <GithubCat class="size-5 fill-dark dark:fill-white" />
@@ -66,7 +68,7 @@ const { projects, active } = Astro.props;
                 {data.link && (
                   <a
                     target="_blank"
-                    class="flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-neutral-900 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                    class="flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text-base 2xl:text-base px-4 py-2 me-2 mb-2 dark:bg-neutral-900 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                     href={data.link}
                   >
                     <BrandVercel class="size-5 fill-black dark:fill-white" />
