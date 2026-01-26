@@ -6,11 +6,20 @@ import { projects } from '../info/DataProjects';
 ---
 
 <Layout title="Projects Deyverson">
-  <section class="container mx-auto pt-28 pb-28 lg:max-w-4xl md:max-w-2xl">
+  <section
+    class="container flex flex-col items-center justify-center px-4 mx-auto xl:max-w-full pt-28 pb-28 lg:max-w-md"
+  >
     <span>
-      <h1 class="pb-8 text-2xl font-bold">Proyectos</h1>
+      <h1 class="pb-8 text-2xl font-bold text-center 2xl:pb-20 2xl:text-4xl">
+        Proyectos
+      </h1>
     </span>
-    <Cards projects={projects} active={false} />
+    <Cards
+      projects={projects}
+      active={false}
+      display="flex-wrap"
+      width="md:w-1/2"
+    />
   </section>
   <Footer />
 </Layout>
