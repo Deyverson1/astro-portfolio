@@ -3,19 +3,8 @@ represents a project and contains properties such as `title`, `description`, `li
 `image`, `tags`, `color`, and `id`. These objects describe different projects with details like
 their titles, descriptions, links to the project and GitHub repository, images, tags indicating
 technologies used, colors for styling, and unique identifiers. */
-import { tags } from "../components/Tags.astro";
+import { tags } from '../components/Tags.astro';
 export const ProjectData = [
-  {
-    title: "Dropi.co - Clon IU/UX",
-    description:
-      "Clon funcional de UI/UX de Dropi.co con mejoras enfocadas en rendimiento SPA",
-    link: "https://dropi-replic.vercel.app/",
-    github: "https://github.com/Deyverson1/dropi-replic",
-    image: "/projects/DropiTry.png",
-    tags: [tags.React, tags.JavaScript, tags.Css],
-    color: "border-orange-500",
-    id: "1",
-  },
   // {
   //   title: "Anime Search - Consumo de APIs",
   //   description:
@@ -28,25 +17,25 @@ export const ProjectData = [
   //   id: "2",
   // },
   {
-    title: "Bancolombia - Clon IU/UX",
+    title: 'Bancolombia - Clon IU/UX',
     description:
-      "Clon funcional de UI/UX del sitio web de Bancolombia, desarrollado con Astro y enfocado en estructura, rendimiento y responsividad",
-    github: "https://github.com/Deyverson1/bancolombia-replic",
-    link: "https://bancolombia-replic.vercel.app/",
-    image: "/projects/bancolombia.webp",
+      'Clon funcional de UI/UX del sitio web de Bancolombia, desarrollado con Astro y enfocado en estructura, rendimiento y responsividad',
+    github: 'https://github.com/Deyverson1/bancolombia-replic',
+    link: 'https://practica-iu-ix-bancolombia.netlify.app/',
+    image: '/projects/bancolombia.webp',
     tags: [tags.Astro, tags.TypeScript, tags.Tailwind],
-    color: "border-green-500",
-    id: "3",
+    color: 'border-green-500',
+    id: '3',
   },
-  // {
-  //   title: "Search Movies and books!",
-  //   description:
-  //     "Fue creado con el propósito de aprender acerca de Svelte, actualmente presenta dos funciones principales las cuales son la búsqueda de libros y películas",
-  //   link: "https://search-movies-and-books.vercel.app/",
-  //   github: "https://github.com/Deyverson1/search-movies-and-books",
-  //   image: "/projects/searchmovie.webp",
-  //   tags: [tags.Svelte, tags.JavaScript, tags.Css],
-  //   color: "border-sky-500",
-  //   id: "4",
-  // },
+  {
+    title: 'Dropi.co - Clon IU/UX',
+    description:
+      'Clon funcional de UI/UX de Dropi.co con mejoras enfocadas en rendimiento SPA',
+    link: 'https://dropi-replic.vercel.app/',
+    github: 'https://github.com/Deyverson1/dropi-replic',
+    image: '/projects/DropiTry.png',
+    tags: [tags.React, tags.JavaScript, tags.Css],
+    color: 'border-orange-500',
+    id: '1',
+  },
 ];

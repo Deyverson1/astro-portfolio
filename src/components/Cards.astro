@@ -8,7 +8,7 @@ const { projects, active } = Astro.props;
 ---
 
 <div
-  class="px-2 lg:px-0 flex flex-col justify-center text-center gap-y-16 items-center"
+  class="flex flex-col items-center justify-center px-2 text-center lg:px-0 gap-y-16"
 >
   {
     projects.map(
@@ -33,15 +33,15 @@ const { projects, active } = Astro.props;
             active={active}
             client:load
           />
-          <div class="w-full items-center justify-center md:w-1/2 md:max-w-lg 2xl:w-4/6 2xl:max-w-full pt-4">
-            <h3 class="text-2xl font-bold pt-0 mt-0 2xl:text-3xl">
+          <div class="items-center justify-center w-full pt-4 md:w-1/2 md:max-w-lg 2xl:w-4/6 2xl:max-w-full">
+            <h3 class="pt-0 mt-0 text-2xl font-bold 2xl:text-3xl">
               {data.title}
             </h3>
-            <div class="flex flex-row items-center justify-center flex-wrap mt-2">
-              <div class="2xl:text-xl mt-2 text-gray-700 dark:text-gray-400">
+            <div class="flex flex-row flex-wrap items-center justify-center mt-2">
+              <div class="mt-2 text-gray-700 2xl:text-xl dark:text-gray-400">
                 {data.description}
               </div>
-              <ul class="gap-x-2 w-full hover:cursor-default justify-center flex py-4 gap-y-8 items-center text-center mb-2">
+              <ul class="flex items-center justify-center w-full py-4 mb-2 text-center gap-x-2 hover:cursor-default gap-y-8">
                 {data.tags.map(
                   (tag: { icon: any; name: string; class: string }) => (
                     <li
@@ -58,7 +58,7 @@ const { projects, active } = Astro.props;
                 {data.github && (
                   <a
                     target="_blank"
-                    class=" flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl 2xl:text-base px-4 py-2 me-2 mb-2 dark:bg-neutral-900 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                    class="flex items-center px-4 py-2 mb-2 font-normal text-gray-900 bg-white border border-gray-300 gap-x-2 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 rounded-xl 2xl:text-base me-2 dark:bg-neutral-900 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                     href={data.github}
                   >
                     <GithubCat class="size-5 fill-dark dark:fill-white" />
@@ -68,7 +68,7 @@ const { projects, active } = Astro.props;
                 {data.link && (
                   <a
                     target="_blank"
-                    class="flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text-base 2xl:text-base px-4 py-2 me-2 mb-2 dark:bg-neutral-900 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                    class="flex items-center px-4 py-2 mb-2 text-base font-normal text-gray-900 bg-white border border-gray-300 gap-x-2 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 rounded-xl 2xl:text-base me-2 dark:bg-neutral-900 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                     href={data.link}
                   >
                     <BrandVercel class="size-5 fill-black dark:fill-white" />
@@ -77,7 +77,7 @@ const { projects, active } = Astro.props;
                 )}
                 {data.documentation && (
                   <a
-                    class="flex items-center gap-x-2 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-normal rounded-xl text-base px-4 py-2 me-2 mb-2 dark:bg-neutral-950 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                    class="flex items-center px-4 py-2 mb-2 text-base font-normal text-gray-900 bg-white border border-gray-300 gap-x-2 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 rounded-xl me-2 dark:bg-neutral-950 dark:text-white dark:border-gray-600 dark:hover:bg-neutral-800 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                     href={data.documentation}
                   >
                     <Analytics class="size-5" />
