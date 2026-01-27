@@ -1,15 +1,20 @@
 ---
 const contentNav = [
-  { title: "Inicio", label: "/", url: "/" },
-  { title: "Proyectos", label: "/#proyectos", url: "/projects" },
-  { title: "Sobre mi", label: "/#sobre-mi", url: "/#sobre-mi" },
-  { title: "Contacto",  label: "/#contacto", url: "mailto:deyversongp@gmail.com" },
+  { title: 'Inicio', label: '/', url: '/' },
+  { title: 'Proyectos', label: '/#proyectos', url: '/projects' },
+  { title: 'Sobre mi', label: '/#sobre-mi', url: '/#sobre-mi' },
+  {
+    title: 'Contacto',
+    label: '/#contacto',
+    url: 'mailto:deyversongp@gmail.com',
+  },
 ];
 ---
 
-<header
-  class="fixed z-10 flex items-center justify-center w-full mx-auto py-2">
-  <nav class="flex bg-white dark:bg-neutral-900 border-none rounded-full lg:px-6 text-medium font-medium justify-center items-center">
+<header class="fixed z-10 flex items-center justify-center w-full mx-auto py-2">
+  <nav
+    class="flex bg-white dark:bg-neutral-900 border-none rounded-full px-4 lg:px-6 text-medium font-medium justify-center items-center"
+  >
     <section class="flex pt-px justify-center md:justify-center w-full">
       {
         contentNav.map((content) => (
