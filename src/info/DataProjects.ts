@@ -10,7 +10,7 @@ export const projects = [
       'Clon funcional de UI/UX del sitio web de Bancolombia, desarrollado con Astro y enfocado en estructura, rendimiento y responsividad',
     github: 'https://github.com/Deyverson1/bancolombia-replic',
     link: 'https://practica-iu-ix-bancolombia.netlify.app/',
-    image: '/projects/bancolombia.webp',
+    image: 'BancolombiaTry.png',
     tags: [tags.Astro, tags.TypeScript, tags.Tailwind],
     color: 'border-green-500',
     id: '3',
