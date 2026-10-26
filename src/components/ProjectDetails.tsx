@@ -27,9 +27,9 @@ function ProjectDetails({ image, title, id, active }: Props) {
         <div className="relative col-span-6 row-span-5 flex w-3/4 transform flex-col items-center justify-center gap-8 overflow-clip rounded-xl shadow-xl transition duration-500 ease-in-out sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
           <img
             onClick={() => handleDetails(id)}
-            className="aspect-[16/9] w-full cursor-pointer object-cover object-top opacity-95 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+            className="aspect-[16/10] w-full cursor-pointer object-cover object-top opacity-95 transition duration-500 group-hover:scale-[1.06] group-hover:opacity-100"
             src={image}
-            alt={'Extraido de' + title}
+            alt={`Captura de ${title}`}
             id={id}
           />
         </div>

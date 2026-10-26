@@ -17,13 +17,13 @@ export const ProjectData = [
   //   id: "2",
   // },
   {
-    title: 'Bancolombia - Clon IU/UX',
+    title: 'MaintaX CMMS - Gestión de mantenimiento industrial',
     description:
-      'Clon funcional de UI/UX del sitio web de Bancolombia, desarrollado con Astro y enfocado en estructura, rendimiento y responsividad',
-    github: 'https://github.com/Deyverson1/bancolombia-replic',
-    link: 'https://practica-iu-ix-bancolombia.netlify.app/',
-    image: 'BancolombiaTry.png',
-    tags: [tags.Astro, tags.TypeScript, tags.Tailwind],
+      'MaintaX es un software de gestión de mantenimiento industrial (CMMS) que centraliza órdenes de trabajo, inventario de repuestos, requisiciones y compras. Se encuentra en desarrollo continuo.',
+    // github: 'https://github.com/Deyverson1/bancolombia-replic',
+    // link: 'https://practica-iu-ix-bancolombia.netlify.app/',
+    image: 'maintax-dashboard.png',
+    tags: [tags.React, tags.JavaScript, tags.Tailwind],
     color: 'border-green-500',
     id: '3',
   },
@@ -37,5 +37,16 @@ export const ProjectData = [
     tags: [tags.React, tags.JavaScript, tags.Css],
     color: 'border-orange-500',
     id: '1',
+  },
+  {
+    title: 'Bancolombia - Clon IU/UX',
+    description:
+      'Clon funcional de UI/UX del sitio web de Bancolombia, desarrollado con Astro y enfocado en estructura, rendimiento y responsividad',
+    github: 'https://github.com/Deyverson1/bancolombia-replic',
+    link: 'https://practica-bancolombia-replic.vercel.app/',
+    image: 'BancolombiaTry.png',
+    tags: [tags.Astro, tags.TypeScript, tags.Tailwind],
+    color: 'border-green-500',
+    id: '2',
   },
 ];

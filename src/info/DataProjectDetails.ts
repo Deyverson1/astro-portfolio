@@ -26,21 +26,6 @@ export const dataDetails: {
     video: '/video/DropiWeb.mp4',
   },
   '2': {
-    title: 'Anime Search - Consumo de APIs',
-    description:
-      'Tiene como objetivo la implementación de búsqueda de anime a partir del consumo de varias APIS como https://jikan.moe/, https://animechan.xyz/, https://nekos.best/, presento una implementación de TypeScript para mejorar la calidad del código con respecto a los errores',
-    points: [
-      'Diseño responsivo.',
-      'Consumo de APIs.',
-      'Manejo de datos.',
-      'Respuesta rápida',
-    ],
-    imageInfoMobile: 'SearchMobile.png',
-    imageInfoDesktop: 'SearchDesktop.png',
-    image: '/projects/animesearch.webp',
-    video: '/video/AnimeVideo.mp4',
-  },
-  '3': {
     title: 'Bancolombia - Replica con Astro',
     description:
       'Actualmente en proceso de replica del sitio web de Bancolombia https://www.bancolombia.com/personas, esta desarrollado principalmente con Astro, ademas de una pequeña integración de TypeScript, por la parte los estilos se realizan por medio de Tailwind',
@@ -55,7 +40,40 @@ export const dataDetails: {
     image: 'BancolombiaDetails.png',
     video: '/video/BancolombiaVideo.mp4',
   },
+  '3': {
+    title: 'MaintaX CMMS - Gestión de mantenimiento industrial',
+    description:
+      'MaintaX CMMS es una plataforma de gestión de mantenimiento industrial que centraliza órdenes de trabajo, inventario de repuestos, requisiciones, compras y control de maquinaria. Busca facilitar la planificación, el seguimiento y el control de costos. En desarrollo continuo.',
+    // github: 'https://github.com/Deyverson1/bancolombia-replic',
+    // link: 'https://practica-iu-ix-bancolombia.netlify.app/',
+    points: [
+      'Panel de control con indicadores clave.',
+      'alendario de trabajo con alertas de tareas vencidas.',
+      'Gestión de órdenes, inventario y requisiciones.',
+      'Arquitectura SPA con componentes reutilizables. ',
+    ],
+    imageInfoMobile: 'BancolombiaMobile.png',
+    imageInfoDesktop: 'mockup-maintax-requisiciones.png',
+    image: 'work-orders-maintax.png',
+    video: '/video/BancolombiaVideo.mp4',
+  },
   '4': {
+    title: 'Anime Search - Consumo de APIs',
+    description:
+      'Tiene como objetivo la implementación de búsqueda de anime a partir del consumo de varias APIS como https://jikan.moe/, https://animechan.xyz/, https://nekos.best/, presento una implementación de TypeScript para mejorar la calidad del código con respecto a los errores',
+    points: [
+      'Diseño responsivo.',
+      'Consumo de APIs.',
+      'Manejo de datos.',
+      'Respuesta rápida',
+    ],
+    imageInfoMobile: 'SearchMobile.png',
+    imageInfoDesktop: 'SearchDesktop.png',
+    image: '/projects/animesearch.webp',
+    video: '/video/AnimeVideo.mp4',
+  },
+
+  '5': {
     title: 'Search Movies and books!',
     description:
       'Fue creado con el propósito de aprender acerca de Svelte, actualmente presenta dos funciones principales las cuales son la búsqueda de libros y películas',
