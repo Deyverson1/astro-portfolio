@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BuildingIcon from '../icons/BuildingIcon.astro';
+import MapIcon from '../icons/MapIcon.astro';
+import { jobExperience } from '../../info/JobExperience';
+---
+
+<Layout title="Experiencia Deyverson">
+  <ol class="flex flex-col gap-10">
+    {
+      jobExperience.map((dato) => (
+        <li>
+          <article class="flex gap-10">
+            <header class="text-right items-end flex flex-col gap-3">
+              <p
+                class={`inline-flex items-center rounded-full border ${dato.activeWork ? 'border-cyan-400/20 bg-cyan-950/30 shadow-[inset_0_0_12px_rgba(34,211,238,0.15),0_0_14px_rgba(34,211,238,0.12)]' : 'border-gray-800 bg-neutral-800/50'} px-5 py-1 font-mono text-sm font-semibold text-white  [text-shadow:0_0_8px_rgba(34,211,238,0.6)] w-fit`}
+              >
+                <time datetime="2023-01">{dato.date}</time>&nbsp;– {dato.date2}
+              </p>
+              <div class="flex flex-col items-end gap-0.5">
+                <p class="flex items-center justify-center text-xl gap-2 font-bold whitespace-nowrap">
+                  <BuildingIcon class="size-5 text-cyan-500" /> {dato.company}
+                </p>
+                <p class="flex gap-2 items-center text-gray-300">
+                  <MapIcon class="size-5 text-gray-400" />
+                  {dato.location}
+                </p>
+              </div>
+              <dl>
+                <dt class="sr-only">Sector:</dt>
+                <dd class="w-fit items-center whitespace-nowrap rounded-md border border-white/10 bg-white/5 px-3 py-1 font-mono text-sm font-semibold uppercase tracking-widest text-gray-200 shadow-[inset_0_1px_3px_rgba(0,0,0,0.5)]">
+                  {dato.sector}
+                </dd>
+                <div class="flex gap-1 mt-0.5 text-gray-400 justify-end">
+                  <dt>Permanencia:</dt>
+                  <dd>{dato.tenure}</dd>
+                </div>
+              </dl>
+            </header>
+
+            <div class="relative flex justify-center w-6 min-h-full">
+              <span
+                aria-hidden="true"
+                class={`absolute ${dato.date2 === 'Actualidad' ? 'top-0 ' : '-top-12'}  bottom-0 w-0.5 ${
+                  dato.activeWork
+                    ? 'bg-gradient-to-b from-cyan-400 via-cyan-500/40 to-neutral-800'
+                    : 'bg-neutral-800'
+                }`}
+              />
+
+              <div class="absolute top-2.5 flex items-center justify-center size-4 z-10 bg-black/50 rounded-full">
+                <span
+                  aria-hidden="true"
+                  class={`absolute rounded-full transition-all duration-500 ${
+                    dato.activeWork
+                      ? 'size-5 bg-cyan-400/20 border border-cyan-400/40 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]'
+                      : 'hidden'
+                  }`}
+                />
+
+                <span
+                  aria-hidden="true"
+                  class={`absolute rounded-full transition-all ${
+                    dato.activeWork
+                      ? 'size-4 bg-cyan-500/10 shadow-[0_0_12px_4px_rgba(34,211,238,0.5)]'
+                      : 'size-3.5 bg-neutral-900 border border-white/10'
+                  }`}
+                />
+
+                <span
+                  aria-hidden="true"
+                  class={`absolute rounded-full transition-all duration-300 ${
+                    dato.activeWork
+                      ? 'size-2 bg-cyan-300 shadow-[0_0_6px_#22d3ee]'
+                      : 'size-1.5 bg-neutral-500'
+                  }`}
+                />
+              </div>
+            </div>
+
+            <div class="md:w-full">
+              <header class="flex justify-between">
+                <hgroup>
+                  <p class="text-cyan-400 uppercase tracking-tighter font-mono text-md">
+                    {dato.responsibilities}
+                  </p>
+                  <h3 class="text-3xl font-bold">{dato.role}</h3>
+                </hgroup>
+                <dl class="text-gray-300 border rounded-md text-sm font-semibold font-mono border-white/10 bg-white/5 h-fit px-3 py-1 shadow-[inset_0_1px_3px_rgba(0,0,0,0.5)]">
+                  <dt class="sr-only">Área:</dt>
+                  <dd>{dato.area}</dd>
+                </dl>
+              </header>
+              <ul class="list-disc pt-5 w-full pl-5 marker:text-cyan-400 text-gray-200 flex flex-col gap-2 text-md">
+                {dato.activities.map((activity) => (
+                  <li>{activity} </li>
+                ))}
+              </ul>
+
+              <ul class="flex gap-x-4 gap-y-3 mt-5 text-gray-100 flex-wrap justify-center items-center lg:max-w-[750px] ">
+                {dato.keywords.map((keyword) => (
+                  <li class="bg-neutral-900 px-3 py-1 rounded-lg text-center h-fit">
+                    {keyword}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        </li>
+      ))
+    }
+  </ol>
+</Layout>

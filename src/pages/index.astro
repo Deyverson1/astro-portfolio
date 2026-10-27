@@ -16,6 +16,8 @@ import Shield from '../components/icons/Shield.astro';
 import Skills from '../components/dashboard/Skills.astro';
 import TitleContainer from '../components/TitleContainer.astro';
 import ProjectIcon from '../components/icons/ProjectIcon.astro';
+import Experience from '../components/dashboard/Experience.astro';
+import BriefcaseIcon from '../components/icons/BriefcaseIcon.astro';
 ---
 
 <Layout title="Portfolio de Deyverson - Desarrollador Web">
@@ -50,6 +52,20 @@ import ProjectIcon from '../components/icons/ProjectIcon.astro';
         Habilidades
       </TitleContainer>
       <Skills />
+    </SectionContainer>
+    <SectionContainer>
+      <TitleContainer>
+        <div
+          class="flex items-center text-center justify-center px-2 2xl:mb-4 font-bold lg:px-0 gap-x-3 text-neutral-950 dark:text-white 2xl:pb-4"
+        >
+          <!-- <Presentation class="size-7 pb-0.5"/> -->
+          <BriefcaseIcon class="size-10 shrink-0" />
+          <p class="flex items-center justify-center gap-x-4">
+            Experiencia Laboral
+          </p>
+        </div>
+      </TitleContainer>
+      <Experience />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi" class="2xl:pb-36">

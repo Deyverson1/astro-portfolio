@@ -2,11 +2,11 @@
 const contentNav = [
   { title: 'Inicio', label: '/', url: '/' },
   { title: 'Proyectos', label: '/#proyectos', url: '/projects' },
-  { title: 'Sobre mi', label: '/#sobre-mi', url: '/#sobre-mi' },
+  { title: 'Sobre mí', label: '/#sobre-mi', url: '/#sobre-mi' },
   {
     title: 'Contacto',
     label: '/#contacto',
-    url: 'mailto:deyversongp@gmail.com',
+    url: 'https://mail.google.com/mail/?view=cm&to=deyversongp@gmail.com',
   },
 ];
 ---
@@ -19,8 +19,9 @@ const contentNav = [
       {
         contentNav.map((content) => (
           <a
-            class="text-sm md:text-base relative text-gray-700 dark:text-gray-200 block px-2 py-2 hover:text-gray-400 dark:hover:text-gray-400"
+            class="text-sm  md:text-base relative text-gray-700 dark:text-gray-200 block px-2 py-2 hover:text-gray-400 dark:hover:text-gray-400"
             aria-label={content.label}
+            target={`${content.title === 'Contacto' ? '_blank' : ''}`}
             href={content.url}
           >
             {content.title}
