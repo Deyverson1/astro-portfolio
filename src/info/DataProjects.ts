@@ -5,6 +5,17 @@ importing a module that contains tag constants used to categorize the projects. 
 import { tags } from '../components/Tags.astro';
 export const projects = [
   {
+    title: 'MaintaX CMMS - Gestión de mantenimiento industrial',
+    description:
+      'MaintaX CMMS es una plataforma de gestión de mantenimiento industrial que centraliza órdenes de trabajo, inventario de repuestos, requisiciones, compras y control de maquinaria. Busca facilitar la planificación, el seguimiento y el control de costos. En desarrollo continuo.',
+    // link: '',
+    // github: '',
+    image: 'maintax-dashboard.png',
+    tags: [tags.Php, tags.MySql],
+    color: '',
+    id: '',
+  },
+  {
     title: 'Bancolombia - Clon IU/UX',
     description:
       'Clon funcional de UI/UX del sitio web de Bancolombia, desarrollado con Astro y enfocado en estructura, rendimiento y responsividad',
@@ -48,40 +59,6 @@ export const projects = [
     tags: [tags.TypeScript, tags.React, tags.Tailwind],
     color: 'border-red-500',
     id: '5',
-  },
-  // {
-  //   title: 'Anime Search - Consumo de APIs',
-  //   description:
-  //     'Tiene como objetivo la implementación de búsqueda de anime a partir del consumo de varias APIS como https://jikan.moe/, https://animechan.xyz/, https://nekos.best/, presento una implementación de TypeScript para mejorar la calidad del código con respecto a los errores',
-  //   github: 'https://github.com/Deyverson1/anime-search',
-  //   link: 'https://anime-search-deyverson1.vercel.app/',
-  //   image: '/projects/animesearch.webp',
-  //   tags: [tags.TypeScript, tags.Tailwind, tags.React],
-  //   color: 'border-yellow-600',
-  //   id: '2',
-  // },
-
-  // {
-  //   title: 'Search Movies and books!',
-  //   description:
-  //     'Fue creado con el propósito de aprender acerca de Svelte, actualmente presenta dos funciones principales las cuales son la búsqueda de libros y películas',
-  //   link: 'https://search-movies-and-books.vercel.app/',
-  //   github: 'https://github.com/Deyverson1/search-movies-and-books',
-  //   image: '/projects/searchmovie.webp',
-  //   tags: [tags.Svelte, tags.JavaScript, tags.Css],
-  //   color: 'border-sky-500',
-  //   id: '4',
-  // },
-  {
-    title: 'Proyecto de CRUD en PHP',
-    description:
-      'Proyecto basado en CRUD, desarrollado como proyecto de aprendizaje, esta creado principalmente en el lenguaje de Php con la ayuda de base de datos de MySQL. Se basa en el control de empleados para una organización.',
-    link: '',
-    github: 'https://github.com/Deyverson1/mechatronic-digital-logic',
-    image: '/projects/crud-picture.png',
-    tags: [tags.Php, tags.MySql],
-    color: 'border-violet-500',
-    id: '',
   },
 
   {

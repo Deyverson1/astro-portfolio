@@ -1,80 +1,79 @@
 ---
-import Header from "../components/dashboard/Header.astro";
-import "@fontsource-variable/onest";
-import BarMusicPlayer from "../components/music/PlayerBar";
+import Header from '../components/dashboard/Header.astro';
+import '@fontsource-variable/onest';
+import BarMusicPlayer from '../components/music/PlayerBar';
 interface Props {
-	title: string;
+  title: string;
 }
 const { title } = Astro.props;
-import { ViewTransitions } from "astro:transitions";
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<ViewTransitions />
-	</head>
-	<body class="relative text-black dark:text-white">
-		<div
-			class="absolute inset-0 top-0 min-h-screen -z-10 h-full w-full
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Deyverson Herrera, tecnólogo mecatrónico y desarrollador web en Cali. Creo aplicaciones con diversas tecnologías, como MaintaX, un CMMS para mantenimiento industrial."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body class="relative text-black dark:text-white">
+    <div
+      class="absolute inset-0 top-0 min-h-screen -z-10 h-full w-full
 			[background:radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]
 			dark:items-center dark:px-5 dark:py-24 dark:[background:radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-		>
-			<div
-				class="absolute bottom-0 left-0 right-0 top-0 dark:bg-none"
-			>
-			</div>
-		</div>
-	</body>
-		<Header />
-	<slot />
+    >
+      <div class="absolute bottom-0 left-0 right-0 top-0 dark:bg-none"></div>
+    </div>
+  </body><Header />
+  <slot />
 </html>
 
 <style is:global>
-	:root {
-		color-scheme: light dark;
+  :root {
+    color-scheme: light dark;
 
-		font-family: "Onest Variable", system-ui, sans-serif;
-	}
-	html {
-		scroll-behavior: smooth;
-	}
-	#header-nav {
-		animation: blur linear both 0.5s;
-		animation-timeline: scroll();
-		animation-range: 0 500px;
-	}
+    font-family: 'Onest Variable', system-ui, sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  #header-nav {
+    animation: blur linear both 0.5s;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+  }
 
-	@keyframes blur {
-		to {
-			backdrop-filter: blur(20px);
-			border-width: 1px;
-			border-color: rgba(0, 0, 0);
-			padding: 0.25rem 0.75rem;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			background-color: rgb(229, 229, 229);
-			border-radius: 9999px;
-		}
-	}
-	@media (prefers-color-scheme: dark) {
-		:root {
-			background-color: black;
-		}
-	}
-	@media (prefers-color-scheme: light) {
-		body {
-			background-color: white;
-		}
-		.try {
-			display: none;
-		}
-	}
+  @keyframes blur {
+    to {
+      backdrop-filter: blur(20px);
+      border-width: 1px;
+      border-color: rgba(0, 0, 0);
+      padding: 0.25rem 0.75rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: rgb(229, 229, 229);
+      border-radius: 9999px;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      background-color: black;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    body {
+      background-color: white;
+    }
+    .try {
+      display: none;
+    }
+  }
 </style>

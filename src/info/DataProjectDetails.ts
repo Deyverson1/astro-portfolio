@@ -57,30 +57,4 @@ export const dataDetails: {
     image: 'work-orders-maintax.png',
     video: '/video/BancolombiaVideo.mp4',
   },
-  '4': {
-    title: 'Anime Search - Consumo de APIs',
-    description:
-      'Tiene como objetivo la implementación de búsqueda de anime a partir del consumo de varias APIS como https://jikan.moe/, https://animechan.xyz/, https://nekos.best/, presento una implementación de TypeScript para mejorar la calidad del código con respecto a los errores',
-    points: [
-      'Diseño responsivo.',
-      'Consumo de APIs.',
-      'Manejo de datos.',
-      'Respuesta rápida',
-    ],
-    imageInfoMobile: 'SearchMobile.png',
-    imageInfoDesktop: 'SearchDesktop.png',
-    image: '/projects/animesearch.webp',
-    video: '/video/AnimeVideo.mp4',
-  },
-
-  '5': {
-    title: 'Search Movies and books!',
-    description:
-      'Fue creado con el propósito de aprender acerca de Svelte, actualmente presenta dos funciones principales las cuales son la búsqueda de libros y películas',
-    points: [],
-    imageInfoMobile: 'MovieMobile.png',
-    imageInfoDesktop: 'MovieDesktop.png',
-    image: '/projects/searchmovie.webp',
-    video: '/video/BooksVideo.mp4',
-  },
 };
