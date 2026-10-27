@@ -11,7 +11,7 @@ export const projects = [
     // link: '',
     // github: '',
     image: 'maintax-dashboard.png',
-    tags: [tags.Php, tags.MySql],
+    tags: [tags.React, tags.JavaScript, tags.Tailwind],
     color: '',
     id: '',
   },
