@@ -9,10 +9,8 @@ import Footer from '../components/dashboard/Footer.astro';
 import Github from '../components/Github.astro';
 import Hero from '../components/dashboard/Hero.astro';
 import Layout from '../layouts/Layout.astro';
-import ProfesionalExperience from '../components/dashboard/ProfesionalExperience.astro';
 import Projects from '../components/dashboard/Projects.astro';
 import SectionContainer from '../components/SectionContainer.astro';
-import Shield from '../components/icons/Shield.astro';
 import Skills from '../components/dashboard/Skills.astro';
 import TitleContainer from '../components/TitleContainer.astro';
 import ProjectIcon from '../components/icons/ProjectIcon.astro';
@@ -28,54 +26,47 @@ import BriefcaseIcon from '../components/icons/BriefcaseIcon.astro';
     >
       <Hero />
     </section>
-    <!-- Experiencia profesional actual -->
-    <!-- El sectioncontainer son estilos generales que se utilizan en multiples elementos, por lo que se genero un elemento que cumple esa función -->
-    <!-- <SectionContainer>
-			<ProfesionalExperience/>
-		</SectionContainer> -->
-
-    <SectionContainer id="projects">
-      <TitleContainer>
-        <div
-          class="flex items-center text-center justify-center px-2 2xl:mb-4 font-bold lg:px-0 gap-x-3 text-neutral-950 dark:text-white 2xl:pb-4"
-        >
-          <!-- <Presentation class="size-7 pb-0.5"/> -->
-          <ProjectIcon class="size-5" />
-          <p class="flex items-center justify-center gap-x-4">Proyectos</p>
-        </div>
-      </TitleContainer>
-      <Projects />
-    </SectionContainer>
-    <SectionContainer>
-      <TitleContainer>
-        <Dna class="size-6 2xl:size-10 pb-0.5" />
-        Habilidades
-      </TitleContainer>
-      <Skills />
-    </SectionContainer>
-    <SectionContainer id="experiencia">
-      <TitleContainer>
-        <div
-          class="flex items-center text-center justify-center px-2 2xl:mb-4 font-bold lg:px-0 gap-x-3 text-neutral-950 dark:text-white 2xl:pb-4"
-        >
-          <!-- <Presentation class="size-7 pb-0.5"/> -->
-          <BriefcaseIcon class="size-10 shrink-0" />
-          <p class="flex items-center justify-center gap-x-4">
-            Experiencia Laboral
-          </p>
-        </div>
-      </TitleContainer>
-      <Experience />
-    </SectionContainer>
-
-    <SectionContainer id="sobre-mi" class="2xl:pb-36">
-      <TitleContainer>
-        <!-- <Shield class="size-7 pb-0.5"/> -->
-        <!-- Quien soy -->
-      </TitleContainer>
-      <AboutMe />
-    </SectionContainer>
-    <Github />
   </main>
-  <Footer />
+  <SectionContainer id="projects">
+    <TitleContainer>
+      <div
+        class="flex items-center text-center justify-center px-2 2xl:mb-4 font-bold lg:px-0 gap-x-3 text-neutral-950 dark:text-white 2xl:pb-4"
+      >
+        <!-- <Presentation class="size-7 pb-0.5"/> -->
+        <ProjectIcon class="size-5" />
+        <p class="flex items-center justify-center gap-x-4">Proyectos</p>
+      </div>
+    </TitleContainer>
+    <Projects />
+  </SectionContainer>
+  <SectionContainer>
+    <TitleContainer>
+      <Dna class="size-6 2xl:size-10 pb-0.5" />
+      Habilidades
+    </TitleContainer>
+    <Skills />
+  </SectionContainer>
+  <SectionContainer id="experiencia">
+    <TitleContainer>
+      <div
+        class="flex items-center text-center justify-center px-2 2xl:mb-4 font-bold lg:px-0 gap-x-3 text-neutral-950 dark:text-white 2xl:pb-4"
+      >
+        <!-- <Presentation class="size-7 pb-0.5"/> -->
+        <BriefcaseIcon class="size-10 shrink-0" />
+        <p class="flex items-center justify-center gap-x-4">
+          Experiencia Laboral
+        </p>
+      </div>
+    </TitleContainer>
+    <Experience />
+  </SectionContainer>
+
+  <SectionContainer id="sobre-mi" class="2xl:pb-36">
+    <TitleContainer>
+      <!-- Quien soy -->
+    </TitleContainer>
+    <AboutMe />
+  </SectionContainer>
+  <Github />
 </Layout>
+<Footer />
